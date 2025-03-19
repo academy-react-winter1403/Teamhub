@@ -1,27 +1,15 @@
-import { useState } from 'react'
+import { Fragment } from 'react'
 import './App.css'
+import { Landing } from './components/Pages/Landing-Page/Landing'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
+    <Fragment>
 
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-         تست یکان بخ ۱۲۳۴۵۶۷
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <Landing/>
+    
+    </Fragment>
   )
 }
 
