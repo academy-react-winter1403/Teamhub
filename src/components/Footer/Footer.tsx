@@ -1,7 +1,12 @@
+import { Fragment } from "react/jsx-runtime"
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+  <Fragment>
+
+    <h1>hi</h1>
+    
+  </Fragment>
   )
 }
 
