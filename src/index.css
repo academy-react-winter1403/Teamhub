@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default, night --prefersdark;
+  themes: light --default, night;
 }
 @plugin "daisyui/theme" {
   name: "light";
@@ -73,28 +73,34 @@
 }
 
 
-@font-face {
-  font-family: VazirBold;
+.vazirmatn {
+  font-family: "Vazirmatn", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:100 900;
   font-style: normal;
-  font-weight: 200 700;
-  font-display: swap;
-  src: url("./assets/fonts/VazirmatnBold.woff2") format("woff2");
-  
+}
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 @theme {
-  --font-roboto: "Roboto", sans-serif;
-  --font-Vazir: "Vazirmatn", VazirBold;
+  /* --font-display: "Roboto","Vazirmatn", sans-serif; */
+  /* --font-Vazir: "Vazirmatn", sans-serif; */
 }
 
 :root {
-
+  font-family: "Vazirmatn" , "Roboto" , sans-serif;
   line-height: 1.5;
   font-weight: 400;
   direction: rtl;
   color-scheme: light dark;
-  /* color: rgba(255, 255, 255, 0.87); */
-  /* background-color: #242424; */
+
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
