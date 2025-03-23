@@ -22,20 +22,6 @@ const Footer = () => {
             <br /> با کمترین تعرفه و بدون نیاز مراجعه حضوری در کل فرایند ثبت
           </p>
         </div>
-
-import { Fragment } from "react/jsx-runtime"
-
-const Footer = () => {
-  return (
-  <Fragment>
-
-    <h1>hi</h1>
-    
-  </Fragment>
-  )
-}
-
-
         <div className="join relative pt-7 flex flex-col gap-8 ">
           <div>
             <p className="font-normal text-base  ">
