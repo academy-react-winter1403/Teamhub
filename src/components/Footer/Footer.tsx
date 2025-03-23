@@ -1,3 +1,4 @@
+
 import { Fragment } from "react/jsx-runtime";
 import hegzaImg from "./../../assets/images/Group 33.png";
 import social1 from "./../../assets/images/Social Medias.svg";
@@ -21,6 +22,19 @@ const Footer = () => {
             <br /> با کمترین تعرفه و بدون نیاز مراجعه حضوری در کل فرایند ثبت
           </p>
         </div>
+
+import { Fragment } from "react/jsx-runtime"
+
+const Footer = () => {
+  return (
+  <Fragment>
+
+    <h1>hi</h1>
+    
+  </Fragment>
+  )
+}
+
 
         <div className="join relative pt-7 flex flex-col gap-8 ">
           <div>

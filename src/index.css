@@ -1,28 +1,106 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: light --default, night;
+}
+@plugin "daisyui/theme" {
+  name: "light";
+  default: false;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(98% 0 0);
+  --color-base-300: oklch(95% 0 0);
+  --color-base-content: oklch(30.87% 0.0195 229.78);
+  --color-primary: oklch(65.82% 0.169 248.81);
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: oklch(95.04% 0.0042 236.5);
+  --color-secondary-content: oklch(0% 0 0);
+  --color-accent: oklch(65.82% 0.169 248.81);
+  --color-accent-content: oklch(100% 0 0);
+  --color-neutral: oklch(74% 0.16 232.661);
+  --color-neutral-content: oklch(98% 0 0);
+  --color-info: oklch(74% 0.16 232.661);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(89% 0.058 10.001);
+  --color-error-content: oklch(55.88% 0.1973 29.23);
+  --radius-selector: 1rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.21875rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 1;
+}
 
-@font-face {
-  font-family: VazirBold;
+@plugin "daisyui/theme" {
+  name: "night";
+  default: false;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(20.768% 0.039 265.754);
+  --color-base-200: oklch(19.314% 0.037 265.754);
+  --color-base-300: oklch(17.86% 0.034 265.754);
+  --color-base-content: oklch(84.153% 0.007 265.754);
+  --color-primary: oklch(65.82% 0.169 248.81);
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: oklch(95.04% 0.0042 236.5);
+  --color-secondary-content: oklch(13.602% 0.031 276.934);
+  --color-accent: oklch(65.82% 0.169 248.81);
+  --color-accent-content: oklch(95.59% 0.0123 260.03);
+  --color-neutral: oklch(27.949% 0.036 260.03);
+  --color-neutral-content: oklch(85.589% 0.007 260.03);
+  --color-info: oklch(68% 0.169 237.323);
+  --color-info-content: oklch(0% 0 0);
+  --color-success: oklch(70% 0.14 182.503);
+  --color-success-content: oklch(15.69% 0.026 181.911);
+  --color-warning: oklch(85% 0.199 91.936);
+  --color-warning-content: oklch(16.648% 0.027 82.95);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(14.357% 0.034 13.118);
+  --radius-selector: 1rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.21875rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 1;
+}
+
+
+.vazirmatn {
+  font-family: "Vazirmatn", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:100 900;
   font-style: normal;
-  font-weight: 200 700;
-  font-display: swap;
-  src: url("./assets/fonts/VazirmatnBold.woff2") format("woff2");
-  
+}
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 @theme {
-  --font-roboto: "Roboto", sans-serif;
-  --font-Vazir: "Vazirmatn", VazirBold;
+  /* --font-display: "Roboto","Vazirmatn", sans-serif; */
+  /* --font-Vazir: "Vazirmatn", sans-serif; */
 }
 
 :root {
-
+  font-family: "Vazirmatn" , "Roboto" , sans-serif;
   line-height: 1.5;
   font-weight: 400;
   direction: rtl;
   color-scheme: light dark;
-  /* color: rgba(255, 255, 255, 0.87); */
-  /* background-color: #242424; */
+
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
