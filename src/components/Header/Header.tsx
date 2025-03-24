@@ -3,7 +3,7 @@ import { Fragment } from "react/jsx-runtime"
 const Header = () => {
   return (
     <Fragment>
-      <div className="Header flex gap-70">
+      <div className="Header flex gap-70 z-100">
         <div className="logo flex">
           <img className="ml-2" src="./Group 33.png" alt="" />
           هگزا اسکواد

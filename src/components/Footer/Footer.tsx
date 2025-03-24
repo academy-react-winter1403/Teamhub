@@ -11,7 +11,7 @@ import copyright from "./../../assets/images/copyright.svg";
 const Footer = () => {
   return (
     <Fragment>
-      <div className="h-125 w-full bg-[#252641]">
+      <div className="h-125 w-full bg-[#252641] text-white">
         <div>
           <div className="flex flex-row-reverse gap-1.5 justify-center items-end text-2xl pt-10 pb-4 ">
             <p className="font-black">هگزا اسکواد</p>
