@@ -17,27 +17,22 @@ import { Landing } from "../../components/Pages/Landing-Page/Landing";
         element: <Landing/>
       },
       {
-        index: true,
         path: '/CourseList',
         element: <App/>
       },
       {
-        index: true,
         path: '/Blogs',
         element: <App/>
       },
       {
-        index: true,
         path: '/CourseDetails',
         element: <App/>
       },
       {
-        index: true,
         path: '/News',
         element: <App/>
       },
       {
-        index: true,
         path: '/Cart',
         element: <App/>
       },
