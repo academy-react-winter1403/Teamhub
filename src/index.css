@@ -88,10 +88,6 @@
     "wdth" 100;
 }
 
-@theme {
-  /* --font-display: "Roboto","Vazirmatn", sans-serif; */
-  /* --font-Vazir: "Vazirmatn", sans-serif; */
-}
 
 :root {
   font-family: "Vazirmatn" , "Roboto" , sans-serif;

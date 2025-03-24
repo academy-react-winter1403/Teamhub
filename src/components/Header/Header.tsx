@@ -3,8 +3,9 @@ import { Fragment } from "react/jsx-runtime"
 
 const Header = () => {
   return (
+
 <Fragment>
-      <div className="Header flex items-center justify-center gap-60">
+      <div className="Header flex items-center justify-center gap-60 z-100">
         <div className="logo flex  font-semibold items-center">
           <img className="ml-2 w-10" src="./logo.svg" alt="" />
           هگزا اسکواد
