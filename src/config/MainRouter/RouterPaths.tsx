@@ -4,7 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../../components/Root/Root";
 import NotFound from "../../components/NotFound/NotFound";
 import App from "../../App";
-import { Landing } from "../../Pages/Landing-Page/Landing";
+import { Landing } from "../../Pages/Landing";
 
   export const router= createBrowserRouter([
   {

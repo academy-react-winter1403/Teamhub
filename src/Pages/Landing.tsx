@@ -1,6 +1,6 @@
-// import React from 'react'
-
-import BannerContentOne from "./LandnigTitles"
+import LandingTitles from "../components/LandnigTitles"
+import Search from "../components/common/search/Search"
+import LandingReport from "../components/cards/landingReport/LandingReport"
 
 const Landing = () => {
   return (
@@ -12,13 +12,9 @@ const Landing = () => {
           <div className="h-112 w-40 bg-[url(/codingRight.svg)] bg-no-repeat bg-contain"></div>
           <div  className="flex flex-col justify-center gap-2.5 flex-nowrap">
 
-              <BannerContentOne />
-
-                {/* <div></div>
-
-                <div>
-
-                </div> */}
+              <LandingTitles />
+              <Search />
+              <LandingReport />
 
           </div>
           <div className="h-112 w-40 bg-[url(/codingLeft.svg)] bg-no-repeat bg-contain"></div>

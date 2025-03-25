@@ -1,10 +1,10 @@
-
-
 const LandingReport = () => {
+
+
   return (
-    <div>
+    <>
       
-    </div>
+    </>
   )
 }
 
