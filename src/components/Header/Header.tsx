@@ -2,17 +2,18 @@ import { NavLink } from "react-router-dom"
 import { Fragment } from "react/jsx-runtime"
 import { LoginModalBtn } from "../common/login/LoginModalBtn"
 import { DarkModeBtn } from "../common/dark-mode/DarkModeBtn"
+import { CartBtn } from "../common/cart/CartBtn"
 
 const Header = () => {
   return (
 
     <Fragment>
-      <div className="Header h-25 flex items-center justify-center gap-60 z-100">
+      <div className="Header h-25 flex items-center justify-around z-100">
+        
         <div className="logo flex  font-semibold items-center">
           <img className="ml-2 w-10" src="./logo.svg" alt="" />
           هگزا اسکواد
         </div>
-
 
         <div className="top-menu flex gap-12 text-sm">
           <NavLink to="" className="">
@@ -32,12 +33,7 @@ const Header = () => {
         <div className="flex gap-5 items-center">
           <DarkModeBtn/>
 
-          <div className="indicator ">
-            {/* <span className="indicator-item h-6 w-6 bg-blue-400 rounded-2xl border-3 border-green-100 absolute top-2 right-2 text-sm text-white">2</span> */}
-            <button className="btn bg-white h-12 w-12 rounded-3xl flex border-none p-0">
-            <img src="./shopping-bag.svg" className="w-7 m-auto bg-[length:auto_100%]" alt="" />
-            </button>
-          </div>  
+          <CartBtn/>
 
           <LoginModalBtn/>
         </div>
