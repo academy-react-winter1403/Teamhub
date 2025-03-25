@@ -32,7 +32,9 @@ const Header = () => {
 
         <div className="flex gap-5 items-center">
           <DarkModeBtn/>
+
           <CartBtn/>
+
           <LoginModalBtn/>
         </div>
 
