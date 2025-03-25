@@ -1,11 +1,9 @@
-// import React from 'react'
-
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../../components/Root/Root";
 import NotFound from "../../components/NotFound/NotFound";
 import App from "../../App";
 import { Landing } from "../../Pages/Landing";
-
+import BlogDetails from "../../Pages/BlogDetails";
 
   export const router= createBrowserRouter([
   {
