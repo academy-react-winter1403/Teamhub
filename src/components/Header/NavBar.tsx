@@ -1,22 +1,20 @@
 import { NavLink } from "react-router-dom"
-import { Fragment } from "react/jsx-runtime"
+import { HeaderMockData } from "../../core/constants/common/HeaderMockData"
+
+interface MenuItem {
+    title: string;
+    path: string;
+}
 
 const NavBar = () => {
   return (
-    <Fragment>
-        <NavLink to="" className="">
-            دوره ها
-        </NavLink>
-        <NavLink to="" >
-            اساتید
-        </NavLink>
-        <NavLink to="" >
-            ارتباط با ما
-        </NavLink>
-        <NavLink to="" >
-            اخبار مقالات
-        </NavLink>
-    </Fragment>
+    <div className="top-menu flex gap-12 text-sm">
+        {HeaderMockData.map((item: MenuItem,index: number)=>(
+                <NavLink to={item.path} key={index} className="">
+                     {item.title}
+                </NavLink>
+        ))}
+    </div>
   )
 }
 
