@@ -17,21 +17,6 @@ const Header = () => {
 
         <NavBar/>
 
-        {/* <div className="top-menu flex gap-12 text-sm">
-          <NavLink to="" className="">
-            دوره ها
-          </NavLink>
-          <NavLink to="" >
-            اساتید
-          </NavLink>
-          <NavLink to="" >
-            ارتباط با ما
-          </NavLink>
-          <NavLink to="" >
-            اخبار مقالات
-          </NavLink>
-        </div> */}
-
         <div className="flex gap-5 items-center">
           <DarkModeBtn/>
 
