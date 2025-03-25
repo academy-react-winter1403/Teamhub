@@ -10,14 +10,14 @@ const Landing = () => {
         <div className="flex flex-row justify-around w-full">
 
           <div className="h-112 w-40 bg-[url(/codingRight.svg)] bg-no-repeat bg-contain"></div>
-          <div  className="flex flex-col justify-center gap-2.5 flex-nowrap">
+          <div  className="flex flex-col justify-between gap-2.5 flex-nowrap w-3xl">
 
               <LandingTitles />
               <Search />
               <LandingReport />
 
           </div>
-          <div className="h-112 w-40 bg-[url(/CodingLeft.svg)] bg-no-repeat bg-contain"></div>
+          <div className="h-112 w-40 bg-[url(/codingLeft.svg)] bg-no-repeat bg-contain"></div>
 
         </div>
 
