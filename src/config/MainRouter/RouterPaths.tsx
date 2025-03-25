@@ -36,6 +36,10 @@ import { Landing } from "../../Pages/Landing-Page/Landing";
         path: '/Cart',
         element: <App/>
       },
+      {
+        path: '/BlogDetails',
+        element: <App/>
+      },
 
     ]
   },
