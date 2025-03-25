@@ -5,6 +5,7 @@ import Root from "../../components/Root/Root";
 import NotFound from "../../components/NotFound/NotFound";
 import App from "../../App";
 import { Landing } from "../../Pages/Landing-Page/Landing";
+import BlogDetails from "../../Pages/BlogDetails";
 
   export const router= createBrowserRouter([
   {
@@ -38,7 +39,7 @@ import { Landing } from "../../Pages/Landing-Page/Landing";
       },
       {
         path: '/BlogDetails',
-        element: <App/>
+        element: <BlogDetails/>
       },
 
     ]
