@@ -1,12 +1,10 @@
-import axios from "axios";
-
+import http from "../interceptor"
 const URL = import.meta.env.VITE_API_BASE_URL;
 
 export const getLandingReport = async () =>{
     try {
-        console.log("asd");
-        const result = await axios.get(URL + "/Home/LandingReport");
-        return result.data;
+        const result = await http.get(URL + "/Home/LandingReport");
+        return result;
     } catch (error) {
         console.log(error)
         return [];
