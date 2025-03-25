@@ -17,7 +17,7 @@ const Landing = () => {
               <LandingReport />
 
           </div>
-          <div className="h-112 w-40 bg-[url(/codingLeft.svg)] bg-no-repeat bg-contain"></div>
+          <div className="h-112 w-40 bg-[url(/CodingLeft.svg)] bg-no-repeat bg-contain"></div>
 
         </div>
 

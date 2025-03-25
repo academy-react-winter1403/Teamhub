@@ -6,6 +6,7 @@ import NotFound from "../../components/NotFound/NotFound";
 import App from "../../App";
 import { Landing } from "../../Pages/Landing";
 
+
   export const router= createBrowserRouter([
   {
     path: '/',
@@ -35,6 +36,10 @@ import { Landing } from "../../Pages/Landing";
       {
         path: '/Cart',
         element: <App/>
+      },
+      {
+        path: '/BlogDetails',
+        element: <BlogDetails/>
       },
 
     ]
