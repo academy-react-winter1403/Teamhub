@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom"
 import { Fragment } from "react/jsx-runtime"
 import { LoginModalBtn } from "../common/login/LoginModalBtn"
 import { DarkModeBtn } from "../common/dark-mode/DarkModeBtn"
 import { CartBtn } from "../common/cart/CartBtn"
+import { NavBar } from "./NavBar"
 
 const Header = () => {
   return (
@@ -15,7 +15,9 @@ const Header = () => {
           هگزا اسکواد
         </div>
 
-        <div className="top-menu flex gap-12 text-sm">
+        <NavBar/>
+
+        {/* <div className="top-menu flex gap-12 text-sm">
           <NavLink to="" className="">
             دوره ها
           </NavLink>
@@ -28,7 +30,7 @@ const Header = () => {
           <NavLink to="" >
             اخبار مقالات
           </NavLink>
-        </div>
+        </div> */}
 
         <div className="flex gap-5 items-center">
           <DarkModeBtn/>
