@@ -1,4 +1,4 @@
-# TeamHub-React-Project
+# TeamHub React Project
 
 Hi
 
