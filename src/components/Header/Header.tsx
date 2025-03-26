@@ -1,5 +1,5 @@
 import { Fragment } from "react/jsx-runtime"
-import { LoginModalBtn } from "../common/login/LoginModalBtn"
+import { LoginModalBtn } from "../login modal/LoginModalBtn"
 import { DarkModeBtn } from "../common/dark-mode/DarkModeBtn"
 import { CartBtn } from "../common/cart/CartBtn"
 import { NavBar } from "./NavBar"
@@ -19,12 +19,9 @@ const Header = () => {
 
         <div className="flex gap-5 items-center">
           <DarkModeBtn/>
-
           <CartBtn/>
-
           <LoginModalBtn/>
         </div>
-
       </div>
 
     </Fragment>
