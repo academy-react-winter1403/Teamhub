@@ -1,6 +1,6 @@
 
 import { Fragment } from "react/jsx-runtime";
-import hegzaImg from "./../../assets/images/Group 33.png";
+import hegzaImg from "./../../assets/images/logo.svg";
 import social1 from "./../../assets/images/Social Medias.svg";
 import social2 from "./../../assets/images/Social Medias (1).svg";
 import social3 from "./../../assets/images/Social Medias (2).svg";
