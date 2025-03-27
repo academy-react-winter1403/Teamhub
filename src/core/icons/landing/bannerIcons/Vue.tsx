@@ -1,6 +1,6 @@
 const Vue = () => {
   return (
-    <div>
+    <div dir="ltr">
       <svg
         width="64"
         height="64"

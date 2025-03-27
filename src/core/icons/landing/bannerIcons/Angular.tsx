@@ -1,6 +1,6 @@
-export const AngularIcon = () => {
+const AngularIcon = () => {
   return (
-    <div>
+    <div dir="ltr">
       <svg
         width="64"
         height="64"
@@ -24,3 +24,5 @@ export const AngularIcon = () => {
     </div>
   );
 };
+
+export default AngularIcon;

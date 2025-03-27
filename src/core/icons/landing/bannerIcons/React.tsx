@@ -1,4 +1,4 @@
-export const ReactIcon = () => {
+const ReactIcon = () => {
   return (
     <div>
       <svg
@@ -20,3 +20,5 @@ export const ReactIcon = () => {
     </div>
   );
 };
+
+export default ReactIcon;
