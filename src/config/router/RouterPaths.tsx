@@ -4,6 +4,7 @@ import NotFound from "../../components/NotFound/NotFound";
 import App from "../../App";
 import { Landing } from "../../Pages/Landing";
 import BlogDetails from "../../Pages/BlogDetails";
+import { CourseList } from "../../Pages/CourseList";
 
   export const router= createBrowserRouter([
   {
@@ -17,7 +18,7 @@ import BlogDetails from "../../Pages/BlogDetails";
       },
       {
         path: '/CourseList',
-        element: <App/>
+        element: <CourseList/>
       },
       {
         path: '/Blogs',
