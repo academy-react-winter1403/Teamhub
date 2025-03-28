@@ -1,0 +1,35 @@
+import CtgCards from "../cards/landing/ctgCards";
+
+const LandingCtg = () => {
+  return (
+    <div className="relative w-full h-[750px] mb-20">
+      {/* content */}
+      <div className="h-full flex justify-evenly items-center z-50">
+        {/* right */}
+        <div className="w-1/4 h-38 flex flex-col justify-between z-50">
+          <h4 className="font-black text-4xl text-justify z-50">
+            دسته بندی‌ دوره‌ها
+          </h4>
+          <p className="font-medium text-base text-justify z-50">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+          </p>
+        </div>
+        {/* left */}
+        <div className="w-2/4 h-full flex justify-evenly z-50">
+          <CtgCards />
+        </div>
+      </div>
+      {/* background */}
+      <div className="absolute w-full h-120 -z-10">
+        <span className="absolute block bg-no-repeat bg-contain bg-[url(./dot.svg)] w-100 h-38 bottom-140 right-90"></span>
+        <span className="absolute block bg-no-repeat bg-contain bg-[url(./Ellipse.svg)] size-32 bottom-140 right-160"></span>
+        <span className="absolute block bg-no-repeat bg-contain bg-[url(./RectangleBlue.svg)] w-250 h-120 bottom-160 left-0"></span>
+        <span className="absolute block bg-no-repeat bg-contain bg-[url(./RectangleYellow.svg)] size-40 bottom-210 right-25"></span>
+      </div>
+    </div>
+  );
+};
+
+export default LandingCtg;

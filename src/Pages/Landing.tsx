@@ -1,6 +1,6 @@
-import LandingTitles from "../components/LandnigTitles";
+import LandingTitles from "../components/Landing/LandnigTitles";
 import Search from "../components/common/search/Search";
-import LandingReport from "../components/cards/landingReport/LandingReport";
+import LandingReport from "../components/cards/landing/landingReport/LandingReport";
 import {
   AngularIcon,
   Css,
@@ -11,12 +11,17 @@ import {
   Sass,
   Vue,
 } from "../core/icons/landing/BannerIcons";
+import Services from "../components/Landing/Services";
+import TopCourse from "../components/Landing/TopCourse";
+import LandingCtg from "../components/Landing/LandingCtg";
+import Teachers from "../components/Landing/Teachers";
+import LandingBlogs from "../components/Landing/LandingBlogs";
 
 const Landing = () => {
   return (
     <>
       {/* landing banner */}
-      <div className="relative -top-25 bg-[url(/header-bg.svg)] bg-bottom bg-no-repeat bg-cover w-full h-[900px] min-h-screen mb-20 z-0 flex justify-center items-center">
+      <div className="relative -top-25 bg-[url(/header-bg.svg)] bg-bottom bg-no-repeat bg-cover w-full h-[900px] min-h-screen z-0 flex justify-center items-center">
         <div className="flex flex-row justify-around w-full h-2/3">
           <div className="h-112 w-40 flex flex-col justify-between">
             <ReactIcon />
@@ -40,14 +45,15 @@ const Landing = () => {
       </div>
 
       {/* landing services */}
-
+      <Services />
       {/* landing course */}
-
+      <TopCourse />
       {/* landing category */}
-
+      <LandingCtg />
       {/* landing teacheres */}
-
+      <Teachers />
       {/* landing news */}
+      <LandingBlogs />
     </>
   );
 };
