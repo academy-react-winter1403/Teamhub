@@ -8,14 +8,12 @@ const ArticlesSection: React.FC = () => {
       <h2 className="text-2xl font-bold text-gray-800 mb-6">اخبار و مقالات</h2>
 
       <div className="grid md:grid-cols-2 gap-6">
-        {/* لیست مقالات سمت چپ */}
         <div className="flex flex-col gap-4">
           {articles.map((article) => (
             <ArticleCard key={article.id} article={article} />
           ))}
         </div>
 
-        {/* مقاله بزرگ سمت راست */}
         <div className="bg-white shadow-md p-5 rounded-lg">
           <img
             src="https://source.unsplash.com/500x300/?study"

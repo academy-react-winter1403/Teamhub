@@ -12,3 +12,20 @@ export interface Article {
     date: string;
     views: number;
   }
+
+export interface NavbarLink {
+    title: string;
+    path: string;
+}
+
+export interface CourseInfos {
+    title: string;
+    description: string;
+    favorite: number;
+    studentCount: number;
+    status: string;
+    startDate:string;
+    endDate:string;
+    lessons:number;
+    hour:string;
+}

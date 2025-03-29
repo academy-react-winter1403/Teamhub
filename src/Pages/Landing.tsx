@@ -43,16 +43,10 @@ const Landing = () => {
           </div>
         </div>
       </div>
-
-      {/* landing services */}
       <Services />
-      {/* landing course */}
       <TopCourse />
-      {/* landing category */}
       <LandingCtg />
-      {/* landing teacheres */}
       <Teachers />
-      {/* landing news */}
       <LandingBlogs />
     </>
   );

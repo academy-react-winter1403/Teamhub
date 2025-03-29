@@ -3,7 +3,7 @@ import likeIcon from "./../../assets/images/like.svg";
 function Rating() {
   return (
     <>
-      <div className="w-[842px] h-[60px]  flex justify-between items-center mx-auto mb-10 ">
+      <div className="w-full h-[60px]  flex justify-between items-center mx-auto mb-10 ">
         <div className="w-[328px] h-[32px] flex items-center gap-3 ">
           <div className="rating rating-hidden flex-row-reverse ">
             <input
