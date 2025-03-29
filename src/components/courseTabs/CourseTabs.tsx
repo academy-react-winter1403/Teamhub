@@ -1,10 +1,10 @@
 import Comment from "../comment/Comment";
 import Description from "./Description";
-import LessonList from "./lessonList";
+import LessonList from "./LessonList";
 
 const CourseTabs = () => {
   return (
-    <div className="w-4/6">
+    <div className="w-4/6 bg-white rounded-2xl">
       {/* name of each tab group should be unique */}
       <div className="tabs tabs-border">
         <input
