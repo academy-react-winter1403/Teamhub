@@ -1,5 +1,6 @@
+import { NavbarLink } from "../Types";
 
-export const HeaderMockData: {title: string; path: string}[] = [
+export const HeaderMockData: NavbarLink[] = [
 
         {title: "دوره ها", path: "/CourseList"},
         {title:"اساتید", path: ""},
