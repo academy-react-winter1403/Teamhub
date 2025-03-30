@@ -13,14 +13,14 @@ const CourseList = () => {
             <div className="courses  rounded-xl w-[70%]">
 
                 <div className="tabs tabs-box flex bg-[#FAFBFC] mb-5"> 
-                  <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-1.svg)] bg-no-repeat bg-center m-1 mb-8"/>
+                  <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-1.svg)] bg-no-repeat bg-center m-1 mb-8" defaultChecked/>
                   <div className="tab-content bg-[#FAFBFC]">
                     <div className="courseCards w-full flex flex-wrap justify-between gap-2 border-1 border-blue-500">
                       <CourseCards/>
                     </div>
                   </div>
 
-                  <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-2.svg)] bg-no-repeat bg-center m-1" defaultChecked />
+                  <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-2.svg)] bg-no-repeat bg-center m-1"  />
                   <div className="tab-content bg-base-100 border-base-300 p-6">
                     Tab content 2</div>                
                   

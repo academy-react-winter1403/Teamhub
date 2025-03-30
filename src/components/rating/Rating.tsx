@@ -49,14 +49,14 @@ function Rating() {
           </p>
 
           <div className="w-[182px] h-[42px] flex gap-4">
-            <div className="w-[83px] h-[42px] rounded-3xl bg-[rgba(236,239,241,1)] flex justify-center items-center gap-2 ">
+            <button className="btn w-[83px] h-[42px] rounded-3xl bg-[rgba(236,239,241,1)] flex justify-center items-center gap-2 ">
               {" "}
               <img src={likeIcon} alt="not found" /> 22
-            </div>
-            <div className="w-[83px] h-[42px] rounded-3xl bg-[rgba(236,239,241,1)] flex justify-center items-center gap-2">
+            </button>
+            <button className=" btn  w-[83px] h-[42px] rounded-3xl bg-[rgba(236,239,241,1)] flex justify-center items-center gap-2">
               {" "}
               <img src={dislikeIcon} alt="not found" /> 0
-            </div>
+            </button>
           </div>
         </div>
       </div>
