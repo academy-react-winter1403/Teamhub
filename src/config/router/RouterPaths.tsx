@@ -6,6 +6,8 @@ import { Landing } from "../../Pages/Landing";
 import BlogDetails from "../../Pages/BlogDetails";
 import { CourseList } from "../../Pages/CourseList";
 import CourseDetails from "../../Pages/CourseDetails";
+import { Blogs } from "../../Pages/Blogs";
+
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +32,10 @@ export const router = createBrowserRouter([
         element: <CourseDetails />,
       },
       {
+        path: '/BlogDetails',
+        element: <BlogDetails/>
+      },
+      {
         path: "/News",
         element: <App />,
       },
@@ -37,14 +43,11 @@ export const router = createBrowserRouter([
         path: "/Cart",
         element: <App />,
       },
-      {
-        path: "/BlogDetails",
-        element: <BlogDetails />,
-      },
     ],
   },
-  {
-    path: "*",
-    element: <NotFound />,
-  },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  
 ]);
