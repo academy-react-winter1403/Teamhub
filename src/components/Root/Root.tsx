@@ -1,20 +1,18 @@
-import { Fragment } from 'react'
-import { Header } from "../Header/Header"
-import { Footer } from '../footer/Footer'
-import { Outlet } from 'react-router-dom'
+import { Fragment } from "react";
+import { Header } from "../header/Header";
+import { Footer } from "../footer/Footer";
+import { Outlet } from "react-router-dom";
 
 const Root = () => {
   return (
-   <Fragment>
-
-     <Header/>
+    <Fragment>
+      <Header />
 
       <Outlet />
 
-     <Footer/>
-     
-   </Fragment>
-  )
-}
+      <Footer />
+    </Fragment>
+  );
+};
 
-export default Root
+export default Root;

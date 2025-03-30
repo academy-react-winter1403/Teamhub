@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import { teachers } from "../../core/constants/landing/TeachersMockData.tsx";
+import { teachers } from "../../core/constants/mock/TeachersMockData.tsx";
 import TeacherCard from "../cards/landing/teachers/Index.tsx";
 
 const Slider: React.FC = () => {

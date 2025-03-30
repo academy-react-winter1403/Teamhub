@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import Root from "../../components/Root/Root";
+import Root from "../../components/root/Root";
 import NotFound from "../../Pages/NotFound";
 import App from "../../App";
 import { Landing } from "../../Pages/Landing";
@@ -7,7 +7,6 @@ import BlogDetails from "../../Pages/BlogDetails";
 import { CourseList } from "../../Pages/CourseList";
 import CourseDetails from "../../Pages/CourseDetails";
 import { Blogs } from "../../Pages/Blogs";
-
 
 export const router = createBrowserRouter([
   {
@@ -25,15 +24,15 @@ export const router = createBrowserRouter([
       },
       {
         path: "/Blogs",
-        element: <App />,
+        element: <Blogs />,
       },
       {
         path: "/CourseDetails",
         element: <CourseDetails />,
       },
       {
-        path: '/BlogDetails',
-        element: <BlogDetails/>
+        path: "/BlogDetails",
+        element: <BlogDetails />,
       },
       {
         path: "/News",
@@ -45,9 +44,8 @@ export const router = createBrowserRouter([
       },
     ],
   },
-    {
-      path: "*",
-      element: <NotFound />,
-    },
-  
+  {
+    path: "*",
+    element: <NotFound />,
+  },
 ]);

@@ -1,11 +1,11 @@
-import TopCourse from "../components/Landing/TopCourse";
+import TopCourse from "../components/landing/TopCourse";
 import Rating from "../components/rating/Rating";
 import CourseInfos from "../components/courseDetails/CourseInfos";
 import CourseTabs from "../components/courseTabs/CourseTabs";
 
 const CourseDetails = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-full">
       {/* static */}
       <div className="w-10/12 h-200 flex p-5 justify-between">
         <div className="w-2/3 h-full p-5 flex flex-col justify-between ">
