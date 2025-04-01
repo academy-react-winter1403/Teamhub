@@ -1,15 +1,15 @@
 import { CardViewOne } from "../components/cards/courseCards/CardViewOne"
 import { CardViewTwo } from "../components/cards/courseCards/CardViewTwo"
 import { NexAndpre } from "../components/common/NexAndpre"
+import { Filters } from "../components/filterCourse/Filters"
 
 const CourseList = () => {
   return (
     <div className="bg-[#FAFBFC] relative w-full flex flex-col justify-center items-center">
         <div className="banner h-130 w-[90%] bg-[url(/courseListBanner.png)] bg-no-repeat bg-center bg-contain"></div>
         <div className="w-[90%] flex justify-center gap-5">
-            <div className="filters w-[22%] h-25 border-1 rounded-2xl">
-              
-            </div>
+
+            <Filters/>
             
             <div className="courses rounded-xl w-[70%]">
 
@@ -25,19 +25,13 @@ const CourseList = () => {
                     </div>
                   </div>
 
-<<<<<<< Updated upstream
-                  <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-2.svg)] bg-no-repeat bg-center m-1"  />
-                  <div className="tab-content bg-base-100 border-base-300 p-6">
-                    Tab content 2</div>                
-=======
                   <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-2.svg)] bg-no-repeat bg-center m-1"/>
                   <div className="tab-content bg-[#FAFBFC] border-base-300">
                     <CardViewTwo/>
                     <CardViewTwo/>
                     <CardViewTwo/>
                     <CardViewTwo/>
-                  </div>                
->>>>>>> Stashed changes
+                  </div>
                   
                   <div className='w-[65%] box-border pl-10 pr-10'>
                     <label className="input outline-none rounded-xl w-full border-0 drop-shadow-sm">
