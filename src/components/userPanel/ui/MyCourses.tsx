@@ -1,4 +1,4 @@
-import Search from "../../common/search/Search";
+import Search from "../../common/Search";
 
 const MyCourses = () => {
   return (

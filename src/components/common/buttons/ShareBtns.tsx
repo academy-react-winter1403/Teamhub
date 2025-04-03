@@ -1,7 +1,7 @@
-import shareText from "./../../assets/images/title.svg";
-import igIcon from "./../../assets/images/igIcon.svg";
-import xIcon from "./../../assets/images/xIcon.svg";
-import fIcon from "./../../assets/images/fIcon.svg";
+import shareText from "../../../assets/images/title.svg";
+import igIcon from "../../../assets/images/igIcon.svg";
+import xIcon from "../../../assets/images/xIcon.svg";
+import fIcon from "../../../assets/images/fIcon.svg";
 const ShareComp = () => {
   return (
     <>

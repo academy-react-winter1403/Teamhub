@@ -1,7 +1,7 @@
 import { Fragment } from "react/jsx-runtime";
-import { LoginModalBtn } from "../../loginModal/LoginModalBtn";
-import { DarkModeBtn } from "../../common/DarkModeBtn";
-import { CartBtn } from "../../common/cart/CartBtn";
+import { LoginModalBtn } from "../../modals/login/LoginModalBtn";
+import { DarkModeBtn } from "../../common/buttons/DarkModeBtn";
+import { CartBtn } from "../../common/buttons/CartBtn";
 import { NavBar } from "./NavBar";
 
 const Header = () => {

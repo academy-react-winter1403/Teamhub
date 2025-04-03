@@ -4,7 +4,7 @@ import Comment from "../components/common/Comment";
 import Rating from "../components/common/Rating";
 import BlogHero from "../components/articles/BlogHero";
 import BlogText from "../components/articles/BlogText";
-import ShareComp from "../components/common/ShareBtns";
+import ShareComp from "../components/common/buttons/ShareBtns";
 
 const BlogDetails = () => {
   return (

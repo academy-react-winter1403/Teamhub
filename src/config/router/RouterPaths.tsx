@@ -1,25 +1,27 @@
 import { createBrowserRouter } from "react-router-dom";
-import Root from "../../components/root/Root";
+import Root from "../Root";
 import NotFound from "../../Pages/NotFound";
-import App from "../../App";
+
+import Cart from "../../Pages/Cart";
+import Login from "../../Pages/login";
+import Signup from "../../Pages/signup";
+import { Blogs } from "../../Pages/Blogs";
 import { Landing } from "../../Pages/Landing";
 import BlogDetails from "../../Pages/BlogDetails";
 import { CourseList } from "../../Pages/CourseList";
 import CourseDetails from "../../Pages/CourseDetails";
-import { Blogs } from "../../Pages/Blogs";
-// import UserPanel from "../../components/userPanel/UserPanel";
-import UserRoot from "../../components/root/UserRoot";
+
+import UserRoot from "../UserRoot";
+import MyCourses from "../../components/userPanel/ui/MyCourses";
 import Dashboard from "../../components/userPanel/ui/Dashboard";
 import ProfileEdit from "../../components/userPanel/ui/ProfileEdit";
-// import MySaved from "../../components/userPanel/ui/mySaved";
-import MyCourses from "../../components/userPanel/ui/MyCourses";
 import MyComments from "../../components/userPanel/ui/MyComments";
 import ChangePass from "../../components/userPanel/ui/ChangePass";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root/>,
+    element: <Root />,
     children: [
       {
         index: true,
@@ -41,10 +43,6 @@ export const router = createBrowserRouter([
       {
         path: "/BlogDetails",
         element: <BlogDetails />,
-      },
-      {
-        path: "/Cart",
-        element: <App />,
       },
     ],
   },
@@ -74,6 +72,18 @@ export const router = createBrowserRouter([
         element: <ChangePass />,
       },
     ],
+  },
+  {
+    path: "/Cart",
+    element: <Cart />,
+  },
+  {
+    path: "/Login",
+    element: <Login />,
+  },
+  {
+    path: "/Signup",
+    element: <Signup />,
   },
   {
     path: "*",

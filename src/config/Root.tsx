@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import { Header } from "../layouts/header/Header";
-import { Footer } from "../layouts/footer/Footer";
+import { Header } from "../components/layouts/header/Header";
+import { Footer } from "../components/layouts/footer/Footer";
 import { Outlet } from "react-router-dom";
 
 const Root = () => {
