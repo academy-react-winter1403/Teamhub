@@ -1,4 +1,4 @@
-import AddToCart from "../common/AddToCart";
+import AddToCart from "../../common/AddToCart";
 
 const CourseInfos = () => {
   return (

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { HeaderMockData } from "../../core/constants/mock/HeaderMockData";
+import { HeaderMockData } from "../../../core/constants/mock/HeaderMockData";
 
 interface MenuItem {
   title: string;

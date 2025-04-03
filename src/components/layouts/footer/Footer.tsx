@@ -1,12 +1,11 @@
-
 import { Fragment } from "react/jsx-runtime";
-import hegzaImg from "./../../assets/images/logo.svg";
-import social1 from "./../../assets/images/Social Medias.svg";
-import social2 from "./../../assets/images/Social Medias (1).svg";
-import social3 from "./../../assets/images/Social Medias (2).svg";
-import social4 from "./../../assets/images/Social Medias (3).svg";
-import social5 from "./../../assets/images/Social Medias (4).svg";
-import copyright from "./../../assets/images/copyright.svg";
+import hegzaImg from "../../../assets/images/logo.svg";
+import social1 from "../../../assets/images/Social Medias.svg";
+import social2 from "../../../assets/images/Social Medias (1).svg";
+import social3 from "../../../assets/images/Social Medias (2).svg";
+import social4 from "../../../assets/images/Social Medias (3).svg";
+import social5 from "../../../assets/images/Social Medias (4).svg";
+import copyright from "../../../assets/images/copyright.svg";
 
 const Footer = () => {
   return (
@@ -45,23 +44,50 @@ const Footer = () => {
             <div className="border-r-2 pr-10 pl-10">
               <p className="text-gray-400">درباره ما</p>
             </div>
-            <div className="border-r-2 pr-10 pl-10" > <p className="text-gray-400">قوانین و مقررات</p></div>
+            <div className="border-r-2 pr-10 pl-10">
+              {" "}
+              <p className="text-gray-400">قوانین و مقررات</p>
+            </div>
           </div>
         </div>
         <div className=" bg-[rgba(0,0,0,0.2)] w-[90%]   rounded-2xl h-[64px] flex flex-row-reverse justify-between justify-self-center mt-12 mb-10 ">
           <div className="flex justify-end ">
-            <img className="w-[11%] ml-4" src={social1} alt="img not found :(" />
-            <img className="w-[11%] ml-4" src={social2} alt="img not found :(" />
-            <img className="w-[11%] ml-4" src={social3} alt="img not found :(" />
-            <img className="w-[11%] ml-4" src={social4} alt="img not found :(" />
-            <img className="w-[11%] ml-5" src={social5} alt="img not found :(" />
+            <img
+              className="w-[11%] ml-4"
+              src={social1}
+              alt="img not found :("
+            />
+            <img
+              className="w-[11%] ml-4"
+              src={social2}
+              alt="img not found :("
+            />
+            <img
+              className="w-[11%] ml-4"
+              src={social3}
+              alt="img not found :("
+            />
+            <img
+              className="w-[11%] ml-4"
+              src={social4}
+              alt="img not found :("
+            />
+            <img
+              className="w-[11%] ml-5"
+              src={social5}
+              alt="img not found :("
+            />
           </div>
 
           <div className="flex flex-row-reverse gap-2 mr-5 md:w-[70%] justify-end ">
-            <p className="flex items-center whitespace-nowrap xl:text-[16px]   md:text-[13px] sm:text-[10px] "> 
+            <p className="flex items-center whitespace-nowrap xl:text-[16px]   md:text-[13px] sm:text-[10px] ">
               تمام حقوق مادی و معنوی این مجموعه متعلق به HexaSquad.ir میباشد
             </p>
-            <img className="w-4 items-center" src={copyright} alt="img not found :(" />
+            <img
+              className="w-4 items-center"
+              src={copyright}
+              alt="img not found :("
+            />
           </div>
         </div>
       </div>
