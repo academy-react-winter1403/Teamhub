@@ -1,19 +1,17 @@
-
 // import testVideo from "./../assets/images/testVideo.mp4";
 
-import Comment from "../components/comment/Comment";
-import Rating from "../components/rating/Rating";
-import BlogHero from "../components/blogHero/BlogHero";
-import BlogText from "../components/blogText/BlogText";
-import ShareComp from "../components/shareComp/ShareComp";
-
+import Comment from "../components/common/Comment";
+import Rating from "../components/common/Rating";
+import BlogHero from "../components/articles/BlogHero";
+import BlogText from "../components/articles/BlogText";
+import ShareComp from "../components/common/ShareBtns";
 
 const BlogDetails = () => {
   return (
     <div className="bg-gray-100 w-full flex flex-col justify-between items-center">
       <BlogHero />
 
-      <BlogText/>
+      <BlogText />
 
       {/* <div className="w-[842px] h-[480px]  mx-auto mb-15 rounded-2xl  ">
         <video className="w-full rounded-lg shadow-lg" controls autoPlay loop>
@@ -32,11 +30,11 @@ const BlogDetails = () => {
         </p>
       </div>
 
-      <ShareComp/>
+      <ShareComp />
 
       <div className="w-[842px] flex justify-between items-center">
-      <Rating />
-      </div>  
+        <Rating />
+      </div>
       <div className="w-[842px] h-[500px] bg-[rgba(255,255,255,1)] rounded-3xl mx-auto mb-10 p-8 ">
         <h1 className="w-[300px] h-[37px] font-bold text-2xl mx-auto whitespace-nowrap pb-15">
           نظر کاربران درباره این مقاله

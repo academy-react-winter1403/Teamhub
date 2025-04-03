@@ -5,8 +5,7 @@ import fIcon from "./../../assets/images/fIcon.svg";
 const ShareComp = () => {
   return (
     <>
-
-    <div className="h-[64px] w-[842px] bg-base-300 rounded-2xl flex  mx-auto items-center justify-between mb-10 px-5">
+      <div className="h-[64px] w-[842px] bg-base-300 rounded-2xl flex  mx-auto items-center justify-between mb-10 px-5">
         <div className="w-[103px] h-[25px] ">
           <img src={shareText} alt="not found" />
         </div>
@@ -16,9 +15,8 @@ const ShareComp = () => {
           <img src={igIcon} alt="not found" />
         </div>
       </div>
-      
     </>
-  )
-}
+  );
+};
 
-export default ShareComp
+export default ShareComp;

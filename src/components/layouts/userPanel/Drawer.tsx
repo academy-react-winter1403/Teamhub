@@ -1,6 +1,6 @@
-import SideProfile from "./SideProfile";
-import SideMenu from "./SideMenu";
-import SideFooter from "./SideFooter";
+import SideFooter from "../../userPanel/ui/SideFooter";
+import SideMenu from "../../userPanel/ui/SideMenu";
+import SideProfile from "../../userPanel/ui/SideProfile";
 
 const Drawer = () => {
   return (

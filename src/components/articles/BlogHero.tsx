@@ -1,4 +1,4 @@
-import DateAndView from "../../components/dateAndView/DateAndView";
+import DateAndView from "../common/DateAndView";
 import blogImg from "./../../assets/images/photo.svg";
 import avatarImg from "./../../assets/images/avatar.png";
 

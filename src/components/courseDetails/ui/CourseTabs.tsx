@@ -1,4 +1,4 @@
-import Comment from "../comment/Comment";
+import Comment from "../../common/Comment";
 import Description from "./Description";
 import LessonList from "./LessonList";
 
@@ -16,7 +16,6 @@ const CourseTabs = () => {
         <div className="tab-content border-base-300 bg-base-100 p-4">
           <Description />
         </div>
-
         <input
           type="radio"
           name="my_tabs_2"
@@ -27,7 +26,6 @@ const CourseTabs = () => {
         <div className="tab-content border-base-300 bg-base-100 p-4">
           <LessonList />
         </div>
-
         <input
           type="radio"
           name="my_tabs_2"

@@ -1,5 +1,5 @@
 // import { Fragment } from "react";
-import Drawer from "../userPanel/ui/Drawer";
+import Drawer from "../layouts/userPanel/Drawer";
 import { Outlet } from "react-router-dom";
 import PanelNavbar from "../userPanel/ui/PanelNavbar";
 // import UserPanel from "../userPanel/UserPanel";
