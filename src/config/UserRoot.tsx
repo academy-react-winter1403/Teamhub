@@ -1,7 +1,7 @@
 // import { Fragment } from "react";
-import Drawer from "../layouts/userPanel/Drawer";
+import Drawer from "../components/layouts/userPanel/Drawer";
 import { Outlet } from "react-router-dom";
-import PanelNavbar from "../userPanel/ui/PanelNavbar";
+import PanelNavbar from "../components/userPanel/ui/PanelNavbar";
 // import UserPanel from "../userPanel/UserPanel";
 
 const UserRoot = () => {

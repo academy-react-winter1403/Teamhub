@@ -1,5 +1,5 @@
 import LandingTitles from "../components/landing/LandnigTitles";
-import Search from "../components/common/search/Search";
+import Search from "../components/common/Search";
 import LandingReport from "../components/cards/landing/landingReport/LandingReport";
 import {
   AngularIcon,
