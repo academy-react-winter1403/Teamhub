@@ -9,7 +9,8 @@ const CourseDetails = () => {
       {/* static */}
       <div className="w-10/12 h-200 flex p-5 justify-between">
         <div className="w-2/3 h-full p-5 flex flex-col justify-between ">
-          <div className="reletive w-full h-7/11 rounded-4xl  bg-[url(./CourseImg.svg)] bg-no-repeat bg-cover bg-center">
+          <div className="relative w-full h-7/11 rounded-4xl  bg-[url(./CourseImg.svg)] bg-no-repeat bg-cover bg-center">
+            {/* api should changes */}
             <span className="absolute w-30 h-12 rounded-4xl bg-white top-40 right-50"></span>
             <span className="absolute w-30 h-12 rounded-4xl bg-white top-133 left-185"></span>
             <span className="absolute w-30 h-12 rounded-4xl bg-white top-133 left-150"></span>

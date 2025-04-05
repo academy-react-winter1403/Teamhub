@@ -3,8 +3,9 @@ import Root from "../Root";
 import NotFound from "../../pages/NotFound";
 
 import Cart from "../../pages/Cart";
-import Login from "../../pages/login";
-import Signup from "../../pages/signup";
+
+import Login from "../../pages/Login";
+import Signup from "../../pages/Signup";
 import { Blogs } from "../../pages/Blogs";
 import { Landing } from "../../pages/Landing";
 import BlogDetails from "../../pages/BlogDetails";
