@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Root";
-import NotFound from "../../Pages/NotFound";
+import NotFound from "../../pages/NotFound";
 
-import Cart from "../../Pages/Cart";
-import Login from "../../Pages/login";
-import Signup from "../../Pages/signup";
-import { Blogs } from "../../Pages/Blogs";
-import { Landing } from "../../Pages/Landing";
-import BlogDetails from "../../Pages/BlogDetails";
-import { CourseList } from "../../Pages/CourseList";
-import CourseDetails from "../../Pages/CourseDetails";
+import Cart from "../../pages/Cart";
+import Login from "../../pages/login";
+import Signup from "../../pages/signup";
+import { Blogs } from "../../pages/Blogs";
+import { Landing } from "../../pages/Landing";
+import BlogDetails from "../../pages/BlogDetails";
+import { CourseList } from "../../pages/CourseList";
+import CourseDetails from "../../pages/CourseDetails";
 
 import UserRoot from "../UserRoot";
 import MyCourses from "../../components/userPanel/ui/MyCourses";
