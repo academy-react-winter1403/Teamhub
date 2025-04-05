@@ -1,4 +1,4 @@
-import CtgCards from "../cards/landing/ctgCards";
+import CtgCards from "../cards/landing/ctgCards/Index";
 
 const LandingCtg = () => {
   return (
@@ -22,7 +22,7 @@ const LandingCtg = () => {
         </div>
       </div>
       {/* background */}
-      <div className="absolute w-full h-120 -z-10">
+      <div className="relative w-full h-120 -z-10">
         <span className="absolute block bg-no-repeat bg-contain bg-[url(./dot.svg)] w-100 h-38 bottom-140 right-90"></span>
         <span className="absolute block bg-no-repeat bg-contain bg-[url(./Ellipse.svg)] size-32 bottom-140 right-160"></span>
         <span className="absolute block bg-no-repeat bg-contain bg-[url(./RectangleBlue.svg)] w-250 h-120 bottom-160 left-0"></span>

@@ -1,4 +1,4 @@
-const NexAndpre = () => {
+const Pagination = () => {
   return (
     <div>
       <div className="join mb-10 gap-1 items-center">
@@ -20,4 +20,4 @@ const NexAndpre = () => {
   );
 };
 
-export { NexAndpre };
+export { Pagination };

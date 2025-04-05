@@ -1,6 +1,6 @@
 import { CardViewOne } from "../components/cards/courseCards/CardViewOne";
 import { CardViewTwo } from "../components/cards/courseCards/CardViewTwo";
-import { NexAndpre } from "../components/common/pagination";
+import { Pagination } from "../components/common/Pagination";
 import { Filters } from "../components/courseList/filter/Filters";
 
 const CourseList = () => {
@@ -56,7 +56,7 @@ const CourseList = () => {
             </button>
           </div>
 
-          <NexAndpre />
+          <Pagination />
         </div>
       </div>
     </div>
