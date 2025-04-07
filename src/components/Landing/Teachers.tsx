@@ -8,7 +8,7 @@ import TeacherCard from "../cards/landing/teachers/Index.tsx";
 
 const Slider: React.FC = () => {
   return (
-    <div className="w-full py-10 bg-blue-50">
+    <div id="teachers" className="w-full py-10 bg-blue-50">
       <h2 className="text-center text-2xl font-bold text-gray-800 mb-6">
         اساتید برتر
       </h2>

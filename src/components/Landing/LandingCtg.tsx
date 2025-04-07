@@ -1,4 +1,5 @@
 import CtgCards from "../cards/landing/ctgCards/Index";
+import { LandingCtgSub } from "../../core/constants/mock/LandingCtg";
 
 const LandingCtg = () => {
   return (
@@ -8,12 +9,10 @@ const LandingCtg = () => {
         {/* right */}
         <div className="w-1/4 h-38 flex flex-col justify-between z-50">
           <h4 className="font-black text-4xl text-justify z-50">
-            دسته بندی‌ دوره‌ها
+            {LandingCtgSub[0].title}
           </h4>
           <p className="font-medium text-base text-justify z-50">
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+            {LandingCtgSub[0].desc}
           </p>
         </div>
         {/* left */}

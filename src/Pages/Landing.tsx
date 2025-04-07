@@ -1,6 +1,11 @@
 import LandingTitles from "../components/landing/LandnigTitles";
 import Search from "../components/common/Search";
 import LandingReport from "../components/cards/landing/landingReport/LandingReport";
+import Services from "../components/landing/Services";
+import TopCourse from "../components/landing/TopCourse";
+import LandingCtg from "../components/landing/LandingCtg";
+import Teachers from "../components/landing/Teachers";
+import LandingBlogs from "../components/landing/LandingBlogs";
 import {
   AngularIcon,
   Css,
@@ -11,11 +16,6 @@ import {
   Sass,
   Vue,
 } from "../assets/icons/landing/BannerIcons";
-import Services from "../components/landing/Services";
-import TopCourse from "../components/landing/TopCourse";
-import LandingCtg from "../components/landing/LandingCtg";
-import Teachers from "../components/landing/Teachers";
-import LandingBlogs from "../components/landing/LandingBlogs";
 
 const Landing = () => {
   return (

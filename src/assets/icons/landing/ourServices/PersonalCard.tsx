@@ -1,6 +1,6 @@
 const PersonalCard = () => {
   return (
-    <div>
+    <div className="w-16 h-16 text-gray-600">
       <svg
         width="68"
         height="60"

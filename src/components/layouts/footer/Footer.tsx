@@ -6,6 +6,7 @@ import social3 from "../../../assets/images/Social Medias (2).svg";
 import social4 from "../../../assets/images/Social Medias (3).svg";
 import social5 from "../../../assets/images/Social Medias (4).svg";
 import copyright from "../../../assets/images/copyright.svg";
+import { FooterDataTxt } from "../../../core/constants/mock/FooterData";
 
 const Footer = () => {
   return (
@@ -16,10 +17,23 @@ const Footer = () => {
             <p className="font-black">هگزا اسکواد</p>
             <img className="h-7 " src={hegzaImg} alt="image not found :(" />
           </div>
-          <p className="xl:text-[20px] md:text-[18px] font-normal leading-8 pb-5 ">
+          {FooterDataTxt.map((items, index) => {
+            const tags = ["p"];
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const Tag = tags[index] as any;
+            const textSize = [
+              "xl:text-[20px] md:text-[18px] font-normal leading-8 pb-5",
+            ][index];
+            return (
+              <Tag key={index} className={textSize}>
+                {items.title}
+              </Tag>
+            );
+          })}
+          {/* <p className="xl:text-[20px] md:text-[18px] font-normal leading-8 pb-5 ">
             هدف ما سهولت دسترسی و دریافت خدمات از همه ی نقاط کشور
             <br /> با کمترین تعرفه و بدون نیاز مراجعه حضوری در کل فرایند ثبت
-          </p>
+          </p> */}
         </div>
         <div className="join relative pt-7 flex flex-col gap-8 ">
           <div>

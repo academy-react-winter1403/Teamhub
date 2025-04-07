@@ -1,3 +1,27 @@
+export interface NavbarLink {
+    title: string;
+    path: string;
+}
+
+export interface LandingHero {
+    title: string;
+}
+
+export interface LandingService {
+    title: string;
+    desc: string;
+}
+
+export interface LandingCtg {
+    title: string;
+    desc: string;
+
+}
+
+export interface FooterData {
+    title: string;
+}
+
 export interface Teacher {
     name: string;
     field: string;
@@ -11,21 +35,4 @@ export interface Article {
     image: string;
     date: string;
     views: number;
-  }
-
-export interface NavbarLink {
-    title: string;
-    path: string;
-}
-
-export interface CourseInfos {
-    title: string;
-    description: string;
-    favorite: number;
-    studentCount: number;
-    status: string;
-    startDate:string;
-    endDate:string;
-    lessons:number;
-    hour:string;
 }
