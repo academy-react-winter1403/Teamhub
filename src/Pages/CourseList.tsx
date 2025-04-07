@@ -1,6 +1,7 @@
-import { CardViewOne } from "../components/cards/courseCards/CardViewOne";
 import { CardViewTwo } from "../components/cards/courseCards/CardViewTwo";
+import { CardWrapper } from "../components/cards/courseCards/wrapper/CardWrapper";
 import { Pagination } from "../components/common/Pagination";
+import Search from "../components/common/Search";
 import { Filters } from "../components/courseList/filter/Filters";
 
 const CourseList = () => {
@@ -12,26 +13,12 @@ const CourseList = () => {
 
         <div className="courses rounded-xl w-[70%]">
           <div className="tabs tabs-box flex bg-[#FAFBFC] mb-5">
-            <input
-              type="radio"
-              name="my_tabs_6"
-              className="tab bg-[url(/grid-1.svg)] bg-no-repeat bg-center m-1 mb-8"
-              defaultChecked
-            />
+            <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-1.svg)] bg-no-repeat bg-center m-1 mb-8" defaultChecked/>
             <div className="tab-content bg-[#FAFBFC]">
-              <div className="courseCards w-full flex flex-wrap justify-between gap-2">
-                <CardViewOne />
-                <CardViewOne />
-                <CardViewOne />
-                <CardViewOne />
-              </div>
+                <CardWrapper/>
             </div>
 
-            <input
-              type="radio"
-              name="my_tabs_6"
-              className="tab bg-[url(/grid-2.svg)] bg-no-repeat bg-center m-1"
-            />
+            <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-2.svg)] bg-no-repeat bg-center m-1"/>
             <div className="tab-content bg-[#FAFBFC] border-base-300">
               <CardViewTwo />
               <CardViewTwo />
@@ -39,23 +26,15 @@ const CourseList = () => {
               <CardViewTwo />
             </div>
 
-            <div className="w-[65%] box-border pl-10 pr-10">
-              <label className="input outline-none rounded-xl w-full border-0 drop-shadow-sm">
-                <input
-                  type="search"
-                  className="grow outline-none bg-[url(./search-normal.svg)] bg-no-repeat bg-3 bg-left"
-                  placeholder="چی میخوای یاد بگیری ؟"
-                />
-              </label>
+            <div className="flex w-[90%]">
+              <Search/>
+              <button className="btn w-[25%] h-11 bg-white  rounded-xl shadow-md font-light">
+                <img src="./sort.svg" alt="" />
+                محبوب ترین ها
+                <img src="./arrow-down.svg" className="mr-5" alt="" />
+              </button>
             </div>
-
-            <button className="btn w-[25%] h-11 bg-white  rounded-xl shadow-md font-light">
-              <img src="./sort.svg" alt="" />
-              محبوب ترین ها
-              <img src="./arrow-down.svg" className="mr-5" alt="" />
-            </button>
           </div>
-
           <Pagination />
         </div>
       </div>
