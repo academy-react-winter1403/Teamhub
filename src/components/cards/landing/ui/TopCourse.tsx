@@ -7,13 +7,13 @@ const TopCard = () => {
           Title
         </h3>
         <div className="w-9/10 h-10 flex justify-between bg-[#ECEFF1] rounded-4xl items-center">
-          <span className="w-2/10 indent-3 bg-[url(./note-2.svg)] bg-no-repeat bg-right bg-[14px]">
+          <span className="w-2/10 indent-3 bg-[url(./note-2.svg)] bg-no-repeat bg-right">
             lesson
           </span>
-          <span className=" w-2/10 indent-3 bg-[url(./clock.svg)] bg-no-repeat bg-[14px] bg-right">
+          <span className=" w-2/10 indent-3 bg-[url(./clock.svg)] bg-no-repeat bg-right">
             hour
           </span>
-          <span className="w-2/10 indent-3 bg-[url(./calendar.svg)] bg-no-repeat bg-[14px] bg-right ">
+          <span className="w-2/10 indent-3 bg-[url(./calendar.svg)] bg-no-repeat bg-right ">
             date
           </span>
         </div>
