@@ -1,5 +1,5 @@
-import { CardViewTwo } from "../components/cards/courseCards/CardViewTwo";
-import { CardWrapper } from "../components/cards/courseCards/wrapper/CardWrapper";
+import { WrapperViewOne } from "../components/cards/courseCards/wrapper/WrapperViewOne";
+import { WrapperViewTwo } from "../components/cards/courseCards/wrapper/WrapperViewTwo";
 import { Pagination } from "../components/common/Pagination";
 import Search from "../components/common/Search";
 import { Filters } from "../components/courseList/filter/Filters";
@@ -13,17 +13,14 @@ const CourseList = () => {
 
         <div className="courses rounded-xl w-[70%]">
           <div className="tabs tabs-box flex bg-[#FAFBFC] mb-5">
-            <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-1.svg)] bg-no-repeat bg-center m-1 mb-8" defaultChecked/>
+            <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-1.svg)] bg-no-repeat bg-center m-1 mb-8 " defaultChecked/>
             <div className="tab-content bg-[#FAFBFC]">
-                <CardWrapper/>
+                <WrapperViewOne/>
             </div>
 
-            <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-2.svg)] bg-no-repeat bg-center m-1"/>
+            <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-2.svg)] bg-no-repeat bg-center m-1 "/>
             <div className="tab-content bg-[#FAFBFC] border-base-300">
-              <CardViewTwo />
-              <CardViewTwo />
-              <CardViewTwo />
-              <CardViewTwo />
+                <WrapperViewTwo/>
             </div>
 
             <div className="flex w-[90%]">

@@ -21,8 +21,7 @@ const CardViewOne = () => {
           </div>
   
           <div className="flex mt-3 items-center relative justify-between">
-            <span className="likes flex justify-around w-15 items-center bg-pink-100 text-red-400 p-1 rounded-xl">
-              <img src="./cardIcons/likes.svg" alt=""/> {"۴۵"}
+            <span className="likes flex justify-around w-7 h-7 items-center bg-[url(/cardIcons/likes.svg)]  bg-no-repeat bg-center bg-pink-100 text-red-400 p-1 rounded-xl">
             </span>
             <span className="price font-bold text-lg text-blue-500">{"۱,۲۰۰,۰۰۰ تومان"}</span>
           </div>
