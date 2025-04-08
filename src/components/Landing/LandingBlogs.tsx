@@ -1,6 +1,6 @@
 import React from "react";
 import { articles } from "../../core/constants/mock/ArticelsMock";
-import ArticleCard from "../cards/landing/articels/Index";
+import ArticleCard from "../cards/landing/ui/ArticlesSec";
 
 const ArticlesSection: React.FC = () => {
   return (
