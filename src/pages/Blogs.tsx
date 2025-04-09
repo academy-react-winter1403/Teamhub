@@ -1,3 +1,4 @@
+
 import mainImg from "../assets/images/BlogMainImg.svg";
 import bgMain from "../assets/images/Rectangle24.svg";
 import mainDot1 from "../assets/images/dot1.svg";
@@ -7,8 +8,29 @@ import mainEllipse from "../assets/images/Ellipse.svg";
 import Search from "../components/common/Search";
 import BlogCard from "../components/articles/BlogCard";
 import { Pagination } from "../components/common/Pagination";
+import { getCards } from "../core/services/api/Blog";
+import { useEffect, useState } from "react";
+import { INews } from "../core/services/types/news.type";
+
 
 const Blogs = () => {
+  // <{news: INews[],totalCount:number}|null>
+
+  const [newsCards, setNewsCards] = useState<{news: INews[],totalCount:number}|null>();
+
+    useEffect(() => {
+
+      
+      getCards().then((result)=>{
+
+        setNewsCards(result)
+        
+      });
+
+    }, []);
+    
+    // console.log(newsCards[0].);
+
   return (
     <div className="w-full bg-[#FAFBFC] mt-5 mb-15">
       <div className="w-12/13 h-[450px] relative mb-19 ">
@@ -65,9 +87,16 @@ const Blogs = () => {
         </div>
 
         <div className="flex  flex-row flex-wrap gap-8 py-10">
+        
+                {
+          newsCards?.news.map((item) => (
+            <BlogCard {...item} />
+          ))
+        }
+{/* 
           <BlogCard />
           <BlogCard />
-          <BlogCard />
+          <BlogCard />  */}
         </div>
 
         <Pagination />
