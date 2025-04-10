@@ -1,6 +1,11 @@
 import cardImg from "../../assets/images/workingImg.jpg";
+import { INews } from "../../core/services/types/news.type";
 import DateAndView from "../common/DateAndView";
-const BlogCard = () => {
+
+ 
+
+const BlogCard = (props:INews ) => {
+  const {title,id,currentView,insertDate,miniDescribe,currentImageAddressTumb} = props
   return (
     <>
       <div className="w-[31.8%] h-[450px] shadow rounded-2xl">
@@ -12,17 +17,14 @@ const BlogCard = () => {
           />
         </div>
         <div className="flex flex-col  text-right p-2 ">
-          <h1 className="font-bold text-xl py-3">
-            {" "}
-            چگونه مطالعه موثر را برای شما آسانتر کنیم.
-          </h1>
+          <h3 className="font-bold text-xl py-3 truncate">
+            {title}
+          </h3>
           <p className="pb-4 font-normal text-sm text-[rgba(69,90,100,1)]">
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد.
+              {miniDescribe}
           </p>
           <div className=" flex justify-start ">
-            <DateAndView />
+            <DateAndView date={insertDate} view={currentView}/>
           </div>
         </div>
       </div>
