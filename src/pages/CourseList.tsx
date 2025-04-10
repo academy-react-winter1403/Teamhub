@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { WrapperViewOne } from "../components/cards/courseCards/wrapper/WrapperViewOne";
 import { WrapperViewTwo } from "../components/cards/courseCards/wrapper/WrapperViewTwo";
@@ -34,6 +35,7 @@ const CourseList = () => {
           <p className="text-xl text-[#263238] text-justify">آموزش برنامه نویسی یکی از دوره‌های محبوب در حوزه فناوری اطلاعات است. برنامه نویسی مهارتی است که به افراد امکان می‌دهد تا نرم‌افزارهای کامپیوتری را ایجاد و توسعه دهند. </p>
         </div>
       </div>
+
       <div className="w-[90%] flex justify-center gap-5">
         <Filters />
 
@@ -56,6 +58,7 @@ const CourseList = () => {
               setCardList={setCardList}
               originalData={originalData}
               />
+
               <button className="btn w-[25%] h-11 bg-white  rounded-xl shadow-md font-light">
                 <img src="./sort.svg" alt="" />
                 محبوب ترین ها
