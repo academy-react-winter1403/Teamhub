@@ -1,10 +1,30 @@
+import { useEffect, useState } from "react";
 import { WrapperViewOne } from "../components/cards/courseCards/wrapper/WrapperViewOne";
 import { WrapperViewTwo } from "../components/cards/courseCards/wrapper/WrapperViewTwo";
 import { Pagination } from "../components/common/Pagination";
-import Search from "../components/common/Search";
+import {Search} from "../components/courseList/search/Search";
 import { Filters } from "../components/courseList/filter/Filters";
+import { getCourseList } from "../core/services/api/CourseList";
 
 const CourseList = () => {
+  interface Course{
+    title: string
+  }
+  const [cardList, setCardList] = useState<Course[]>([])
+  const [originalData, setoriginalData] = useState<Course[]>([])
+
+  const getCouseData= async() => {
+    const response = await getCourseList()
+    const dataArray= Object.values(response)
+    setCardList(dataArray[0] as Course[])
+    setoriginalData(dataArray[0] as Course[])
+    console.log(dataArray[0])
+  }
+
+  useEffect(() => {
+    getCouseData()
+  }, [])
+
   return (
     <div className="bg-[#FAFBFC] relative w-full flex flex-col justify-center items-center">
       <div className="banner flex items-center h-130 w-[90%] bg-[url(/courseListBanner.svg)] bg-no-repeat bg-center bg-contain mb-15 p-10">
@@ -21,7 +41,9 @@ const CourseList = () => {
           <div className="tabs tabs-box flex bg-[#FAFBFC] mb-5">
             <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-1.svg)] bg-no-repeat bg-center m-1 mb-8 " defaultChecked/>
             <div className="tab-content bg-[#FAFBFC]">
-                <WrapperViewOne/>
+                <WrapperViewOne
+                cardList={cardList}
+                />
             </div>
 
             <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-2.svg)] bg-no-repeat bg-center m-1 "/>
@@ -30,7 +52,10 @@ const CourseList = () => {
             </div>
 
             <div className="flex w-[90%]">
-              <Search/>
+              <Search
+              setCardList={setCardList}
+              originalData={originalData}
+              />
               <button className="btn w-[25%] h-11 bg-white  rounded-xl shadow-md font-light">
                 <img src="./sort.svg" alt="" />
                 محبوب ترین ها
