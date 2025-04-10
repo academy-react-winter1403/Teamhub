@@ -1,29 +1,14 @@
-import { useEffect, useState } from "react"
 import { CardViewOne } from "../CardViewOne"
-import { getCourseList } from "../../../../core/services/api/CourseList"
+interface Course{
+  title: string
+}
 
-
-const WrapperViewOne = () => {
-  interface Course{
-    title: string
-  }
-  const [courseList, setCourseList] = useState<Course[]>([])
-
-  const getCouseData= async() => {
-    const response = await getCourseList()
-    const dataArray= Object.values(response)
-    setCourseList(dataArray[0] as Course[])
-    console.log(dataArray[0])
-  }
-
-  useEffect(() => {
-    getCouseData()
-  }, [])
+const WrapperViewOne = ({cardList}: {cardList: Course[]}) => {
   
 
   return (
     <div className="courseCards w-full flex flex-wrap justify-between gap-2">
-      {courseList.map((item, index)=>(
+      {cardList.map((item, index)=>(
 
           <CardViewOne 
           key={index} 
