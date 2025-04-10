@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { teachers } from "../../core/constants/mock/TeachersMockData.tsx";
-import TeacherCard from "../cards/landing/teachers/Index.tsx";
+import TeacherCard from "../cards/landing/ui/Teachers.tsx";
 
 const Slider: React.FC = () => {
   return (

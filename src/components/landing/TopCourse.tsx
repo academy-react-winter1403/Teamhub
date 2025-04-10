@@ -1,4 +1,4 @@
-import TopCard from "../cards/landing/topCourse/Index";
+import TopCard from "../cards/landing/ui/TopCourse";
 import SeeAllBtn from "../common/buttons/SeeAllBtn";
 
 const TopCourse = () => {

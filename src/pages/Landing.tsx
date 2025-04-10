@@ -1,6 +1,7 @@
 import LandingTitles from "../components/landing/LandnigTitles";
 import Search from "../components/common/Search";
-import LandingReport from "../components/cards/landing/landingReport/LandingReport";
+
+import LandingReport from "../components/cards/landing/ui/LandingReport";
 import Services from "../components/landing/Services";
 import TopCourse from "../components/landing/TopCourse";
 import LandingCtg from "../components/landing/LandingCtg";
@@ -30,7 +31,9 @@ const Landing = () => {
             <Html5 />
           </div>
           {/* banner */}
-          <div className="flex flex-col justify-between gap-2.5 flex-nowrap w-3xl">
+
+          <div className="flex flex-col justify-between gap-2.5 flex-nowrap w-4xl">
+
             <LandingTitles />
             <Search />
             <LandingReport />

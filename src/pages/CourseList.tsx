@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { WrapperViewOne } from "../components/cards/courseCards/wrapper/WrapperViewOne";
 import { WrapperViewTwo } from "../components/cards/courseCards/wrapper/WrapperViewTwo";
@@ -36,11 +35,13 @@ const CourseList = () => {
         </div>
       </div>
 
+
       <div className="w-[90%] flex justify-center gap-5">
         <Filters />
 
         <div className="courses rounded-xl w-[70%]">
           <div className="tabs tabs-box flex bg-[#FAFBFC] mb-5">
+
             <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-1.svg)] bg-no-repeat bg-center m-1 mb-8 " defaultChecked/>
             <div className="tab-content bg-[#FAFBFC]">
                 <WrapperViewOne
@@ -58,6 +59,7 @@ const CourseList = () => {
               setCardList={setCardList}
               originalData={originalData}
               />
+
 
               <button className="btn w-[25%] h-11 bg-white  rounded-xl shadow-md font-light">
                 <img src="./sort.svg" alt="" />

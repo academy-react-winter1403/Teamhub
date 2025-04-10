@@ -1,4 +1,4 @@
-import CtgCards from "../cards/landing/ctgCards/Index";
+import CtgCards from "../cards/landing/ui/CtgCards";
 import { LandingCtgSub } from "../../core/constants/mock/LandingCtg";
 
 const LandingCtg = () => {
