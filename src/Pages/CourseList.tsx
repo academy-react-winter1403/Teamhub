@@ -7,7 +7,13 @@ import { Filters } from "../components/courseList/filter/Filters";
 const CourseList = () => {
   return (
     <div className="bg-[#FAFBFC] relative w-full flex flex-col justify-center items-center">
-      <div className="banner h-130 w-[90%] bg-[url(/courseListBanner.png)] bg-no-repeat bg-center bg-contain"></div>
+      <div className="banner flex items-center h-130 w-[90%] bg-[url(/courseListBanner.svg)] bg-no-repeat bg-center bg-contain mb-15 p-10">
+        <div className="flex flex-col gap-8 w-160">
+          <h2 className="text-right font-semibold text-blue-500 text-2xl">مهمه از کی یاد می گیری!!</h2>
+          <h1 className="text-right font-semibold text-5xl">آموزش برنامه نویسی با بهترین ها</h1>
+          <p className="text-xl text-[#263238] text-justify">آموزش برنامه نویسی یکی از دوره‌های محبوب در حوزه فناوری اطلاعات است. برنامه نویسی مهارتی است که به افراد امکان می‌دهد تا نرم‌افزارهای کامپیوتری را ایجاد و توسعه دهند. </p>
+        </div>
+      </div>
       <div className="w-[90%] flex justify-center gap-5">
         <Filters />
 
