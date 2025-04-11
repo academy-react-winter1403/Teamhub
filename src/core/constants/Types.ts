@@ -36,3 +36,14 @@ export interface Article {
     date: string;
     views: number;
 }
+
+export interface CourseListHero {
+    title: string;
+}
+
+export interface CourseState{
+    title: string
+    teacherName: string
+    cost: number
+    describe: string
+  }

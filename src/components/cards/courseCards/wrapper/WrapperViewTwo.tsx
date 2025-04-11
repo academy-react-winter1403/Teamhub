@@ -1,12 +1,21 @@
+import { CourseState } from "../../../../core/constants/Types"
 import { CardViewTwo } from "../CardViewTwo"
 
-const WrapperViewTwo = () => {
+
+const WrapperViewTwo = ({cardList}: {cardList: CourseState[]}) => {
   return (
     <div>
-        <CardViewTwo />
-        <CardViewTwo />
-        <CardViewTwo />
-        <CardViewTwo />
+      {cardList.map((item, index) => 
+        <CardViewTwo
+        key={index} 
+        title={item.title}
+        teacherName={item.teacherName}
+        cost={item.cost}
+        describe={item.describe}
+        />
+      )}
+
+
     </div>
   )
 }
