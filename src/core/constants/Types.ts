@@ -36,3 +36,7 @@ export interface Article {
     date: string;
     views: number;
 }
+
+export interface Auth{
+    title: string;
+}
