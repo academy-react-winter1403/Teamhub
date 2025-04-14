@@ -6,9 +6,7 @@ import RegisterModal from "./RegisterModal";
 import { AuthData } from "../../../core/constants/mock/AuthData";
 
 const LoginModalBtn = () => {
-  const [step, setStep] = useState(5);
-
-  console.error(setStep);
+  const [step, setStep] = useState(1);
 
   // const nextStep = () => setStep((prev) => prev + 1);
   // const prevStep = () => setStep((prev) => (prev > 1 ? prev - 1 : 1));
