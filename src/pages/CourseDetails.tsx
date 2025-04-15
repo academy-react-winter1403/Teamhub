@@ -11,9 +11,9 @@ const CourseDetails = () => {
         <div className="w-2/3 h-full p-5 flex flex-col justify-between ">
           <div className="relative w-full h-7/11 rounded-4xl  bg-[url(./CourseImg.svg)] bg-no-repeat bg-cover bg-center">
             {/* api should changes */}
-            <span className="absolute w-30 h-12 rounded-4xl bg-white top-40 right-50"></span>
-            <span className="absolute w-30 h-12 rounded-4xl bg-white top-133 left-185"></span>
-            <span className="absolute w-30 h-12 rounded-4xl bg-white top-133 left-150"></span>
+            <span className="absolute w-20 h-12 rounded-4xl bg-white top-5 right-5"></span>
+            <span className="absolute w-30 h-12 rounded-4xl bg-white bottom-5 left-10"></span>
+            <span className="absolute w-30 h-12 rounded-4xl bg-white bottom-5 left-45"></span>
           </div>
           {/* title */}
           <div className="w-full h-2/11 flex flex-col justify-between">

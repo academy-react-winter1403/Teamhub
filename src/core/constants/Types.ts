@@ -37,6 +37,24 @@ export interface Article {
     views: number;
 }
 
+export interface CourseListHero {
+    title: string;
+}
+
+export interface CourseState{
+    id: number
+    title: string
+    teacherName: string
+    cost: number
+    describe: string
+  }
+export interface CourseState2{
+    title: string
+    teacherName: string
+    cost: number
+  }
+
 export interface Auth{
     title: string;
 }
+

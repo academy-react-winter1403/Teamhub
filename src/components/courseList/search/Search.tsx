@@ -1,9 +1,9 @@
-interface Course{
-    title: string
-}
+import { CourseState } from "../../../core/constants/Types";
+
+
 interface Props{
-    setCardList: (data: Course[]) => void
-    originalData: Course[]
+    setCardList: (data: CourseState[]) => void
+    originalData: CourseState[]
 }
 
 const Search = ({setCardList, originalData}: Props) => {
@@ -20,8 +20,8 @@ const Search = ({setCardList, originalData}: Props) => {
     };
   
     return (
-        <div className="w-full h-14 box-border pl-10 pr-10">
-            <label className="h-full input outline-none rounded-4xl w-full border-0 drop-shadow-sm">
+        <div className="w-full h-12 box-border pl-10 pr-10">
+            <label className="h-full input outline-none rounded-xl w-full border-0 drop-shadow-sm">
             <input
                 type="search"
                 className="grow outline-none bg-[url(./search-normal.svg)] bg-no-repeat bg-3 bg-left"

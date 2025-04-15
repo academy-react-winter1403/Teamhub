@@ -6,7 +6,7 @@ const instance = axios.create({
 })
 
 const onSuccess = (response: AxiosResponse) => {
-    return response.data;
+    return response;
 }
 
 const onError = (err: Error | AxiosError) => { 
