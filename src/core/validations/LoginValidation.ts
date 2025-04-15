@@ -9,5 +9,5 @@ export const loginSchema = Yup.object({
         const isPhone =/^09\d{9}$/.test(value);
         return isEmail || isPhone;
     }),
-    password:Yup.string().min(6,"رمز عبور حداقل باید 8 کاراکتر باشد").required("رمز عبور الزامی است")    
+    password:Yup.string().min(8,"رمز عبور حداقل باید 8 کاراکتر باشد").required("رمز عبور الزامی است")    
 });

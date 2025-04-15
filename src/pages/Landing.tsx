@@ -4,8 +4,8 @@ import LandingReport from "../components/cards/landing/ui/LandingReport";
 import Services from "../components/landing/Services";
 import TopCourse from "../components/landing/TopCourse";
 import LandingCtg from "../components/landing/LandingCtg";
-import Teachers from "../components/landing/Teachers";
-import LandingBlogs from "../components/landing/LandingBlogs";
+// import Teachers from "../components/landing/Teachers";
+// import LandingBlogs from "../components/landing/LandingBlogs";
 import {
   AngularIcon,
   Css,
@@ -16,6 +16,8 @@ import {
   Sass,
   Vue,
 } from "../assets/icons/landing/BannerIcons";
+import InstructorCarousel from "../components/landing/instructor";
+import ArticlesSection from "../components/landing/articles-section";
 
 const Landing = () => {
   return (
@@ -47,8 +49,8 @@ const Landing = () => {
       <Services />
       <TopCourse />
       <LandingCtg />
-      <Teachers />
-      <LandingBlogs />
+      <InstructorCarousel />
+      <ArticlesSection />
     </>
   );
 };
