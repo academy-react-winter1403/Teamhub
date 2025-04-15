@@ -53,3 +53,8 @@ export interface CourseState2{
     teacherName: string
     cost: number
   }
+
+export interface Auth{
+    title: string;
+}
+

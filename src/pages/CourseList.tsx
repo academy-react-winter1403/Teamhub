@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { WrapperViewOne } from "../components/cards/courseCards/wrapper/WrapperViewOne";
 import { WrapperViewTwo } from "../components/cards/courseCards/wrapper/WrapperViewTwo";
 import { Pagination } from "../components/common/Pagination";
-import {Search} from "../components/courseList/search/Search";
+import { Search } from "../components/courseList/search/Search";
 import { Filters } from "../components/courseList/filter/Filters";
 import { getCourseList } from "../core/services/api/CourseList";
 import CourseListTitles from "../components/courseList/CourseListTitles";
@@ -11,6 +11,7 @@ import { PopularCoursesBtn } from "../components/courseList/PopularCoursesBtn";
 
 
 const CourseList = () => {
+
 
   const [cardList, setCardList] = useState<CourseState[]>([])
   const [originalData, setoriginalData] = useState<CourseState[]>([])
@@ -30,6 +31,7 @@ const CourseList = () => {
   return (
     <div className="bg-[#FAFBFC] relative w-full flex flex-col justify-center items-center">
       <CourseListTitles/>
+
       <div className="w-[90%] flex justify-center gap-5">
         <Filters />
 
@@ -37,13 +39,16 @@ const CourseList = () => {
           <div className="tabs tabs-box flex justify-between bg-[#FAFBFC] mb-5">
 
             <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-1.svg)] bg-no-repeat bg-center m-1 mb-8 " defaultChecked/>
+
             <div className="tab-content bg-[#FAFBFC]">
-                <WrapperViewOne
-                cardList={cardList}
-                />
+              <WrapperViewOne cardList={cardList} />
             </div>
 
-            <input type="radio" name="my_tabs_6" className="tab bg-[url(/grid-2.svg)] bg-no-repeat bg-center m-1 "/>
+            <input
+              type="radio"
+              name="my_tabs_6"
+              className="tab w-10 rounded-full bg-[url(/grid-2.svg)] bg-no-repeat bg-center m-1 "
+            />
             <div className="tab-content bg-[#FAFBFC] border-base-300">
                 <WrapperViewTwo
                 cardList={cardList}
@@ -56,6 +61,7 @@ const CourseList = () => {
               originalData={originalData}
               />
               <PopularCoursesBtn/>
+
             </div>
           </div>
           <Pagination />

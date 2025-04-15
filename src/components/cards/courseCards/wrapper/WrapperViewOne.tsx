@@ -14,10 +14,10 @@ const WrapperViewOne = ({cardList}: {cardList: CourseState2[]}) => {
           teacherName={item.teacherName}
           cost={item.cost}
           />
+
       ))}
+    </div>
+  );
+};
 
-    </div>  
-  )
-}
-
-export {WrapperViewOne}
+export { WrapperViewOne };

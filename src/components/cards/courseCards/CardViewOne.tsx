@@ -32,4 +32,4 @@ const CardViewOne = ({title, teacherName, cost}: CourseState2) => {
   )
 }
 
-export {CardViewOne}
+export { CardViewOne };
