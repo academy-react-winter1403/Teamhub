@@ -6,5 +6,5 @@ export interface LoginResponse {
     roles: string[] | null;
     message: string;
     success: boolean;
-    errors: string | null; // یا می‌تونی دقیق‌ترش کنی اگه بدونی errors چه ساختاری داره
+    errors: string | null; 
 }
