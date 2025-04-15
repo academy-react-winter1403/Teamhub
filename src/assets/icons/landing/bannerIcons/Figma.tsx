@@ -8,7 +8,7 @@ const Figma = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_16_1376)">
+        <g clipPath="url(#clip0_16_1376)">
           <path
             d="M22.75 64.5C28.7 64.5 33.5 59.7 33.5 53.75V43H22.75C16.8 43 12 47.8 12 53.75C12 59.7 16.8 64.5 22.75 64.5Z"
             fill="#0ACF83"
