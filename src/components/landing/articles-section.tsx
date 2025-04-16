@@ -101,12 +101,12 @@ export default function ArticlesSection() {
   };
 
   return (
-    <div className="bg-white py-16 px-4 md:px-8">
+    <div className="w-full bg-white py-16 px-4 md:px-8">
       <div className="container mx-auto">
         <div className="flex justify-center mb-12">
           <h2 className="text-3xl font-bold text-center text-gray-800 relative">
             <span className="relative z-10">اخبار و مقالات</span>
-            <span className="absolute bottom-0 left-0 right-0 h-1 bg-blue-500 transform -translate-y-2"></span>
+            <span className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gray-100 via-blue-400 to-gray-100 transform -translate-y-2 -mb-4"></span>
           </h2>
         </div>
 
@@ -160,9 +160,9 @@ export default function ArticlesSection() {
           {/* Featured article (larger) */}
           {filteredArticles.length > 0 && (
             <motion.div className="lg:col-span-1 rtl" variants={item}>
-              <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-1/2 overflow-hidden">
+              <div className="h-full bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                <div className="flex flex-col p-6 h-full">
+                  <div className="h-1/2 w-full">
                     <img
                       src={filteredArticles[0].image || "/placeholder.svg"}
                       alt={filteredArticles[0].title}
@@ -170,7 +170,7 @@ export default function ArticlesSection() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="md:w-1/2 p-6 flex flex-col justify-between">
+                  <div className="w-full p-6 flex flex-col justify-between">
                     <div>
                       <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mb-3">
                         {filteredArticles[0].category}
