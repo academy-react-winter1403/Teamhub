@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom"
-import { CourseState2 } from "../../../core/constants/Types"
+import { CourseState } from "../../../core/constants/Types";
+import courseImage from "../../../assets/images/CourseImg.svg"
 
-const CardViewOne = ({title, teacherName, cost}: CourseState2) => {
+const CardViewOne = ({courseId, title, teacherName, cost, tumbImageAddress}: CourseState) => {
   return (
-    <Link to="/CourseDetails" className="bg-white shadow-md rounded-2xl mb-5 p-4 w-80">
+    <Link to={"/CourseDetails/"+ courseId} className="bg-white shadow-md rounded-2xl mb-5 p-4 w-80">
         <img 
-          src={"./cardIcons/cardImage.svg"} alt="item"
-          className="rounded-xl object-cover w-full min-h-30"
+          src={tumbImageAddress && tumbImageAddress !== "Not-set" ? tumbImageAddress : courseImage} alt="item"
+          className="rounded-xl object-cover w-full h-45 "
         />
         <div className="mt-3">
           <h3 className="title font-medium text-right text-lg mr-3">{title}</h3>
@@ -23,7 +24,8 @@ const CardViewOne = ({title, teacherName, cost}: CourseState2) => {
           </div>
   
           <div className="flex mt-3 items-center relative justify-between">
-            <button className="likes btn w-7 h-7 items-center bg-[url(/cardIcons/likes.svg)] bg-no-repeat bg-center bg-contain bg-white border-0">
+            <button className="likes btn  h-10 p-5 items-center bg-[url(/cardIcons/likes.svg)] bg-no-repeat bg-[50%] bg-[size:25px] bg-pink-100 border-0 rounded-2xl">
+              {/* <span className="border-1 w-full text-left text-xl text-red-600">5</span> */}
             </button>
             <span className="price font-semibold text-lg text-blue-500">{cost +" تومان"}</span>
           </div>

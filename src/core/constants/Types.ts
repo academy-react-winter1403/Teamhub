@@ -42,11 +42,12 @@ export interface CourseListHero {
 }
 
 export interface CourseState{
-    id: number
     title: string
     teacherName: string
     cost: number
     describe: string
+    courseId: string;
+    tumbImageAddress: string
   }
 export interface CourseState2{
     title: string

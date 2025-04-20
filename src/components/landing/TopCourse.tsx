@@ -11,7 +11,6 @@ const TopCourse = () => {
     const response = await getTopCourses();
     const dataArray = Object.values(response);
     setCourseTop(dataArray as TopCourse[]);
-    // console.log(response)
   };
 
   useEffect(() => {
