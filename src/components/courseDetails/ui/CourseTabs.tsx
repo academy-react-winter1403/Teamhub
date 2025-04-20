@@ -2,7 +2,7 @@ import Comment from "../../common/Comment";
 import Description from "./Description";
 import LessonList from "./LessonList";
 
-const CourseTabs = () => {
+const CourseTabs = ({describe}: any) => {
   return (
     <div className="w-4/6 bg-white rounded-2xl">
       {/* name of each tab group should be unique */}
@@ -12,16 +12,17 @@ const CourseTabs = () => {
           name="my_tabs_2"
           className="tab"
           aria-label="توضیحات"
-        />
+        defaultChecked/>
         <div className="tab-content border-base-300 bg-base-100 p-4">
-          <Description />
+          <Description 
+          describe= {describe}
+          />
         </div>
         <input
           type="radio"
           name="my_tabs_2"
           className="tab"
           aria-label="پیش‌نمایش ها"
-          defaultChecked
         />
         <div className="tab-content border-base-300 bg-base-100 p-4">
           <LessonList />
