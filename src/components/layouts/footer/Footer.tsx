@@ -1,5 +1,4 @@
 import { Fragment } from "react/jsx-runtime";
-import hegzaImg from "../../../assets/images/logo.svg";
 import social1 from "../../../assets/images/Social Medias.svg";
 import social2 from "../../../assets/images/Social Medias (1).svg";
 import social3 from "../../../assets/images/Social Medias (2).svg";
@@ -7,6 +6,7 @@ import social4 from "../../../assets/images/Social Medias (3).svg";
 import social5 from "../../../assets/images/Social Medias (4).svg";
 import copyright from "../../../assets/images/copyright.svg";
 import { FooterDataTxt } from "../../../core/constants/mock/FooterData";
+import HeaderLogoDark from "../header/HeaderLogoDark";
 
 const Footer = () => {
   return (
@@ -14,8 +14,7 @@ const Footer = () => {
       <div className="h-125 w-full bg-[#252641] text-white">
         <div>
           <div className="flex flex-row-reverse gap-1.5 justify-center items-end text-2xl pt-10 pb-4 ">
-            <p className="font-black">هگزا اسکواد</p>
-            <img className="h-7 " src={hegzaImg} alt="image not found :(" />
+            <HeaderLogoDark />
           </div>
           {FooterDataTxt.map((items, index) => {
             const tags = ["p"];

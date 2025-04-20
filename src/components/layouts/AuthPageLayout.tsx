@@ -1,10 +1,10 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-import HeaderLogo from "./header/HeaderLogo";
+import HeaderLogoDark from "./header/HeaderLogoDark";
 
 const AuthPageLayout = () => {
   return (
     <div className="rounded-r-3xl w-1/2 h-full bg-gray-800 text-white flex flex-col items-center justify-around">
-      <HeaderLogo />
+      <HeaderLogoDark />
       <div className="flex gap-4">
         <a
           href="#"

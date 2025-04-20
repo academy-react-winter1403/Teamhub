@@ -71,6 +71,8 @@ export default function SimpleCart() {
     <div className="container mx-auto px-4 py-8">
       <CustomNavbar title={AuthData[14].title} />
 
+      <div className="divider"></div>
+
       {cartItems.length === 0 ? (
         <div className="text-center py-12">
           <h2 className="text-2xl font-semibold mb-4">Your cart is empty</h2>
