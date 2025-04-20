@@ -1,9 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Root";
 import NotFound from "../../pages/NotFound";
-
 import Cart from "../../pages/Cart";
-
 import Login from "../../pages/Login";
 import Signup from "../../pages/Signup";
 import { Blogs } from "../../pages/Blogs";
@@ -11,13 +9,13 @@ import { Landing } from "../../pages/Landing";
 import BlogDetails from "../../pages/BlogDetails";
 import { CourseList } from "../../pages/CourseList";
 import CourseDetails from "../../pages/CourseDetails";
-
 import UserRoot from "../UserRoot";
 import MyCourses from "../../components/userPanel/ui/MyCourses";
 import Dashboard from "../../components/userPanel/ui/Dashboard";
 import ProfileEdit from "../../components/userPanel/ui/ProfileEdit";
 import MyComments from "../../components/userPanel/ui/MyComments";
 import ChangePass from "../../components/userPanel/ui/ChangePass";
+import ForgetPassword from "../../pages/ForgetPassword";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +42,10 @@ export const router = createBrowserRouter([
       {
         path: "/BlogDetails",
         element: <BlogDetails />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },
@@ -87,7 +89,7 @@ export const router = createBrowserRouter([
     element: <Signup />,
   },
   {
-    path: "*",
-    element: <NotFound />,
+    path: "/ForgetPassword",
+    element: <ForgetPassword />,
   },
 ]);

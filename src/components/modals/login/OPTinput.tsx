@@ -1,7 +1,7 @@
 import { Field, FieldProps } from "formik";
 import { useRef } from "react";
 
-const OTPInput = () => {
+const OTPInputCode = () => {
   const inputsRef = useRef<Array<HTMLInputElement | null>>([]);
 
   const handleInput = (
@@ -65,4 +65,4 @@ const OTPInput = () => {
   );
 };
 
-export default OTPInput;
+export default OTPInputCode;

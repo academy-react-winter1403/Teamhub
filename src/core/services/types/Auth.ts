@@ -8,3 +8,22 @@ export interface LoginResponse {
     success: boolean;
     errors: string | null; 
 }
+
+export interface SignupStepOne{
+    "id": number,
+    "message": string,
+    "success": boolean,
+    "errors": string[] | null
+}
+
+export interface SignupStepTwe{
+    "ErrorType": string,
+    "ErrorMessage": string[] | null,
+    "StatusCode": number
+}
+
+export interface SignupStepThree{
+    "ErrorType": string,
+    "ErrorMessage": string[] | null,
+    "StatusCode": number
+}
