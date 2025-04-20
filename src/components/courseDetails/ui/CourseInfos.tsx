@@ -1,27 +1,27 @@
 import AddToCart from "../../common/buttons/AddToCart";
 
-const CourseInfos = () => {
+const CourseInfos: any = ({capacity, status, endTime, insertDate, cost}: any) => {
   return (
     <div className="h-6/8 flex flex-col justify-evenly">
       <div className="flex justify-between">
         <span className="">تعداد دانشجو</span>
-        <span className="">27</span>
+        <span className="">{capacity}</span>
       </div>
       <div className="flex justify-between">
         <span className="">وضعیت دوره</span>
-        <span className="">در حال برگزاری</span>
+        <span className="">{status}</span>
       </div>
       <div className="flex justify-between">
         <span className="">تاریخ شروع</span>
-        <span className="">24 فروردین 1403</span>
+        <span className="">{insertDate}</span>
       </div>
       <div className="flex justify-between">
         <span className="">تاریخ پایان</span>
-        <span className="">24 شهریور 1403</span>
+        <span className="">{endTime}</span>
       </div>
       <div className="flex justify-between">
         <AddToCart />
-        <span>500 تومان</span>
+        <span className="text-blue-500 text-xl">{cost + " تومان"}</span>
       </div>
     </div>
   );
