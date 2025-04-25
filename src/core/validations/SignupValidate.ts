@@ -1,7 +1,7 @@
 import * as Yup from "yup"
 
-export const SignupCodeSchema = Yup.object({
-    Phone:Yup.string()
-    .required("شماره موبایل الزامی است")
-  .matches(/^09\d{9}$/, "شماره معتبر نیست")
+export const SignupCodeSchema = Yup.object().shape({
+  phoneNumber: Yup.string()
+  .matches(/^(\+98|0)?9\d{9}$/, "شماره تلفن معتبر نیست")
+  .required("شماره تلفن الزامی است")
 });

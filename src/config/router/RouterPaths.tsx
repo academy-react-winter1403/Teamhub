@@ -1,21 +1,9 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, lazy } from "react-router-dom";
+
+// Root layouts
 import Root from "../Root";
-import NotFound from "../../pages/NotFound";
-import Cart from "../../pages/Cart";
-import Login from "../../pages/Login";
-import Signup from "../../pages/Signup";
-import { Blogs } from "../../pages/Blogs";
-import { Landing } from "../../pages/Landing";
-import BlogDetails from "../../pages/BlogDetails";
-import { CourseList } from "../../pages/CourseList";
-import CourseDetails from "../../pages/CourseDetails";
 import UserRoot from "../UserRoot";
-import MyCourses from "../../components/userPanel/ui/MyCourses";
-import Dashboard from "../../components/userPanel/ui/Dashboard";
-import ProfileEdit from "../../components/userPanel/ui/ProfileEdit";
-import MyComments from "../../components/userPanel/ui/MyComments";
-import ChangePass from "../../components/userPanel/ui/ChangePass";
-import ForgetPassword from "../../pages/ForgetPassword";
+import AdditionalRoot from "../AdditionalRoot";
 
 export const router = createBrowserRouter([
   {
@@ -25,27 +13,49 @@ export const router = createBrowserRouter([
       {
         index: true,
         path: "/",
-        element: <Landing />,
+        lazy: async () => {
+          const { Landing } = await import("../../pages/Landing");
+          return { Component: Landing };
+        },
       },
       {
         path: "/CourseList",
-        element: <CourseList />,
+        lazy: async () => {
+          const { CourseList } = await import("../../pages/CourseList");
+          return { Component: CourseList };
+        },
       },
       {
         path: "/Blogs",
-        element: <Blogs />,
+        lazy: async () => {
+          const { Blogs } = await import("../../pages/Blogs");
+          return { Component: Blogs };
+        },
       },
       {
         path: "/CourseDetails/:id",
-        element: <CourseDetails />,
+        lazy: async () => {
+          const { default: CourseDetails } = await import(
+            "../../pages/CourseDetails"
+          );
+          return { Component: CourseDetails };
+        },
       },
       {
         path: "/BlogDetails",
-        element: <BlogDetails />,
+        lazy: async () => {
+          const { default: BlogDetails } = await import(
+            "../../pages/BlogDetails"
+          );
+          return { Component: BlogDetails };
+        },
       },
       {
         path: "*",
-        element: <NotFound />,
+        lazy: async () => {
+          const { default: NotFound } = await import("../../pages/NotFound");
+          return { Component: NotFound };
+        },
       },
     ],
   },
@@ -54,42 +64,86 @@ export const router = createBrowserRouter([
     element: <UserRoot />,
     children: [
       {
-        // index: true,
         path: "/UserPanel",
-        element: <Dashboard />,
+        lazy: async () => {
+          const { default: Dashboard } = await import(
+            "../../components/userPanel/ui/Dashboard"
+          );
+          return { Component: Dashboard };
+        },
       },
       {
         path: "ProfileEdit",
-        element: <ProfileEdit />,
+        lazy: async () => {
+          const { default: ProfileEdit } = await import(
+            "../../components/userPanel/ui/ProfileEdit"
+          );
+          return { Component: ProfileEdit };
+        },
       },
       {
         path: "MyCourses",
-        element: <MyCourses />,
+        lazy: async () => {
+          const { default: MyCourses } = await import(
+            "../../components/userPanel/ui/MyCourses"
+          );
+          return { Component: MyCourses };
+        },
       },
       {
         path: "MyComments",
-        element: <MyComments />,
+        lazy: async () => {
+          const { default: MyComments } = await import(
+            "../../components/userPanel/ui/MyComments"
+          );
+          return { Component: MyComments };
+        },
       },
       {
         path: "ChangePass",
-        element: <ChangePass />,
+        lazy: async () => {
+          const { default: ChangePass } = await import(
+            "../../components/userPanel/ui/ChangePass"
+          );
+          return { Component: ChangePass };
+        },
+      },
+    ],
+  },
+  {
+    path: "/Auth",
+    element: <AdditionalRoot />,
+    children: [
+      {
+        path: "Login",
+        lazy: async () => {
+          const { default: Login } = await import("../../pages/Login");
+          return { Component: Login };
+        },
+      },
+      {
+        path: "Signup",
+        lazy: async () => {
+          const { default: Signup } = await import("../../pages/Signup");
+          return { Component: Signup };
+        },
+      },
+      {
+        path: "ForgetPassword",
+        lazy: async () => {
+          const { default: ForgetPassword } = await import(
+            "../../pages/ForgetPassword"
+          );
+          return { Component: ForgetPassword };
+        },
       },
     ],
   },
   {
     path: "/Cart",
-    element: <Cart />,
-  },
-  {
-    path: "/Login",
-    element: <Login />,
-  },
-  {
-    path: "/Signup",
-    element: <Signup />,
-  },
-  {
-    path: "/ForgetPassword",
-    element: <ForgetPassword />,
+    lazy: async () => {
+      const { default: Cart } = await import("../../pages/Cart");
+      return { Component: Cart };
+    },
   },
 ]);
