@@ -1,109 +1,76 @@
-import { Field, Form, Formik, ErrorMessage } from "formik";
-import { Link } from "react-router-dom";
-import { Fragment } from "react/jsx-runtime";
-import { AuthData } from "../../../core/constants/mock/AuthData";
-import { loginSchema } from "../../../core/validations/LoginValidation";
-import { LoginAPI } from "../../../core/services/api/Auth";
-import { useEffect, useState } from "react";
-import { ToastError } from "../../common/Toast";
+// // LoginForm.tsx
+// import { useForm } from "react-hook-form";
+// import { yupResolver } from "@hookform/resolvers/yup";
+// import { LoginFormValues } from "../../../core/services/types/Auth";
+// import { loginSchema } from "../../..//core/validations/LoginValidation";
+// import { LoginAPI } from "../../../core/services/api/Auth";
 
-const LoginForm = () => {
-  const [errorMessage, setErrorMessage] = useState("");
-  const [loading, setLoading] = useState(false);
+// const LoginForm = () => {
+//   const {
+//     register,
+//     handleSubmit,
+//     formState: { errors },
+//   } = useForm<LoginFormValues>({
+//     resolver: yupResolver(loginSchema),
+//     defaultValues: {
+//       phoneOrGmail: "",
+//       password: "",
+//       rememberMe: false,
+//     },
+//   });
 
-  const handleSubmit = async (values: {
-    phoneOrGmail: string;
-    password: string;
-    rememberMe: boolean;
-  }) => {
-    setLoading(true);
-    setErrorMessage("");
+//   const onSubmit = async (data: LoginFormValues) => {
+//     const res = await LoginAPI(data);
 
-    const result = await LoginAPI({
-      phoneOrGmail: values.phoneOrGmail,
-      password: values.password,
-      rememberMe: values.rememberMe,
-    });
+//     if (res) {
+//       if (data.rememberMe) {
+//         localStorage.setItem("token", res.token);
+//         localStorage.setItem("user", JSON.stringify(res));
+//       } else {
+//         sessionStorage.setItem("token", res.token);
+//       }
 
-    setLoading(false);
+//       console.log("ورود موفق");
+//       // مثلا: navigate("/dashboard");
+//     } else {
+//       console.log("ورود ناموفق");
+//     }
+//   };
 
-    if (result === false) {
-      setErrorMessage("خطایی در ورود رخ داده است. لطفاً دوباره تلاش کنید.");
-    } else {
-      console.log("ورود موفق:", result);
-    }
-  };
+//   return (
+//     <form
+//       onSubmit={handleSubmit(onSubmit)}
+//       className="flex flex-col gap-4 w-full max-w-md mx-auto p-4"
+//     >
+//       <input
+//         className="p-2 border border-gray-300 rounded"
+//         {...register("phoneOrGmail")}
+//         placeholder="ایمیل یا شماره موبایل"
+//       />
+//       {errors.phoneOrGmail && (
+//         <p className="text-red-500 text-sm">{errors.phoneOrGmail.message}</p>
+//       )}
 
-  useEffect(() => {
-    if (errorMessage) {
-      const timer = setTimeout(() => {
-        setErrorMessage("");
-      }, 4000);
-      return () => clearTimeout(timer);
-    }
-  });
+//       <input
+//         type="password"
+//         className="p-2 border border-gray-300 rounded"
+//         {...register("password")}
+//         placeholder="رمز عبور"
+//       />
+//       {errors.password && (
+//         <p className="text-red-500 text-sm">{errors.password.message}</p>
+//       )}
 
-  //
-  return (
-    <Fragment>
-      <Formik
-        initialValues={{ phoneOrGmail: "", password: "", rememberMe: false }}
-        onSubmit={handleSubmit}
-        validationSchema={loginSchema}
-      >
-        <div className="w-full h-93">
-          <Form className="w-full h-full flex flex-col justify-evenly items-center">
-            <Field
-              className="w-[90%] p-3 pr-7 border-1 border-gray-300 rounded-3xl mt-5"
-              name="phoneOrGmail"
-              placeholder="ایمیل یا شماره موبایل"
-            />
+//       <label className="flex items-center gap-2">
+//         <input type="checkbox" {...register("rememberMe")} />
+//         مرا به خاطر بسپار
+//       </label>
 
-            <Field
-              className="w-[90%] p-3 pr-7 border-1 border-gray-300 rounded-3xl mt-5"
-              name="password"
-              type="password"
-              placeholder="رمز عبور"
-            />
-            <ErrorMessage
-              name="password"
-              component="div"
-              className="text-red-500 text-sm"
-            />
-            <div className="flex justify-around mt-3">
-              <div>
-                <input name="rememberMe" type="checkbox" />
-                <label htmlFor="rememberMe" className="m-3">
-                  {AuthData[1].title}
-                </label>
-              </div>
-              <div className="divider divider-horizontal"></div>
-              <Link to="" className="text-blue-500">
-                {AuthData[2].title}
-              </Link>
-            </div>
+//       <button type="submit" className="bg-blue-500 text-white py-2 rounded">
+//         ورود
+//       </button>
+//     </form>
+//   );
+// };
 
-            <button
-              type="submit"
-              className="btn w-50 h-12 rounded-3xl bg-blue-500 text-white mt-5"
-              disabled={loading}
-            >
-              {loading ? AuthData[12].title : AuthData[13].title}
-            </button>
-
-            {errorMessage && <ToastError message={errorMessage} />}
-
-            <div className="mt-2">
-              {AuthData[4].title}
-              <Link to="" className="text-blue-500 ">
-                {AuthData[9].title}
-              </Link>
-            </div>
-          </Form>
-        </div>
-      </Formik>
-    </Fragment>
-  );
-};
-
-export { LoginForm };
+// export default LoginForm;

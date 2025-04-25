@@ -1,16 +1,21 @@
 import { Form, Formik } from "formik";
-import { Link } from "react-router-dom";
 import { AuthData } from "../../../core/constants/mock/AuthData";
 import { useState, useEffect } from "react";
-import OTPInputCode from "../../modals/login/OPTinput";
+import OTPInputCode from "./OPTinput";
 import { OtpSchemaSeparate } from "../../../core/validations/OptValidate";
+import { getItemLocalStorage } from "../../../core/hooks/localStorage/getItem";
+import { ToastContainer } from "react-toastify";
+import { resendOtp, verifyOtp } from "../func/authServices";
+// import { verifyOtp, resendOtp } from;
 
 const RegVerifyCode = () => {
+  const phoneNumber: string = getItemLocalStorage("phoneNumber") || "Unknown";
   const [seconds, setSeconds] = useState(95);
+  const [isResending, setIsResending] = useState(false);
 
   useEffect(() => {
     if (seconds > 0) {
-      const timer = setInterval(() => setSeconds((s) => s - 1), 1000);
+      const timer = setInterval(() => setSeconds((prev) => prev - 1), 1000);
       return () => clearInterval(timer);
     }
   }, [seconds]);
@@ -18,51 +23,77 @@ const RegVerifyCode = () => {
   const formatTime = (sec: number) => {
     const minutes = Math.floor(sec / 60)
       .toString()
-      .padStart(1, "0");
-    const second = (sec % 60).toString().padStart(2, "0");
-    return `${minutes}:${second}`;
+      .padStart(2, "0");
+    const seconds = (sec % 60).toString().padStart(2, "0");
+    return `${minutes}:${seconds}`;
+  };
+
+  const handleSubmit = async (
+    values: { n1: string; n2: string; n3: string; n4: string; n5: string },
+    { setSubmitting }: { setSubmitting: (isSubmitting: boolean) => void }
+  ) => {
+    const code = Object.values(values).join("");
+    console.log("OTP Code:", code);
+    await verifyOtp(phoneNumber, code, setSubmitting);
   };
 
   return (
-    <div className="w-1/2 h-full flex flex-col items-center justify-evenly border-l-2 border-t-2 border-b-2 rounded-l-3xl">
+    <>
+      <ToastContainer />
       <Formik
         initialValues={{ n1: "", n2: "", n3: "", n4: "", n5: "" }}
         validationSchema={OtpSchemaSeparate}
-        onSubmit={(values) => {
-          const code = Object.values(values).join("");
-          console.log("OTP Code:", code);
-        }}
+        onSubmit={handleSubmit}
       >
-        <div className="w-full h-93">
-          <h2 className="font-extrabold text-4xl m-0">{AuthData[15].title}</h2>
-          <Form className="w-full h-full flex flex-col justify-evenly items-center">
+        {({ isSubmitting }) => (
+          <Form className="w-[90%] h-full flex flex-col justify-evenly items-center">
             <span className="text-start font-light text-sm">
-              {AuthData[6].title}
+              {AuthData[18].title}
+              {phoneNumber}
+              {AuthData[19].title}
             </span>
             <div className="w-full flex" dir="ltr">
               <OTPInputCode />
             </div>
-
             <div className="flex justify-around mt-3">
-              <p className="text-blue-500 text-xl">{formatTime(seconds)}</p>
+              <p className="text-blue-500 text-xl">
+                {seconds > 0 ? formatTime(seconds) : "Time's up!"}
+              </p>
             </div>
-
             <button
               type="submit"
+              disabled={isSubmitting}
               className="btn w-50 h-12 rounded-3xl bg-blue-500 text-white mt-3"
             >
-              {AuthData[0].title}
+              {isSubmitting ? "در حال دریافت..." : AuthData[0].title}
             </button>
             <div className="mt-2">
               {AuthData[7].title}
-              <Link to="" className="text-blue-500 ">
-                {AuthData[10].title}
-              </Link>
+              <button
+                type="button"
+                onClick={
+                  seconds === 0
+                    ? () => resendOtp(phoneNumber, setIsResending, setSeconds)
+                    : undefined
+                }
+                disabled={seconds > 0 || isResending}
+                className={`text-blue-500 hover:underline ${
+                  seconds > 0 || isResending
+                    ? "opacity-50 cursor-not-allowed"
+                    : ""
+                }`}
+              >
+                {isResending
+                  ? "Sending..."
+                  : seconds > 0
+                  ? AuthData[10].title
+                  : "ارسال مجدد کد"}
+              </button>
             </div>
           </Form>
-        </div>
+        )}
       </Formik>
-    </div>
+    </>
   );
 };
 

@@ -1,20 +1,37 @@
-import React from "react";
-import { Teacher } from "../../../../core/constants/Types";
-
 interface TeacherCardProps {
-  teacher: Teacher;
+  name: string;
+  imageSrc: string;
+  courses: number;
+  news?: number;
+  onClick: () => void;
 }
 
-const TeacherCard: React.FC<TeacherCardProps> = ({ teacher }) => {
+const TeacherCard = ({
+  name,
+  imageSrc,
+  courses,
+  news,
+  onClick,
+}: TeacherCardProps) => {
   return (
-    <div className="bg-white shadow-md p-5 rounded-lg text-center">
+    <div
+      className="w-[296px] h-[90%] bg-white shadow-md rounded-3xl flex flex-col justify-between text-center relative cursor-pointer"
+      onClick={onClick}
+    >
       <img
-        // src="" unComment when add img src
-        alt={teacher.name}
-        className="rounded-full w-32 h-32 mx-auto mb-4"
+        src={imageSrc}
+        alt={name ? `تصویر ${name}` : "تصویر استاد"}
+        className="w-full h-[75%] rounded-t-3xl object-cover"
       />
-      <h3 className="text-lg font-semibold">{teacher.name}</h3>
-      <p className="text-gray-600">{teacher.field}</p>
+      <h3 className="text-lg font-semibold text-gray-800">
+        {name || "نام استاد"}
+      </h3>
+      <p className="text-gray-600 text-sm mb-4">
+        مقالات: {news !== undefined ? news : 0}
+      </p>
+      <span className="w-[88px] h-[36px] bg-white absolute top-3 right-3 rounded-2xl p-2 text-[#2196F3] text-sm font-medium shadow-sm">
+        دوره‌ها: {courses || 0}
+      </span>
     </div>
   );
 };

@@ -1,10 +1,22 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import HeaderLogoDark from "./header/HeaderLogoDark";
+import {
+  Css,
+  Html5,
+  ReactIcon,
+  Vue,
+} from "../../assets/icons/landing/BannerIcons";
 
 const AuthPageLayout = () => {
   return (
     <div className="rounded-r-3xl w-1/2 h-full bg-gray-800 text-white flex flex-col items-center justify-around">
       <HeaderLogoDark />
+      <div className=" w-3/5 h-3/5 flex flex-col justify-evenly">
+        <Css />
+        <Html5 />
+        <ReactIcon />
+        <Vue />
+      </div>
       <div className="flex gap-4">
         <a
           href="#"

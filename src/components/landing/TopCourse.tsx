@@ -19,9 +19,11 @@ const TopCourse = () => {
 
   return (
     <div className="w-9/10 h-147 items-center flex flex-col justify-around mb-20">
-      <div className="flex flex-col justify-around">
-        <h4 className="font-black text-4xl">دوره های آموزشی</h4>
-        <span className="w-full h-1 bg-[#2196F3] bg-linear-to-l from-white to-[#2196F3]" />
+      <div className="flex justify-center mb-12">
+        <h2 className="text-3xl font-bold text-center text-gray-800 relative">
+          <span className="relative z-10">دوره های آموزشی</span>
+          <span className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gray-100 via-blue-400 to-gray-100 transform -translate-y-2 -mb-4"></span>
+        </h2>
       </div>
 
       <div className="flex flex-wrap justify-around  w-full">
