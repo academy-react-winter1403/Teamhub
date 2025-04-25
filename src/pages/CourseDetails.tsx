@@ -43,9 +43,9 @@ const CourseDetails = () => {
             />
           </div>
         </div>
-        <div className="w-3/10 h-6/8 flex flex-col justify-between p-2 pt-5">
-          <div className="w-full h-6/8 rounded-4xl bg-white items-center pr-7 pl-7">
-            <h6 className="font-bold text-2xl h-1/8 items-center justify-center flex">
+        <div className="w-3/10 flex flex-col gap-5 p-2 pt-5">
+          <div className="w-full rounded-4xl bg-white items-center p-7">
+            <h6 className="font-bold text-2xl  items-center justify-center flex mb-5">
               مشخصات دوره
             </h6>
             <CourseInfos 
@@ -56,16 +56,17 @@ const CourseDetails = () => {
             cost={details?.cost}
             />
           </div>
-          <div className="w-full h-1/6  rounded-4xl bg-white flex justify-start items-center">
-            <div className="w-16 h-16">
+          <div className="w-full rounded-4xl bg-white p-5 shadow flex flex-col gap-5 ">
+            <div className="w-40 flex justify-between items-center">
               <img
-                src={teacher?.data?.pictureAddress}
+                src={teacher?.data?.pictureAddress ? teacher?.data?.pictureAddress : courseImage}  
                 alt=""
-                className="w-full h-full rounded-4xl"
+                className="w-16 h-16 rounded-4xl border-1"
               />
+              <h4 className="">{details?.teacherName}</h4>
+
             </div>
             <div className="text-justify">
-              <h4 className="">{details?.teacherName}</h4>
               <h6 className="text-xs">{details?.techs?.join("&")}</h6>
             </div>
           </div>
