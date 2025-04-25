@@ -1,8 +1,20 @@
-import DateAndView from "../common/DateAndView";
+// import DateAndView from "../common/DateAndView";
 import blogImg from "./../../assets/images/photo.svg";
 import avatarImg from "./../../assets/images/avatar.png";
+import { useEffect } from "react";
+import { INews } from "../../core/services/types/news.type";
+interface heroProps{
+  detail?: INews[]
+}
 
-const BlogHero = () => {
+const BlogHero = ({detail}: heroProps) => {
+  const fuck= ()=>{
+    console.log("fuck is: "+ detail)
+  }
+  useEffect(() => {
+    fuck()
+  }, [])
+  
   return (
     <>
       <div className="w-[1280px] h-[340px]  flex mx-auto mt-10 mb-15 ">
@@ -36,7 +48,10 @@ const BlogHero = () => {
                 <img className="rounded" src={avatarImg} alt="not found" />
               </div>
             </div>
-            <DateAndView />
+            {/* <DateAndView 
+              date={detail.insertDate}
+              view={detail.currentView}
+              /> */}
           </div>
         </div>
       </div>

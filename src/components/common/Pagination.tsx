@@ -44,7 +44,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) 
 
   return (
     <div>
-      <div className="join mb-10 gap-1 items-center">
+      <div className="join my-10 gap-1 items-center">
         {/* دکمه قبلی */}
         <button
           className={`join-item btn rounded-3xl bg-[url(/cardIcons/arrow-right.svg)] bg-[size:8px] bg-[60%] bg-no-repeat ${
