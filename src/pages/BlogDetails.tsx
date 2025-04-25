@@ -5,11 +5,26 @@ import Rating from "../components/common/Rating";
 import BlogHero from "../components/articles/BlogHero";
 import BlogText from "../components/articles/BlogText";
 import ShareComp from "../components/common/buttons/ShareBtns";
+import { getBlogCards } from "../core/services/api/Blog";
+import { useEffect, useState } from "react";
+import { INews } from "../core/services/types/news.type";
+
 
 const BlogDetails = () => {
+  const [detail, setdetail] = useState<INews[]>([])
+
+  const getBlogsData= async() => {
+    const result= await getBlogCards(1)
+    setdetail(result.news)
+    console.log(result.news)
+  }
+  useEffect(() => {
+    getBlogsData()
+  }, [])
+
   return (
     <div className="bg-gray-100 w-full flex flex-col justify-between items-center">
-      <BlogHero />
+      <BlogHero detail={detail}/>
 
       <BlogText />
 

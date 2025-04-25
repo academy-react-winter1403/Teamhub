@@ -2,7 +2,7 @@ import AddToCart from "../../common/buttons/AddToCart";
 
 const CourseInfos: any = ({capacity, status, endTime, insertDate, cost}: any) => {
   return (
-    <div className="h-6/8 flex flex-col justify-evenly">
+    <div className="h-6/8 flex flex-col justify-evenly gap-10">
       <div className="flex justify-between">
         <span className="">تعداد دانشجو</span>
         <span className="">{capacity}</span>

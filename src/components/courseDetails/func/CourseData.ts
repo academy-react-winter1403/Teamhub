@@ -40,9 +40,7 @@ const useCourseDetails = () => {
     try {
       const teachRes = await http.get(`/Home/GetTeacherDetails?TeacherId=${teacherId}`);
       setTeacher(teachRes);
-
       console.log("teacher id is: "+teacherId);
-
     } catch (err) {
       console.error(err);
     }
