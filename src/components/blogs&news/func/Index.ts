@@ -19,10 +19,6 @@ export const useBlogsdata = () => {
       setCardList(firstPageData);
       setTotalPages(Math.ceil(totalCount / 12));
 
-      if (totalCount > firstPageData.length) {
-        const totalPages = Math.ceil(totalCount / 12);
-        const requests = [];
-
 
             if (totalCount > firstPageData.length) {
                 const totalPages = Math.ceil(totalCount / 12);
@@ -40,11 +36,11 @@ export const useBlogsdata = () => {
                 setAllCourses(allData);
                 // console.log(allData)
             }
+          
         } catch (error) {
             console.error("Error fetching all courses:", error);
           }
-    }
-  };
+  }
   // دریافت داده‌های صفحه جاری
   const getPageData = async (page: number) => {
     if (page === 1) return; // صفحه اول قبلا دریافت شده
