@@ -15,9 +15,16 @@ export const PanelMockData: userPanelPage[] = [
     title: "خروج از حساب",
     path: "",
     onClick: () => {
-      console.log("خروج از حساب انجام شد!");
       localStorage.removeItem("token");
-      window.location.href = "/login";
+      window.location.href = "/auth/login";
+    },
+  },
+  {
+    title: "عملیات جدید", // آیتم جدید
+    path: "",
+    onClick: () => {
+      console.log("عملیات جدید انجام شد!"); // عملیات نمونه
+      // می‌توانید عملیات دلخواه را اینجا اضافه کنید
     },
   },
 ];

@@ -12,7 +12,7 @@ const Drawer = () => {
             <button className="btn btn-error"></button>
           </div>
         </div>
-        <div className="w-full h-5/8 flex flex-col items-center justify-start">
+        <div className="w-full  flex flex-col items-center justify-start">
           <SideMenu />
         </div>
         <SideFooter />
