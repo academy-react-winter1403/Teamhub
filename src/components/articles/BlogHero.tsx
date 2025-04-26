@@ -2,7 +2,7 @@ import DateAndView from "../common/DateAndView";
 import blogImg from "./../../assets/images/Rectangle 34.png";
 import avatarImg from "./../../assets/images/avatar.png";
 
-const BlogHero = ({img, title, miniDescribe, date, view}: any) => {
+const BlogHero = ({img, title, miniDescribe, date, view, addUserFullName}: any) => {
 
 
   return (
@@ -23,7 +23,7 @@ const BlogHero = ({img, title, miniDescribe, date, view}: any) => {
           </div>
           <div className="flex items-center justify-between flex-row-reverse">
             <div className=" flex flex-row-reverse gap-2 justify-end items-center w-[186px] h-[64px] bg-[rgba(255,255,255,1)] rounded-2xl">
-              <p className="whitespace-nowrap text-[16px]"> امیرحسین ملکی</p>
+              <p className="whitespace-nowrap text-[16px]">{addUserFullName}</p>
               <div className=" w-[40px] h-[40px] mr-4 ml-2">
                 <img className="rounded" src={avatarImg} alt="not found"/>
               </div>

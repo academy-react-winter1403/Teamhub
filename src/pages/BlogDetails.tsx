@@ -11,7 +11,7 @@ const URL= import.meta.env.VITE_API_BASE_URL
 
 const BlogDetails = () => {
   const [detail, setdetail] = useState<INews>()
-  const { id } = useParams();
+  const { id } = useParams()
 
   const getBlogsData= async(id: string) => {
     const result= await http.get(URL + "/News/"+ id)
@@ -33,6 +33,7 @@ const BlogDetails = () => {
         date= {detail?.insertDate}
         view= {detail?.currentView}
         img= {detail?.currentImageAddress}
+        addUserFullName= {detail?.addUserFullName}
       />
 
 

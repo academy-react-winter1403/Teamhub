@@ -40,6 +40,7 @@
     currentImageAddress: string
     currentLikeCount: number
     currentDissLikeCount: number
+    addUserFullName: string
   }
   export interface blogProps {
     blogState: INews
