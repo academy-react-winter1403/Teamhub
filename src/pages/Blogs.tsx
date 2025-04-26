@@ -19,7 +19,9 @@ const Blogs = () => {
             originalData={allCourses} 
           />  
           
-          <BlogSorting/>
+          <BlogSorting
+            setCardList={setCardList} 
+          />
         </div>
         <BlogCardWrapper
           blogState={{news: cardList}} 

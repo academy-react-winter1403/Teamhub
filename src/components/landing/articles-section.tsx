@@ -94,7 +94,6 @@ export default function ArticlesSection() {
       },
     },
   };
-
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
@@ -164,9 +163,10 @@ export default function ArticlesSection() {
                 <div className="flex flex-col p-6 h-full">
                   <div className="h-1/2 w-full">
                     <img
-                      src={filteredArticles[0].image || "/placeholder.svg"}
+                      // src={filteredArticles[0].image || "/placeholder.svg"}
+                      src= "src/assets/images/Rectangle 34.png"
                       alt={filteredArticles[0].title}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      className="w-full h-full rounded-xl object-cover transition-transform duration-500 hover:scale-105"
                       loading="lazy"
                     />
                   </div>
@@ -210,7 +210,8 @@ export default function ArticlesSection() {
                 >
                   <div className="w-1/3 overflow-hidden">
                     <img
-                      src={article.image || "/placeholder.svg"}
+                      // src={article.image || "/placeholder.svg"}
+                      src= "src/assets/images/Rectangle 34.png"
                       alt={article.title}
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                       loading="lazy"

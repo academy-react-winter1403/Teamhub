@@ -48,7 +48,6 @@ export interface CourseState{
     describe: string
     courseId: string;
     tumbImageAddress: string
-
   }
 export interface CourseState2{
     title: string

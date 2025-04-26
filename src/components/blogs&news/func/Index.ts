@@ -34,7 +34,7 @@ export const useBlogsdata= () => {
                 );
                     
                 setAllCourses(allData);
-                console.log(allData)
+                // console.log(allData)
             }
         } catch (error) {
             console.error("Error fetching all courses:", error);
