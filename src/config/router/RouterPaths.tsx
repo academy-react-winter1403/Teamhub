@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
         },
       },
       {
-        path: "/BlogDetails",
+        path: "/BlogDetails/:id",
         lazy: async () => {
           const { default: BlogDetails } = await import(
             "../../pages/BlogDetails"

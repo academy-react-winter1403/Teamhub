@@ -4,11 +4,11 @@ import { INews } from "../../../core/services/types/news.type";
 import DateAndView from "../../common/DateAndView";
 
 
-const BlogCard = ({title,currentView,insertDate,miniDescribe, currentImageAddressTumb}: INews ) => {
+const BlogCard = ({id,title,currentView,insertDate,miniDescribe, currentImageAddressTumb}: INews ) => {
   
   return (
     <>
-      <Link to={"/BlogDetails"} className="w-[30%] h-[450px] shadow rounded-2xl relative">
+      <Link to={"/BlogDetails/"+ id} className="w-[30%] h-[450px] shadow rounded-2xl relative">
         <div className="w-full">
           <img
             className="w-full h-[290px] rounded-t-2xl"

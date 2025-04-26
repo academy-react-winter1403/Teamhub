@@ -23,20 +23,26 @@ export const useBlogsdata = () => {
         const totalPages = Math.ceil(totalCount / 12);
         const requests = [];
 
-        for (let page = 2; page <= totalPages; page++) {
-          requests.push(getBlogCards(page));
-        }
 
-        const responses = await Promise.all(requests);
-        const allData = firstPageData.concat(
-          ...responses.map((res) => Object.values(res)[0] as INews[])
-        );
-
-        setAllCourses(allData);
-        // console.log(allData)
-      }
-    } catch (error) {
-      console.error("Error fetching all courses:", error);
+            if (totalCount > firstPageData.length) {
+                const totalPages = Math.ceil(totalCount / 12);
+                const requests = [];
+                
+                for (let page = 2; page <= totalPages; page++) {
+                  requests.push(getBlogCards(page));
+                }
+                
+                const responses = await Promise.all(requests);
+                const allData = firstPageData.concat(
+                  ...responses.map(res => Object.values(res)[0] as INews[])
+                );
+                    
+                setAllCourses(allData);
+                // console.log(allData)
+            }
+        } catch (error) {
+            console.error("Error fetching all courses:", error);
+          }
     }
   };
   // دریافت داده‌های صفحه جاری

@@ -17,7 +17,8 @@ const BlogCardWrapper = ({blogState}: BlogCardWrapperProps) => {
             currentView = {newsItem.currentView}
             insertDate = {newsItem.insertDate}
             miniDescribe = {newsItem.miniDescribe}
-            currentImageAddressTumb= {newsItem.currentImageAddressTumb}
+            currentImageAddressTumb = {newsItem.currentImageAddressTumb}
+            id = {newsItem.id}
           />
         ))
       }
