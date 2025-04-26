@@ -29,7 +29,6 @@ const CourseList = () => {
               className="tab w-10 rounded-full bg-[url(/grid-1.svg)] bg-no-repeat bg-center m-1 mb-8"
               defaultChecked
             />
-
             <div className="tab-content bg-[#FAFBFC]">
               <WrapperViewOne cardList={cardList} />
             </div>
@@ -48,7 +47,10 @@ const CourseList = () => {
               setCardList={setCardList} 
               originalData={allCourses} 
               />
-              <PopularCoursesBtn />
+              <PopularCoursesBtn 
+              setCardList={setCardList}
+              allCourses={allCourses}
+              />
             </div>
           </div>
           <Pagination 

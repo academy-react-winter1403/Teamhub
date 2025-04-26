@@ -40,6 +40,8 @@ const CourseDetails = () => {
           {/* rate */}
           <div className="w-full h-1/11 items-center">
             <Rating 
+            currentLikeCount= {details?.likeCount}
+            currentDissLikeCount= {details?.dissLikeCount}
             />
           </div>
         </div>

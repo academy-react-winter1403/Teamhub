@@ -24,8 +24,8 @@ const CardViewOne = ({courseId, title, teacherName, cost, tumbImageAddress}: Cou
           </div>
   
           <div className="flex mt-3 items-center relative justify-between">
-            <button className="likes btn  h-10 p-5 items-center bg-[url(/cardIcons/likes.svg)] bg-no-repeat bg-[50%] bg-[size:25px] bg-pink-100 border-0 rounded-2xl">
-              {/* <span className="border-1 w-full text-left text-xl text-red-600">5</span> */}
+            <button className="likes btn h-10 p-5 items-center bg-[url(/cardIcons/likes.svg)] bg-no-repeat bg-[50%] bg-[size:25px] bg-pink-100 border-0 rounded-2xl">
+              {/* <span className="absolute left-1 top-2 text-lg text-red-500">560</span> */}
             </button>
             <span className="price font-semibold text-lg text-blue-500">{cost +" تومان"}</span>
           </div>

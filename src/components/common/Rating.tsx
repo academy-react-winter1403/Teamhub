@@ -1,6 +1,6 @@
 import dislikeIcon from "./../../assets/images/dislike.svg";
 import likeIcon from "./../../assets/images/like.svg";
-function Rating() {
+function Rating({currentLikeCount, currentDissLikeCount}: any) {
   return (
     <>
       <div className="w-full h-[60px]  flex justify-between items-center mx-auto mb-10 ">
@@ -51,11 +51,11 @@ function Rating() {
           <div className="w-[182px] h-[42px] flex gap-4">
             <button className="btn w-[83px] h-[42px] rounded-3xl bg-[rgba(236,239,241,1)] flex justify-center items-center gap-2 ">
               {" "}
-              <img src={likeIcon} alt="not found" /> 22
+              <img src={likeIcon} alt="not found" /> {currentLikeCount}
             </button>
             <button className=" btn  w-[83px] h-[42px] rounded-3xl bg-[rgba(236,239,241,1)] flex justify-center items-center gap-2">
               {" "}
-              <img src={dislikeIcon} alt="not found" /> 0
+              <img src={dislikeIcon} alt="not found" /> {currentDissLikeCount}
             </button>
           </div>
         </div>
