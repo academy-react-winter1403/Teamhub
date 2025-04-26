@@ -75,7 +75,7 @@ export const verifyOtp = async (
     if (response.data.success) {
       toast.success("کد ارسالی تایید شد");
       setTimeout(() => {
-        window.location.hash = "registerfinish";
+        window.location.hash = "finish";
       }, 4000);
       console.log("Verification successful:", response.data.message);
     } else {

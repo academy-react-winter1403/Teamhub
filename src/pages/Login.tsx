@@ -27,7 +27,7 @@ const Login = () => {
         <h2 className="font-extrabold text-4xl m-0">{AuthData[0].title}</h2>
         <div className="w-full h-93">
           {currentHash === "" && <LoginPageForm />}
-          {currentHash === "#LoginTwoStep" && <LoginTwoStep />}
+          {/* {currentHash === "#LoginTwoStep" && <LoginTwoStep />} // برای دور دوم */}
         </div>
       </div>
     </>

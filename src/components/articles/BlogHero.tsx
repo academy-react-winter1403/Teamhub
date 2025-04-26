@@ -3,18 +3,18 @@ import blogImg from "./../../assets/images/photo.svg";
 import avatarImg from "./../../assets/images/avatar.png";
 import { useEffect } from "react";
 import { INews } from "../../core/services/types/news.type";
-interface heroProps{
-  detail?: INews[]
+interface heroProps {
+  detail?: INews[];
 }
 
-const BlogHero = ({detail}: heroProps) => {
-  const fuck= ()=>{
-    console.log("fuck is: "+ detail)
-  }
+const BlogHero = ({ detail }: heroProps) => {
+  const fuck = () => {
+    console.log("fuck is: " + detail);
+  };
   useEffect(() => {
-    fuck()
-  }, [])
-  
+    fuck();
+  }, []);
+
   return (
     <>
       <div className="w-[1280px] h-[340px]  flex mx-auto mt-10 mb-15 ">

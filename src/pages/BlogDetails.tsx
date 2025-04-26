@@ -1,5 +1,3 @@
-// import testVideo from "./../assets/images/testVideo.mp4";
-
 import Comment from "../components/common/Comment";
 import Rating from "../components/common/Rating";
 import BlogHero from "../components/articles/BlogHero";
@@ -9,22 +7,21 @@ import { getBlogCards } from "../core/services/api/Blog";
 import { useEffect, useState } from "react";
 import { INews } from "../core/services/types/news.type";
 
-
 const BlogDetails = () => {
-  const [detail, setdetail] = useState<INews[]>([])
+  const [detail, setdetail] = useState<INews[]>([]);
 
-  const getBlogsData= async() => {
-    const result= await getBlogCards(1)
-    setdetail(result.news)
-    console.log(result.news)
-  }
+  const getBlogsData = async () => {
+    const result = await getBlogCards(1);
+    setdetail(result.news);
+    // console.log(result.news)
+  };
   useEffect(() => {
-    getBlogsData()
-  }, [])
+    getBlogsData();
+  }, []);
 
   return (
     <div className="bg-gray-100 w-full flex flex-col justify-between items-center">
-      <BlogHero detail={detail}/>
+      <BlogHero detail={detail} />
 
       <BlogText />
 

@@ -6,7 +6,6 @@ import { NavBar } from "./NavBar";
 import Login from "../../common/buttons/Login";
 import HeaderLogo from "./HeaderLogo";
 
-
 const Header = () => {
   return (
     <Fragment>
@@ -17,7 +16,6 @@ const Header = () => {
         <div className="flex gap-5 items-center">
           <DarkModeBtn />
           <CartBtn />
-          {/* <LoginModalBtn /> */}
           <Login />
         </div>
       </div>
