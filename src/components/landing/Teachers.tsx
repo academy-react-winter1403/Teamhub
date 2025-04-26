@@ -72,7 +72,7 @@ const TeachersSection = () => {
   return (
     <div
       id="teachers"
-      className="w-full min-h-[648px] py-10 bg-blue-50 flex flex-col justify-evenly"
+      className="w-full min-h-[648px] py-10 flex flex-col justify-evenly"
     >
       <div className="flex justify-center mb-12">
         <h2 className="text-3xl font-bold text-center text-gray-800 relative">

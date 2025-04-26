@@ -39,9 +39,9 @@ export const sendLoginData = async (
         setItemLocalStorage("token", response.data.token);
       }
       showToast("success", "ورود با موفقیت انجام شد");
-      // setTimeout(() => {
-      //     window.location.hash = "#"
-      // }, 4000);
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 4000);
       // console.log("Login first step successful:", response.data.success);
       console.log(getItemLocalStorage("token"));
     } else if (response.data.success) {
@@ -51,9 +51,9 @@ export const sendLoginData = async (
         // console.log(getItemLocalStorage("token"));
       }
       console.log("Login first step successful:", response.data.success);
-      // setTimeout(() => {
-      //     window.location.hash = "#"
-      // }, 4000);
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 4000);
     } else {
       const errorMessages = response.data.ErrorMessage
         ? response.data.ErrorMessage.join(", ")

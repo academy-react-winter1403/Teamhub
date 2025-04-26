@@ -4,6 +4,7 @@ import avatarImg from "./../../assets/images/avatar.png";
 
 const BlogHero = ({img, title, miniDescribe, date, view}: any) => {
 
+
   return (
     <>
       <div className="w-[1280px] h-[340px] flex mx-auto mt-10 mb-15 ">

@@ -15,13 +15,13 @@ const TeacherCard = ({
 }: TeacherCardProps) => {
   return (
     <div
-      className="w-[296px] h-[90%] bg-white shadow-md rounded-3xl flex flex-col justify-between text-center relative cursor-pointer"
+      className="w-[296px] h-[90%]shadow-md rounded-3xl flex flex-col justify-between text-center relative cursor-pointer"
       onClick={onClick}
     >
       <img
         src={imageSrc}
         alt={name ? `تصویر ${name}` : "تصویر استاد"}
-        className="w-full h-[75%] rounded-t-3xl object-cover"
+        className="w-full h-[75%] rounded-3xl object-cover"
       />
       <h3 className="text-lg font-semibold text-gray-800">
         {name || "نام استاد"}

@@ -24,17 +24,17 @@ const onError = (err: Error | AxiosError) => {
   } else {
     console.error("An unexpected error occurred:", err);
   }
-  return Promise.reject(err); // خطا رو پرت کن تا کامپوننت مدیریتش کنه
+  return Promise.reject(err);
 };
 
 instance.interceptors.response.use(onSuccess, onError);
 
 instance.interceptors.request.use((opt) => {
-  const token = getItemLocalStorage("Token");
+  const token = getItemLocalStorage("token");
   if (token) {
-    opt.headers["Authorization"] = `Bearer ${token}`;
+    opt.headers["Authorization"] = `Bearer ` + token;
   }
-  opt.headers["MessageTest"] = "Hello World"; // نگه داشتم
+  // opt.headers["MessageTest"] = "Hello World";
   return opt;
 });
 

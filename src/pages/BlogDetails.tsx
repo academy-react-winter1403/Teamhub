@@ -1,5 +1,3 @@
-// import testVideo from "./../assets/images/testVideo.mp4";
-
 import Comment from "../components/common/Comment";
 import Rating from "../components/common/Rating";
 import BlogHero from "../components/articles/BlogHero";
@@ -10,7 +8,6 @@ import { INews } from "../core/services/types/news.type";
 import { useParams } from "react-router-dom";
 import http from "../core/services/interceptor"
 const URL= import.meta.env.VITE_API_BASE_URL
-
 
 const BlogDetails = () => {
   const [detail, setdetail] = useState<INews>()
@@ -37,6 +34,7 @@ const BlogDetails = () => {
         view= {detail?.currentView}
         img= {detail?.currentImageAddress}
       />
+
 
       <BlogText 
        describe= {detail?.describe}/>
