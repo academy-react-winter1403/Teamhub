@@ -32,7 +32,7 @@ const LandingReport = () => {
             image="./studentIcon.svg"
           />
           <ReportCard
-            title="دقیقه اموزش"
+            title="ساعت اموزش"
             count={data.courseCount}
             image="./watchIcon.svg"
           />

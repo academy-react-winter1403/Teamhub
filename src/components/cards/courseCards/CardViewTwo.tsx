@@ -1,13 +1,16 @@
-import { CourseState } from "../../../core/constants/Types"
+// import { CourseState } from "../../../core/constants/Types"
+import courseImage from "../../../assets/images/CourseImg.svg"
 
-const CardViewTwo = ({title, teacherName, describe, cost}: CourseState) => {
+
+const CardViewTwo = ({title, teacherName, describe, cost, tumbImageAddress}: any) => {
   return (
     <div className="bg-white relative shadow-md rounded-2xl mb-5 p-4 w-full h-50 flex items-center gap-4" >
       <img
-        src={"./cardIcons/cardImage.svg"} alt="item"
+        src={tumbImageAddress && tumbImageAddress !== "Not-set" ? tumbImageAddress : courseImage} alt="item"
         className="rounded-xl object-cover w-55 h-full"
       />
-      <button className="likes btn flex justify-around w-8 h-8 items-center bg-[url(/cardIcons/likes.svg)]  bg-no-repeat bg-center bg-contain bg-white text-red-400 p-1 border-0 rounded-xl absolute top-5 left-5">
+      <button className="likes btn h-10 p-5 items-center bg-[url(/cardIcons/likes.svg)] bg-no-repeat bg-[50%] bg-[size:25px] bg-pink-100 border-0 rounded-2xl absolute top-5 left-5">
+        {/* <span className="absolute left-1 top-2 text-lg text-red-500">560</span> */}
       </button>
       <div className="flex-1 items-center w-[70%]">
         <h3 className="font-medium text-right text-md">{title}</h3>

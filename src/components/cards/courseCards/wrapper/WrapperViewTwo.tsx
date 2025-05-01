@@ -12,6 +12,7 @@ const WrapperViewTwo = ({cardList}: {cardList: CourseState[]}) => {
         teacherName={item.teacherName}
         cost={item.cost}
         describe={item.describe}
+        tumbImageAddress={item.tumbImageAddress}
         />
       )}
 

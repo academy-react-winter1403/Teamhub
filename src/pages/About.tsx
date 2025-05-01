@@ -71,7 +71,7 @@ const About = () => {
         <div className="divider"></div>
       </div>
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 ">
         <motion.section
           id="about"
           //   className="py-12"
@@ -96,7 +96,7 @@ const About = () => {
                     <strong>منتور:</strong> سجاد شجاعی
                   </p>
                   <p className="mb-4">
-                    <strong>تعداد طراحی:</strong> 1
+                    <strong>طراحی شماره :</strong> 1
                   </p>
                   <p className="mb-4">
                     <strong>زبان برنامه‌نویسی:</strong> TypeScript
