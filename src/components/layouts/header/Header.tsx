@@ -9,7 +9,7 @@ import HeaderLogo from "./HeaderLogo";
 const Header = () => {
   return (
     <Fragment>
-      <div className="Header h-25 w-full flex items-center justify-around z-100">
+      <div className="Header absolute h-25 container flex items-center justify-around z-100">
         <HeaderLogo />
         <NavBar />
 

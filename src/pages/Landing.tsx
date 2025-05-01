@@ -23,8 +23,8 @@ const Landing = () => {
   return (
     <>
       {/* landing banner */}
-      <div className="relative -top-25 bg-[url(/header-bg.svg)] bg-bottom bg-no-repeat bg-cover w-full h-[900px] min-h-screen z-0 flex justify-center items-center">
-        <div className="flex flex-row justify-around w-full h-2/3">
+      <div className="relative bg-[url(/header-bg.svg)] bg-bottom bg-no-repeat bg-cover w-full min-h-[900px] z-0 flex justify-center items-center">
+        <div className="flex flex-row justify-around w-full">
           <div className="h-112 w-40 flex flex-col justify-between">
             <ReactIcon />
             <AngularIcon />

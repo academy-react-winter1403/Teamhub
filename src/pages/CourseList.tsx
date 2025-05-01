@@ -19,6 +19,7 @@ const CourseList = () => {
         <Filters 
           allCourses={allCourses}
           onFilterChange={setFilteredCourses}
+          setCardList={setCardList}
         />
 
         <div className="courses rounded-xl w-[70%]">
@@ -32,7 +33,6 @@ const CourseList = () => {
             <div className="tab-content bg-[#FAFBFC]">
               <WrapperViewOne cardList={cardList} />
             </div>
-
             <input
               type="radio"
               name="my_tabs_6"

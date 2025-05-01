@@ -53,6 +53,9 @@ export interface CourseState2{
     title: string
     teacherName: string
     cost: number
+    techName: string
+    levelName: string
+    technologyList: string
   }
 
 export interface Auth{
