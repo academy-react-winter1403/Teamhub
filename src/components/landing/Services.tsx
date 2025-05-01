@@ -2,7 +2,7 @@ import OurServices from "../cards/landing/ui/OurServices";
 
 const Services = () => {
   return (
-    <div className="w-9/10 h-100 items-center flex flex-col justify-around">
+    <div className=" items-center flex flex-col justify-around">
       <div className="flex justify-center mb-12">
         <h2 className="text-3xl font-bold text-center text-gray-800 relative">
           <span className="relative z-10">خدمات ما</span>

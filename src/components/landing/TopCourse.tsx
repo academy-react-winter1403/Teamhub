@@ -18,7 +18,7 @@ const TopCourse = () => {
   }, []);
 
   return (
-    <div className="w-9/10 h-147 items-center flex flex-col justify-around mb-20">
+    <div className=" h-147 items-center flex flex-col justify-around mb-20">
       <div className="flex justify-center mb-12">
         <h2 className="text-3xl font-bold text-center text-gray-800 relative">
           <span className="relative z-10">دوره های آموزشی</span>

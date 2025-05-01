@@ -1,4 +1,4 @@
-import LandingTitles from "../components/landing/LandnigTitles";
+import LandingTitles from "../components/landing/LandingTitles";
 import Search from "../components/common/Search";
 import LandingReport from "../components/cards/landing/ui/LandingReport";
 import Services from "../components/landing/Services";
@@ -21,7 +21,7 @@ import ArticlesSection from "../components/landing/articles-section";
 
 const Landing = () => {
   return (
-    <>
+    <div>
       {/* landing banner */}
       <div className="relative bg-[url(/header-bg.svg)] bg-bottom bg-no-repeat bg-cover w-full min-h-[900px] z-0 flex justify-center items-center">
         <div className="flex flex-row justify-around w-full">
@@ -52,7 +52,7 @@ const Landing = () => {
       <Teachers />
 
       <ArticlesSection />
-    </>
+    </div>
   );
 };
 
