@@ -8,15 +8,22 @@ import { PopularCoursesBtn } from "../components/courseList/PopularCoursesBtn";
 import { UseCourseData } from "../components/courseList/func/CourseData";
 
 const CourseList = () => {
-  const {allCourses, setFilteredCourses, cardList, setCardList, 
-    currentPage, totalPages, handlePageChange} = UseCourseData()
-  
+  const {
+    allCourses,
+    setFilteredCourses,
+    cardList,
+    setCardList,
+    currentPage,
+    totalPages,
+    handlePageChange,
+  } = UseCourseData();
+
   return (
     <div className="bg-[#FAFBFC] relative w-full flex flex-col justify-center items-center">
       {/* page banner */}
       <CourseListTitles />
       <div className="w-[90%] flex justify-center gap-5">
-        <Filters 
+        <Filters
           allCourses={allCourses}
           onFilterChange={setFilteredCourses}
           setCardList={setCardList}
@@ -43,17 +50,14 @@ const CourseList = () => {
             </div>
 
             <div className="flex w-[90%]">
-              <Search 
-              setCardList={setCardList} 
-              originalData={allCourses} 
-              />
-              <PopularCoursesBtn 
-              setCardList={setCardList}
-              allCourses={allCourses}
+              <Search setCardList={setCardList} originalData={allCourses} />
+              <PopularCoursesBtn
+                setCardList={setCardList}
+                allCourses={allCourses}
               />
             </div>
           </div>
-          <Pagination 
+          <Pagination
             currentPage={currentPage}
             totalPages={totalPages}
             onPageChange={handlePageChange}

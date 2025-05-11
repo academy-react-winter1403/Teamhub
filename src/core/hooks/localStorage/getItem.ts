@@ -1,16 +1,3 @@
-// export const getItemLocalStorage = <T>(key: string): T | null => {
-//     try {
-//       const serializedValue = localStorage.getItem(key);
-//       if (serializedValue === null) return null;
-//       return JSON.parse(serializedValue) as T;
-//     } catch (error) {
-//       console.error("LocalStorage getItem ERR", error);
-//       return null;
-//     }
-//   };
-// export const getItemLocalStorage = (key: string): string | null => {
-//   return localStorage.getItem(key);
-// };
 export const getItemLocalStorage = (key: string): string | null => {
   const value = localStorage.getItem(key);
   try {

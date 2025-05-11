@@ -30,7 +30,7 @@ const Login = () => {
 
   return (
     <Link
-      to={isLoggedIn ? "/userpanel" : "/auth/login"}
+      to={isLoggedIn ? "/userpanel" : "/login"}
       className="btn bg-blue-400 w-34 h-12 rounded-3xl text-white"
     >
       {isLoggedIn ? phone || "پروفایل" : AuthData[0].title}

@@ -50,7 +50,6 @@ const Landing = () => {
       <TopCourse />
       <LandingCtg />
       <Teachers />
-
       <ArticlesSection />
     </div>
   );

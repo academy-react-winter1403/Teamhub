@@ -6,26 +6,26 @@ import { Search } from "../components/courseList/search/Search";
 import { Pagination } from "../components/common/Pagination";
 
 const Blogs = () => {
-  const {allCourses, cardList, setCardList, currentPage, totalPages, handlePageChange} = useBlogsdata()
+  const {
+    allCourses,
+    cardList,
+    setCardList,
+    currentPage,
+    totalPages,
+    handlePageChange,
+  } = useBlogsdata();
 
   return (
     <div className="w-full bg-[#FAFBFC] mt-5 mb-15">
-      <BlogsTitles/>
+      <BlogsTitles />
 
       <div className="w-[90%] mx-auto ">
         <div className="w-full h-[60px] flex justify-between ">
-          <Search 
-            setCardList={setCardList as any} 
-            originalData={allCourses} 
-          />  
-          
-          <BlogSorting
-            setCardList={setCardList} 
-          />
+          <Search setCardList={setCardList as any} originalData={allCourses} />
+
+          <BlogSorting setCardList={setCardList} />
         </div>
-        <BlogCardWrapper
-          blogState={{news: cardList}} 
-        />
+        <BlogCardWrapper blogState={{ news: cardList }} />
 
         <Pagination
           currentPage={currentPage}

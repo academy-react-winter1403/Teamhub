@@ -1,8 +1,4 @@
-"use client";
-
 import { useState } from "react";
-import CustomNavbar from "../components/common/CustomNavbar";
-import { AuthData } from "../core/constants/mock/AuthData";
 
 // Cart item type definition
 interface CartItem {
@@ -68,11 +64,7 @@ export default function SimpleCart() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <CustomNavbar title={AuthData[14].title} />
-
-      <div className="divider"></div>
-
+    <div className="container mx-auto px-4 py-8 pt-30 ">
       {cartItems.length === 0 ? (
         <div className="text-center py-12">
           <h2 className="text-2xl font-semibold mb-4">Your cart is empty</h2>
