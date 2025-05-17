@@ -40,9 +40,9 @@ export const sendLoginData = async (
       }
       showToast("success", "ورود با موفقیت انجام شد");
       setTimeout(() => {
-        window.location.href = "/";
+        // window.location.href = "/";
       }, 4000);
-      // console.log("Login first step successful:", response.data.success);
+      console.log("Login first step successful:", response.data.success);
       console.log(getItemLocalStorage("token"));
     } else if (response.data.success) {
       showToast("success", "ورود با موفقیت انجام شد");
@@ -52,7 +52,7 @@ export const sendLoginData = async (
       }
       console.log("Login first step successful:", response.data.success);
       setTimeout(() => {
-        window.location.href = "/";
+        // window.location.href = "/";
       }, 4000);
     } else {
       const errorMessages = response.data.ErrorMessage

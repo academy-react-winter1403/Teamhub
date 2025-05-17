@@ -4,30 +4,66 @@ const MenuSection = () => {
   return (
     <>
       <ul className="menu text-white w-full flex flex-col gap-2">
-        <li className="bg-violet-700 rounded-lg">
-          <Link to="/userPanel">داشبورد</Link>
+        <li className="rounded-lg hover:bg-violet-600 focus-within:bg-violet-600 transition-colors">
+          <Link
+            to="/userPanel"
+            className="block w-full px-4 py-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+          >
+            داشبورد
+          </Link>
         </li>
-        <li>
-          <Link to="ProfileEdit">اطلاعات کاربری</Link>
+        <li className="rounded-lg hover:bg-violet-600 focus-within:bg-violet-600 transition-colors">
+          <Link
+            to="ProfileEdit"
+            className="block w-full px-4 py-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+          >
+            اطلاعات کاربری
+          </Link>
         </li>
-
-        <li>
-          <Link to="myCourses">دوره های من</Link>
+        <li className="rounded-lg hover:bg-violet-600 focus-within:bg-violet-600 transition-colors">
+          <Link
+            to="myCourses"
+            className="block w-full px-4 py-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+          >
+            دوره‌های من
+          </Link>
         </li>
-        <li>
-          <Link to="reserveCourses">دوره های رزرو شده</Link>
+        <li className="rounded-lg hover:bg-violet-600 focus-within:bg-violet-600 transition-colors">
+          <Link
+            to="reserveCourses"
+            className="block w-full px-4 py-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+          >
+            دوره‌های رزرو شده
+          </Link>
         </li>
-        <li>
-          <Link to="myComments">دیدگاه های من</Link>
+        <li className="rounded-lg hover:bg-violet-600 focus-within:bg-violet-600 transition-colors">
+          <Link
+            to="myComments"
+            className="block w-full px-4 py-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+          >
+            دیدگاه‌های من
+          </Link>
         </li>
-        <li>
-          <Link to="favorite">علاقه مندی ها</Link>
+        <li className="rounded-lg hover:bg-violet-600 focus-within:bg-violet-600 transition-colors">
+          <Link
+            to="favorite"
+            className="block w-full px-4 py-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+          >
+            علاقه‌مندی‌ها
+          </Link>
         </li>
-        <li>
-          <Link to="security">امنیت</Link>
+        <li className="rounded-lg hover:bg-violet-600 focus-within:bg-violet-600 transition-colors">
+          <Link
+            to="security"
+            className="block w-full px-4 py-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+          >
+            امنیت
+          </Link>
         </li>
-        <li>
-          <a>خروج از حساب</a>
+        <li className="rounded-lg hover:bg-red-600 focus-within:bg-red-600 transition-colors">
+          <button className="block w-full text-right px-4 py-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500">
+            خروج از حساب
+          </button>
         </li>
       </ul>
     </>

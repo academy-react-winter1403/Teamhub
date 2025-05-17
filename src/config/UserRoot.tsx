@@ -7,7 +7,7 @@ console.log(Date());
 
 const UserRoot = () => {
   return (
-    <div className="w-full h-screen flex bg-[#e9e8ff] items-center justify-evenly">
+    <div className="w-full h-screen flex bg-[#e9e8ff] items-center justify-evenly ">
       <div className="w-100 h-21/22 flex">
         {/* Sidebar */}
         <Drawer />
@@ -17,7 +17,7 @@ const UserRoot = () => {
           {/* Top Navigation */}
           <Skelet />
         </div>
-        <div className="w-full h-11/12 rounded-2xl bg-white p-4">
+        <div className="w-full h-11/12 rounded-2xl bg-[#fbfbff] p-4 overflow-scroll">
           {/* Main Content */}
           <Suspense
             fallback={

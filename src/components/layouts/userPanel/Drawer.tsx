@@ -7,8 +7,8 @@ const Drawer = () => {
   return (
     <>
       {/* Sidebar */}
-      <aside className="w-full bg-gradient-to-b from-violet-400 to-violet-600 text-white p-4 rounded-3xl md:rounded-3xl">
-        <div className="flex flex-col items-center gap-4">
+      <aside className="w-full bg-gradient-to-b from-violet-400 to-violet-600 text-white p-4 rounded-3xl md:rounded-3xl overflow-scroll">
+        <div className="flex flex-col items-center gap-4 ">
           {/* logo section */}
           <LogoSection />
           {/* avatar section */}
