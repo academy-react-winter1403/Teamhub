@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
 import cardImg from "../../../assets/images/workingImg.jpg";
-import { INews } from "../../../core/services/types/news.type";
+// import { INews } from "../../../core/services/types/news.type";
 import DateAndView from "../../common/DateAndView";
+interface newsprops{
+  id:number
+  title: string
+  currentView:number
+  insertDate:string
+  miniDescribe:string
+  currentImageAddressTumb: string
+}
 
 
-const BlogCard = ({id,title,currentView,insertDate,miniDescribe, currentImageAddressTumb}: INews ) => {
+const BlogCard = ({id,title,currentView,insertDate,miniDescribe, currentImageAddressTumb}: newsprops ) => {
   
   return (
     <>
@@ -12,8 +20,9 @@ const BlogCard = ({id,title,currentView,insertDate,miniDescribe, currentImageAdd
         <div className="w-full">
           <img
             className="w-full h-[290px] rounded-t-2xl"
-            src={currentImageAddressTumb && currentImageAddressTumb !== "Not-set" && currentImageAddressTumb !== "null"
-              ? currentImageAddressTumb : cardImg}
+            // src={currentImageAddressTumb && currentImageAddressTumb !== "Not-set" && currentImageAddressTumb !== "null"
+            //   ? currentImageAddressTumb : cardImg}
+            src= {currentImageAddressTumb ? currentImageAddressTumb : cardImg}
             alt="not found"
           />
         </div>

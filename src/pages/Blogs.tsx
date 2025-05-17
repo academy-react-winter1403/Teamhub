@@ -16,7 +16,9 @@ const Blogs = () => {
   } = useBlogsdata();
 
   return (
-    <div className="w-full bg-[#FAFBFC] mt-5 mb-15">
+    <div className="w-full bg-[#FAFBFC] mb-15">
+      <div className="h-30"></div>
+
       <BlogsTitles />
 
       <div className="w-[90%] mx-auto ">

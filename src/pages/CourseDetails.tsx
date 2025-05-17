@@ -14,6 +14,7 @@ const CourseDetails = () => {
 
   return (
     <div className="flex flex-col items-center w-full">
+      <div className="h-30"></div>
       {/* static */}
       <div className="w-10/12 h-200 flex p-5 justify-between">
         <div className="w-2/3 h-full p-5 flex flex-col justify-between ">
@@ -25,8 +26,8 @@ const CourseDetails = () => {
             <button className="likes btn h-10 p-5 items-center bg-[url(/cardIcons/likes.svg)] bg-no-repeat bg-[50%] bg-[size:25px] bg-pink-100 border-0 rounded-2xl absolute top-5 right-5">
               {/* <span className="border-1 w-full text-left text-xl text-red-600">5</span> */}
             </button>
-            <span className="absolute bottom-5 left-10 w-30 h-12 rounded-4xl bg-[url(/cardIcons/clock.svg)] bg-no-repeat bg-[85%] bg-[size:25px] bg-white text-left pl-5 leading-12">{"۵ ساعت"}</span>
-            <span className="absolute bottom-5 left-45 w-30 h-12 rounded-4xl bg-[url(/cardIcons/note-2.svg)] bg-no-repeat bg-[85%] bg-[size:25px] bg-white text-left pl-5 leading-12">{"۱۲ درس"}</span>
+            <span className="absolute bottom-5 left-10 w-30 h-12 rounded-4xl bg-[url(/cardIcons/clock.svg)] bg-no-repeat bg-[85%] bg-[size:25px] bg-[rgba(255,255,255,0.66)] text-left pl-5 leading-12">{"۵ ساعت"}</span>
+            <span className="absolute bottom-5 left-45 w-30 h-12 rounded-4xl bg-[url(/cardIcons/note-2.svg)] bg-no-repeat bg-[85%] bg-[size:25px] bg-[rgba(255,255,255,0.66)] text-left pl-5 leading-12">{"۱۲ درس"}</span>
           </div>
           {/* title */}
           <div className="w-full h-2/11 flex flex-col justify-between">
