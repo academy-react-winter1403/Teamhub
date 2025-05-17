@@ -1,4 +1,3 @@
-import Comment from "../components/common/Comment";
 import Rating from "../components/common/Rating";
 import BlogHero from "../components/articles/BlogHero";
 import BlogText from "../components/articles/BlogText";
@@ -7,6 +6,7 @@ import { useEffect, useState } from "react";
 import { INews } from "../core/services/types/news.type";
 import { useParams } from "react-router-dom";
 import http from "../core/services/interceptor"
+import CommentsBlog from "../components/blogs&news/ui/CommentsBlog";
 const URL= import.meta.env.VITE_API_BASE_URL
 
 const BlogDetails = () => {
@@ -17,7 +17,7 @@ const BlogDetails = () => {
     const result= await http.get(URL + "/News/"+ id)
     const ObjArray = Object.values(result)
     setdetail(ObjArray[0].detailsNewsDto)
-    console.log(ObjArray[0].detailsNewsDto)
+    // console.log(ObjArray[0].detailsNewsDto)
   }
   useEffect(() => {
     if(id){
@@ -27,6 +27,7 @@ const BlogDetails = () => {
 
   return (
     <div className="bg-gray-100 w-full flex flex-col justify-between items-center">
+      <div className="h-30"></div>
       <BlogHero 
         miniDescribe= {detail?.miniDescribe}
         title= {detail?.title}
@@ -59,11 +60,11 @@ const BlogDetails = () => {
         currentLikeCount= {detail?.currentLikeCount}
         currentDissLikeCount= {detail?.currentDissLikeCount}/>
       </div>
-      <div className="w-[842px] h-[500px] bg-[rgba(255,255,255,1)] rounded-3xl mx-auto mb-10 p-8 ">
+      <div className="w-[842px]  bg-[rgba(255,255,255,1)] rounded-3xl mx-auto mb-10 p-3 ">
         <h1 className="w-[300px] h-[37px] font-bold text-2xl mx-auto whitespace-nowrap pb-15">
           نظر کاربران درباره این مقاله
         </h1>
-        <Comment />
+        <CommentsBlog />
       </div>
     </div>
   );

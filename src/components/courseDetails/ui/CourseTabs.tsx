@@ -1,6 +1,5 @@
 import Comment from "../../common/Comment";
 import Description from "./Description";
-import LessonList from "./LessonList";
 
 const CourseTabs = ({describe}: any) => {
   return (
@@ -12,8 +11,8 @@ const CourseTabs = ({describe}: any) => {
           name="my_tabs_2"
           className="tab"
           aria-label="توضیحات"
-        defaultChecked/>
-        <div className="tab-content border-base-300 bg-base-100 p-4">
+        />
+        <div className="tab-content border-base-300 bg-base-100 p-4 mb-10 rounded-2xl">
           <Description 
           describe= {describe}
           />
@@ -22,18 +21,10 @@ const CourseTabs = ({describe}: any) => {
           type="radio"
           name="my_tabs_2"
           className="tab"
-          aria-label="پیش‌نمایش ها"
-        />
-        <div className="tab-content border-base-300 bg-base-100 p-4">
-          <LessonList />
-        </div>
-        <input
-          type="radio"
-          name="my_tabs_2"
-          className="tab"
           aria-label="نظرات کاربران"
+          defaultChecked
         />
-        <div className="tab-content border-base-300 bg-base-100 p-10">
+        <div className="tab-content border-base-300 bg-base-100 p-7 mb-20 shadow rounded-2xl">
           <Comment />
         </div>
       </div>

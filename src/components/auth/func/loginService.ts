@@ -5,6 +5,7 @@ import { AxiosError } from "axios";
 import { getItemLocalStorage } from "../../../core/hooks/localStorage/getItem";
 
 interface ApiResponse {
+  id?: number
   success?: boolean;
   message?: string;
   ErrorMessage?: string[];
@@ -21,6 +22,8 @@ const showToast = (type: "success" | "error" | "warning", message: string) => {
   toast[type](message, { autoClose: 4000 });
 };
 
+
+
 export const sendLoginData = async (
   phoneOrGmail: string,
   password: string,
@@ -35,6 +38,7 @@ export const sendLoginData = async (
 
     if (response.data.success && rememberMe) {
       setItemLocalStorage("userCredentials", { phoneOrGmail, password });
+      setItemLocalStorage("userId", response.data.id)
       if (response.data.token) {
         setItemLocalStorage("token", response.data.token);
       }
@@ -46,6 +50,7 @@ export const sendLoginData = async (
       console.log(getItemLocalStorage("token"));
     } else if (response.data.success) {
       showToast("success", "ورود با موفقیت انجام شد");
+      setItemLocalStorage("userId", response.data.id)
       if (response.data.token) {
         setItemLocalStorage("token", response.data.token);
         // console.log(getItemLocalStorage("token"));

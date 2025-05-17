@@ -20,6 +20,7 @@ const CourseList = () => {
 
   return (
     <div className="bg-[#FAFBFC] relative w-full flex flex-col justify-center items-center">
+      <div className="h-30"></div>
       {/* page banner */}
       <CourseListTitles />
       <div className="w-[90%] flex justify-center gap-5">
