@@ -45,7 +45,7 @@ export interface CourseState{
     title: string
     teacherName: string
     cost: number
-    describe: string
+    // describe: string
     courseId: string;
     tumbImageAddress: string
   }

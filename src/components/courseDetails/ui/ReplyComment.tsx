@@ -30,7 +30,7 @@ const ReplyComment = ({commentId}: replyProps) => {
     const fetchCommentReply= async(id: string, commentId: string) => {
         const response= await getReply(id, commentId)
         setReplys(response)
-        console.log(response)
+        // console.log(response)
     }
     useEffect(() => {
         if(id){

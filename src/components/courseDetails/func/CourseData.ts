@@ -15,7 +15,7 @@ const useCourseDetails = () => {
       setLoading(true);
       const response = await getCourseDetail(courseId);
       setDetails(response);
-      // console.log(response);
+      console.log(response);
 
       if (response?.teacherId && Number.isInteger(response.teacherId)) {
         await getTeacherData(response.teacherId);
