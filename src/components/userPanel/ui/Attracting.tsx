@@ -1,6 +1,16 @@
 import { GraduationCap, ShoppingBasket } from "lucide-react";
+import { useProfileStore } from "../../../core/store/profileStore";
+import { useEffect } from "react";
 
 const Attracting = () => {
+  const { profile, fetchProfile } = useProfileStore();
+
+  useEffect(() => {
+    if (!profile) {
+      fetchProfile();
+    }
+  }, [fetchProfile, profile]);
+
   return (
     <div className="w-full py-8 flex justify-between ">
       {/* what term you sign */}
@@ -29,12 +39,16 @@ const Attracting = () => {
         {/* progress bar */}
         {/* For TSX uncomment the commented types below */}
         <div
-          className="radial-progress bg-gradient-to-l from-violet-300 to-violet-500 text-primary-content  "
-          style={{ "--value": 0 } as React.CSSProperties}
-          aria-valuenow={70}
+          className="radial-progress bg-gradient-to-l from-violet-300 to-violet-500 text-primary-content"
+          style={
+            {
+              "--value": profile?.data?.profileCompletionPercentage || 0,
+            } as React.CSSProperties
+          }
+          aria-valuenow={profile?.data?.profileCompletionPercentage || 0}
           role="progressbar"
         >
-          0%
+          {profile?.data?.profileCompletionPercentage || 0}%
         </div>
       </div>
     </div>

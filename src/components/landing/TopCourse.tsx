@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CardViewOne } from "../cards/courseCards/CardViewOne";
 import SeeAllBtn from "../common/buttons/SeeAllBtn";
-import { getTopCourses } from "../../core/services/api/TopCourses";
+import { getTopCourses } from "../../core/services/api/course/TopCourses";
 import type { TopCourse } from "../../core/services/types/TopCourse";
 
 const TopCourse = () => {

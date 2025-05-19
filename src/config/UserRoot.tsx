@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Drawer from "../components/layouts/userPanel/Drawer";
 import Skelet from "../components/layouts/userPanel/Skelet";
 
-console.log(Date());
+// console.log(Date());
 
 const UserRoot = () => {
   return (

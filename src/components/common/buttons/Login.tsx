@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AuthData } from "../../../core/constants/mock/AuthData";
-import { fetchUserProfile } from "../../../core/services/api/user/GetProfileInfo";
+import { fetchUserProfile } from "../../../core/services/api/user/fetchProfileInfo";
 import { getItemLocalStorage } from "../../../core/hooks/localStorage/getItem";
 
 const Login = () => {
@@ -14,7 +14,7 @@ const Login = () => {
       if (token) {
         try {
           const profile = await fetchUserProfile();
-          console.log(token);
+          // console.log(token);
           setPhone(profile.phoneNumber || "");
           setIsLoggedIn(true);
         } catch (error) {

@@ -1,6 +1,7 @@
 import UserSearch from "./UserSearch";
 import { Eye, Trash } from "lucide-react";
 import img from "../../../assets/images/CourseImg.svg";
+// import { GetMyCourses } from "../../../core/services/api/user/GetMyCourses";
 
 const favoriteCourses = [
   {
