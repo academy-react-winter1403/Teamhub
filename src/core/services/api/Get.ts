@@ -1,13 +1,12 @@
 import http from "../interceptor";
-export const getFunc = async (
+
+export const getFunc = async <T>(
   endPoint: string,
-  params?: unknown
-): Promise<unknown> => {
+  params?: Record<string, unknown>
+): Promise<T> => {
   try {
-    // console.log("GET params:", params);
-    const response = await http.get(endPoint, { params });
-    // console.log("GET response:", response);
-    return response;
+    const response = await http.get<T>(endPoint, { params });
+    return response.data; // فرض می‌کنیم interceptor پاسخ رو تو response.data می‌پیچه
   } catch (error) {
     console.error("Get request failed:", error);
     throw error;

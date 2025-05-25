@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getCourseDetail } from "../../../core/services/api/CourseDetail";
+import { getCourseDetail } from "../../../core/services/api/course/CourseDetail";
 import http from "../../../core/services/interceptor";
 
 const useCourseDetails = () => {
