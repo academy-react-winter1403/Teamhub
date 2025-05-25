@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AuthData } from "../../../core/constants/mock/AuthData";
-import { fetchUserProfile } from "../../../core/services/api/user/fetchProfileInfo";
 import { getItemLocalStorage } from "../../../core/hooks/localStorage/getItem";
+import { getProfileInfo } from "../../../core/services/api/user/getProfileInfo";
+import { removeItemLocalStorage } from "../../../core/hooks/localStorage/removeItem";
 
 const Login = () => {
   const [phone, setPhone] = useState("");
@@ -13,16 +14,21 @@ const Login = () => {
       const token = getItemLocalStorage("token");
       if (token) {
         try {
-          const profile = await fetchUserProfile();
-          // console.log(token);
-          setPhone(profile.phoneNumber || "");
-          setIsLoggedIn(true);
+          const profile = await getProfileInfo();
+          if (profile) {
+            setPhone(profile.phoneNumber);
+            setIsLoggedIn(true);
+          } else {
+            setIsLoggedIn(false);
+          }
         } catch (error) {
           console.error("Failed to fetch profile:", error);
           setIsLoggedIn(false);
+          removeItemLocalStorage("token");
         }
       } else {
         setIsLoggedIn(false);
+        removeItemLocalStorage("token");
       }
     };
     checkLoginStatus();

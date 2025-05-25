@@ -1,19 +1,16 @@
-import { getFunc } from "../Get";
+import { getFunc } from "./../Get";
+import { PaginatedResponse, Course } from "./../../types/panel";
 
-interface MyFavoriteCourseData {
-  favoriteCourseDto: [];
-  totalCount: number;
-}
-
-export const GetMyCourses = async (): Promise<MyFavoriteCourseData | null> => {
+export const getMyFavoriteCourses = async (): Promise<
+  PaginatedResponse<Course>
+> => {
   try {
-    const response = await getFunc("/SharePanel/GetMyFavoriteCourses");
-    if (!response) {
-      throw new Error("No data recived from api");
-    }
-    return response as MyFavoriteCourseData;
+    const response = await getFunc<PaginatedResponse<Course>>(
+      "/SharePanel/GetMyFavoriteCourses"
+    );
+    return response;
   } catch (error) {
-    console.error("Error fetching MyFavoriteCourses info:", error);
-    return null;
+    console.error("Error fetching favorite courses:", error);
+    throw error;
   }
 };

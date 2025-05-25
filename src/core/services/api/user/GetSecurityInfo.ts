@@ -1,22 +1,15 @@
-import { getFunc } from "../Get";
+import { getFunc } from "./../Get";
 
-interface SecurityInfoData {
-  nationalIMageAddress: string;
-  verifyNationalImage: boolean;
-  twoStepAuth: boolean;
-  recoveryEmail: string;
-  baseUrl: string | null;
-}
+import { ApiResponse, SecurityInfo } from "./../../types/panel";
 
-export const getSecurityInfo = async (): Promise<SecurityInfoData | null> => {
+export const getSecurityInfo = async (): Promise<SecurityInfo> => {
   try {
-    const response = await getFunc("/SharePanel/GetSecurityInfo");
-    if (!response) {
-      throw new Error("No data received from API");
-    }
-    return response as SecurityInfoData;
+    const response = await getFunc<ApiResponse<SecurityInfo>>(
+      "/SharePanel/GetSecurityInfo"
+    );
+    return response.data;
   } catch (error) {
-    console.error("Error fetching SecurityData info:", error);
-    return null;
+    console.error("Error fetching security info:", error);
+    throw error;
   }
 };

@@ -1,19 +1,14 @@
-import { getFunc } from "../Get";
+import { getFunc } from "./../Get";
+import { PaginatedResponse, News } from "./../../types/panel";
 
-interface MyFavoriteNewsData {
-  myFavoriteNews: [];
-  totalCount: number;
-}
-
-export const GetFavoriteNews = async (): Promise<MyFavoriteNewsData | null> => {
+export const getMyFavoriteNews = async (): Promise<PaginatedResponse<News>> => {
   try {
-    const response = await getFunc("/SharePanel/GetMyFavoriteNews");
-    if (!response) {
-      throw new Error("No data recived from api");
-    }
-    return response as MyFavoriteNewsData;
+    const response = await getFunc<PaginatedResponse<News>>(
+      "/SharePanel/GetMyFavoriteNews"
+    );
+    return response;
   } catch (error) {
-    console.error("Error fetching myFavoriteNews info:", error);
-    return null;
+    console.error("Error fetching favorite news:", error);
+    throw error;
   }
 };

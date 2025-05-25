@@ -1,25 +1,20 @@
 import { getFunc } from "../Get";
 import { ProfileData } from "../../types/panel";
 
-interface ApiResponse {
-  data: ProfileData | { data: ProfileData };
-}
-
 export const getProfileInfo = async (): Promise<ProfileData | null> => {
   try {
-    const response = (await getFunc(
+    const response = await getFunc<ProfileData | { data: ProfileData }>(
       "/SharePanel/GetProfileInfo"
-    )) as ApiResponse;
-    console.log("Raw API response:", response);
-    if (!response || !response.data) {
+    );
+    // console.log("Raw API response:", response);
+    if (!response) {
       throw new Error("No data received from API");
     }
-    const profileData =
-      "data" in response.data ? response.data.data : response.data;
-    console.log("Extracted profile data:", profileData);
+    const profileData = "data" in response ? response.data : response;
+    // console.log("Extracted profile data:", profileData);
     return profileData;
   } catch (error) {
     console.error("Error fetching profile info:", error);
-    throw error; // React Query خطاها رو مدیریت می‌کنه
+    throw error;
   }
 };

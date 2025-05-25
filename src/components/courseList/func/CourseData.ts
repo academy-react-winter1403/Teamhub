@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { CourseState } from "../../../core/constants/Types";
 import { getCourseList } from "../../../core/services/api/course/CourseList";
 
-export const UseCourseData= () => {
 
+export const UseCourseData = () => {
   const [cardList, setCardList] = useState<CourseState[]>([]);
   const [allCourses, setAllCourses] = useState<CourseState[]>([]); // تمام دوره‌ها از همه صفحات
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [filteredCourses, setFilteredCourses] = useState<CourseState[]>([])
+  const [filteredCourses, setFilteredCourses] = useState<CourseState[]>([]);
 
   useEffect(() => {
     if (allCourses.length > 0) {
@@ -33,7 +33,7 @@ export const UseCourseData= () => {
       const firstPage = await getCourseList(1);
       const firstPageData = Object.values(firstPage)[0] as CourseState[];
       const totalCount = firstPage.totalCount;
-      
+
       setAllCourses(firstPageData);
       setCardList(firstPageData);
       setTotalPages(Math.ceil(totalCount / 12));
@@ -42,21 +42,20 @@ export const UseCourseData= () => {
       if (totalCount > firstPageData.length) {
         const totalPages = Math.ceil(totalCount / 12);
         const requests = [];
-        
+
         for (let page = 2; page <= totalPages; page++) {
           requests.push(getCourseList(page));
         }
-        
+
         const responses = await Promise.all(requests);
         const allData = firstPageData.concat(
-          ...responses.map(res => Object.values(res)[0] as CourseState[])
+          ...responses.map((res) => Object.values(res)[0] as CourseState[])
         );
-        
+
         setAllCourses(allData);
       }
     } catch (error) {
       console.error("Error fetching all courses:", error);
-    } finally {
     }
   };
 
@@ -82,10 +81,18 @@ export const UseCourseData= () => {
   }, [currentPage]);
 
   const handlePageChange = (newPage: number) => {
-    if(newPage >= 1 && newPage <= totalPages){
+    if (newPage >= 1 && newPage <= totalPages) {
       setCurrentPage(newPage);
     }
   };
 
-  return {allCourses, setFilteredCourses, cardList, setCardList, currentPage, totalPages, handlePageChange}
-}
+  return {
+    allCourses,
+    setFilteredCourses,
+    cardList,
+    setCardList,
+    currentPage,
+    totalPages,
+    handlePageChange,
+  };
+};

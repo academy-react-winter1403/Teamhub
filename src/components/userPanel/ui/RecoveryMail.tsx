@@ -27,8 +27,8 @@ const RecoveryMail = () => {
         </Form>
       </Formik>
       <div className="w-80 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <span>مایل به تغییر رمز عبور هستم</span>
+        <div className="flex justify-center gap-4.5 py-4">
+          <label htmlFor="">مایل به ورود دو مرحله ای هستم</label>
           <input type="checkbox" className="checkbox" />
         </div>
         <button className="btn bg-[#3f40ea] text-white">ثبت اطلاعات</button>
