@@ -39,14 +39,13 @@ export interface Article {
 export interface CourseListHero {
   title: string;
 }
-
 export interface CourseState {
   title: string;
   teacherName: string;
   cost: number;
+  // describe: string
   courseId: string;
-  describe?: string;
-  tumbImageAddress?: string;
+  tumbImageAddress: string;
 }
 export interface CourseState2 {
   title: string;
@@ -55,6 +54,10 @@ export interface CourseState2 {
   techName: string;
   levelName: string;
   technologyList: string;
+}
+
+export interface Auth {
+  title: string;
 }
 
 export interface Auth {
