@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getCourseDetail } from "../../../core/services/api/CourseDetail";
+import { getCourseDetail } from "../../../core/services/api/course/CourseDetail";
 import http from "../../../core/services/interceptor";
 
 const useCourseDetails = () => {
@@ -47,6 +47,33 @@ const useCourseDetails = () => {
     }
   };
 
-  return { details, loading, error, teacher };
+  // favorite
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const onFavorite= async() => {
+    try {
+      await http.post(
+        "/Course/AddCourseFavorite",
+        { courseId: id },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+      setIsFavorite(true); // تغییر استایل بدون reload
+    } catch (err) {
+      console.error("خطا در افزودن به علاقه‌مندی‌ها", err);
+    }
+  }
+  useEffect(() => {
+    if (details?.isUserFavorite !== undefined) {
+      setIsFavorite(details.isUserFavorite);
+    }
+  }, [details?.isUserFavorite]);
+
+
+  return { details, loading, error, teacher, isFavorite, onFavorite};
 };
 export { useCourseDetails };

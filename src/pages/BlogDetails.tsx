@@ -35,21 +35,21 @@ const BlogDetails = () => {
         view= {detail?.currentView}
         img= {detail?.currentImageAddress}
         addUserFullName= {detail?.addUserFullName}
+        id= {id}
+        isCurrentUserFavorite= {detail?.isCurrentUserFavorite}
       />
-
 
       <BlogText 
        describe= {detail?.describe}/>
 
-      <div className="w-[842px] h-[100px] mx-auto text-right mb-16  ">
-        <p className=" w-[842px] h-[56px] font-normal text-base leading-[28px] mb-10  text-[rgba(69,90,100,1)] ">
-          
+      <div className="w-[842px] h-[100px] mx-auto text-right mb-16">
+        <p className="w-[842px] h-[56px] font-normal text-base leading-[28px] mb-10  text-[rgba(69,90,100,1)]">
           این مثال برای آموزش از روی کتاب بود ولی برای ویدئو یا پادکست یا هر
           آنچه که میتوانید از آن مطلبی یاد بگیرید هم صدق میکند. شما در مثال بالا
           با هر بار از نو آموزش دیدن، هم مطلب را مرور میکنید و هم نکته هایی مهم
           که در طول آموزش متوجه نشده بودین را متوجه میشوید و این اصل قضیه است.
         </p>
-        <p className=" w-[842px] h-[28px] font-normal text-base leading-[28px]  text-[rgba(69,90,100,1)]">
+        <p className="w-[842px] h-[28px] font-normal text-base leading-[28px] text-[rgba(69,90,100,1)]">
           امیدوارم مقاله مفیدی برای شما واقع بوده باشه.
         </p>
       </div>
@@ -57,10 +57,15 @@ const BlogDetails = () => {
 
       <div className="w-[842px] flex justify-between items-center">
         <Rating 
-        currentLikeCount= {detail?.currentLikeCount}
-        currentDissLikeCount= {detail?.currentDissLikeCount}/>
+          currentLikeCount= {detail?.currentLikeCount}
+          currentDissLikeCount= {detail?.currentDissLikeCount}
+          currentUserLike= {detail?.currentUserIsLike}
+          currentUserDissLike= {detail?.currentUserIsDissLike}
+          currentUserSetRate= {detail?.currentUserSetRate}
+          currentUserRateNumber= {detail?.currentUserRateNumber}
+        />
       </div>
-      <div className="w-[842px]  bg-[rgba(255,255,255,1)] rounded-3xl mx-auto mb-10 p-3 ">
+      <div className="w-220 bg-[rgba(255,255,255,1)] rounded-3xl mx-auto mb-10 p-3">
         <h1 className="w-[300px] h-[37px] font-bold text-2xl mx-auto whitespace-nowrap pb-15">
           نظر کاربران درباره این مقاله
         </h1>

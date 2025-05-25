@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CourseState } from "../../../core/constants/Types";
-import { getCourseList } from "../../../core/services/api/CourseList";
+import { getCourseList } from "../../../core/services/api/course/CourseList";
 
 export const UseCourseData= () => {
 

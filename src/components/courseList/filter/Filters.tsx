@@ -19,7 +19,7 @@ const Filters = ({allCourses, onFilterChange, setCardList}: PriceRangeFilterProp
             <h2 className="w-25 text-left text-lg text-gray-700 font-bold bg-[url(/cardIcons/filter.svg)] bg-contain bg-no-repeat bg-right">فیلتر ها</h2>
             <button className="btn w-10 rounded-2xl bg-[url(/cardIcons/Delete.svg)] bg-no-repeat bg-contain"></button>
           </div>
-
+          
           <div className="collapse collapse-arrow bg-base-100 border-b-1 border-base-300">
             <input type="radio" name="my-accordion-2" />
             <div className="collapse-title font-semibold text-right text-[#263238]">دسته بندی ها</div>

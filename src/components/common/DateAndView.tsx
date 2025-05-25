@@ -9,7 +9,7 @@ interface IProps{
 const DateAndView:FC<IProps> =  ({date,view})=> {
   return (
     <>
-      <div className="flex items-center justify-center gap-4 w-[230px] h-[22px] text-blue-500 mr-5 ">
+      <div className="flex items-center gap-4 h-[22px] text-blue-500 mr-5 mb-2">
         <div className="flex items-center text-[14px] flex-row-reverse gap-1.5">
           {view} بازدید{" "}
           <img className="size-4 mb-1" src={eyeImg} alt="not found" />

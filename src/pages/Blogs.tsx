@@ -22,7 +22,7 @@ const Blogs = () => {
       <BlogsTitles />
 
       <div className="w-[90%] mx-auto ">
-        <div className="w-full h-[60px] flex justify-between ">
+        <div className="w-full flex justify-between ">
           <Search setCardList={setCardList as any} originalData={allCourses} />
 
           <BlogSorting setCardList={setCardList} />

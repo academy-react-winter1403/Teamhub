@@ -11,7 +11,7 @@ import HeaderLogoDark from "../header/HeaderLogoDark";
 const Footer = () => {
   return (
     <Fragment>
-      <div className="h-125 w-full bg-[#252641] text-white">
+      <div className="w-full bg-[#252641] text-white px-20">
         <div>
           <div className="flex flex-row-reverse gap-1.5 justify-center items-end text-2xl pt-10 pb-4 ">
             <HeaderLogoDark />
@@ -63,37 +63,37 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className=" bg-[rgba(0,0,0,0.2)] w-[90%]   rounded-2xl h-[64px] flex flex-row-reverse justify-between justify-self-center mt-12 mb-10 ">
-          <div className="flex justify-end ">
+        <div className=" bg-[rgba(0,0,0,0.2)] w-[90%] rounded-2xl p-3 md:flex flex-row-reverse justify-between justify-self-center mt-12 mb-10 ">
+          <div className="flex md:justify-end sm:justify-center">
             <img
-              className="w-[11%] ml-4"
+              className="lg:w-[11%] sm:w-[8%] ml-4"
               src={social1}
               alt="img not found :("
             />
             <img
-              className="w-[11%] ml-4"
+              className="lg:w-[11%] sm:w-[8%] ml-4"
               src={social2}
               alt="img not found :("
             />
             <img
-              className="w-[11%] ml-4"
+              className="lg:w-[11%] sm:w-[8%] ml-4"
               src={social3}
               alt="img not found :("
             />
             <img
-              className="w-[11%] ml-4"
+              className="lg:w-[11%] sm:w-[8%] ml-4"
               src={social4}
               alt="img not found :("
             />
             <img
-              className="w-[11%] ml-5"
+              className="lg:w-[11%] sm:w-[8%] ml-5"
               src={social5}
               alt="img not found :("
             />
           </div>
 
-          <div className="flex flex-row-reverse gap-2 mr-5 md:w-[70%] justify-end ">
-            <p className="flex items-center whitespace-nowrap xl:text-[16px]   md:text-[13px] sm:text-[10px] ">
+          <div className="flex flex-row-reverse gap-2 md:w-[70%] sm:w-full justify-center sm:mt-5">
+            <p className="flex w-[70%] items-center whitespace-nowrap xl:text-[16px] md:text-[13px] sm:text-[10px] sm:text-center ">
               تمام حقوق مادی و معنوی این مجموعه متعلق به HexaSquad.ir میباشد
             </p>
             <img

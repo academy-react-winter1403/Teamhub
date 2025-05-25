@@ -14,7 +14,6 @@ const WrapperViewOne = ({cardList}: {cardList: CourseState[]}) => {
           teacherName={item.teacherName}
           cost={item.cost}
           courseId={item.courseId}
-          describe={""}
           tumbImageAddress={item.tumbImageAddress}
           />
 

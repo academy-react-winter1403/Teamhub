@@ -24,7 +24,7 @@ const Search = ({ setCardList, originalData }: Props) => {
   };
 
   return (
-    <div className="w-full h-12 box-border pl-10 pr-10">
+    <div className="md:w-[80%] h-12 box-border pl-5 pr-5  ">
       <label className="h-full input outline-none rounded-xl w-full border-0 drop-shadow-sm">
         <input
           type="search"

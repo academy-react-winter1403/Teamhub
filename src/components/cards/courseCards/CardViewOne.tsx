@@ -4,13 +4,13 @@ import courseImage from "../../../assets/images/CourseImg.svg"
 
 const CardViewOne = ({courseId, title, teacherName, cost, tumbImageAddress}: CourseState) => {
   return (
-    <Link to={"/CourseDetails/"+ courseId} className="bg-white shadow-md rounded-2xl mb-5 p-4 w-80">
+    <Link to={"/CourseDetails/"+ courseId} className="flex flex-col justify-between bg-white shadow-md rounded-2xl mb-5 p-4 w-80">
         <img 
           src={tumbImageAddress && tumbImageAddress !== "Not-set" ? tumbImageAddress : courseImage} alt="item"
           className="rounded-xl object-cover w-full h-45 "
         />
         <div className="mt-3">
-          <h3 className="title font-medium text-right text-lg mr-3">{title}</h3>
+          <h3 className="title font-medium text-right text-lg mr-3 ">{title}</h3>
 
           <div className="flex justify-between items-center text-gray-600 mt-2 bg-gray-200 p-3 pl-0 rounded-3xl text-sm">
             <span className='lesson w-[30%] bg-[url(/cardIcons/note-2.svg)] bg-no-repeat bg-right'>{"۱۲ درس"}</span>

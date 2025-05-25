@@ -1,9 +1,28 @@
+import { useEffect, useState } from "react";
 import DateAndView from "../common/DateAndView";
 import blogImg from "./../../assets/images/Rectangle 34.png";
 import avatarImg from "./../../assets/images/avatar.png";
+import http from "../../core/services/interceptor"
 
-const BlogHero = ({img, title, miniDescribe, date, view, addUserFullName}: any) => {
+const BlogHero = ({img, title, miniDescribe, date, view, addUserFullName, id, isCurrentUserFavorite}: any) => {
+  const [isFavorite, setIsFavorite] = useState(false);
 
+  // Favorite
+  const onFavorite= async() => {
+    try {
+      await http.post(`/News/AddFavoriteNews?NewsId=${id}`);
+      setIsFavorite(true); // تغییر استایل بدون reload
+    } catch (err) {
+      console.error("خطا در افزودن به علاقه‌مندی‌ها", err);
+    }
+  }
+  useEffect(() => {
+    if (isCurrentUserFavorite !== undefined) {
+      setIsFavorite(isCurrentUserFavorite);
+      // console.log(isCurrentUserFavorite)
+    }
+  }, [isCurrentUserFavorite]);
+  
 
   return (
     <>
@@ -12,7 +31,16 @@ const BlogHero = ({img, title, miniDescribe, date, view, addUserFullName}: any) 
           <img 
           src={img && img !== "null" ? img : blogImg}
           alt="not found" />
-          <button className="likes btn absolute top-5 right-5 h-10 p-5 items-center bg-[url(/cardIcons/likes.svg)] bg-no-repeat bg-[50%] bg-[size:25px] bg-pink-100 border-0 rounded-2xl"></button>
+            <button 
+              onClick={onFavorite} 
+              className={
+                isFavorite
+                ?"favorite btn h-10 p-5 items-center bg-[url(./assets/images/heartIcon.svg)] bg-no-repeat bg-[50%] bg-[size:25px] bg-pink-100 border-0 rounded-2xl absolute top-5 right-5"
+                :"favorite btn h-10 p-5 items-center bg-[url(/cardIcons/likes.svg)] bg-no-repeat bg-[50%] bg-[size:25px] bg-pink-100 border-0 rounded-2xl absolute top-5 right-5"
+              }
+              disabled= {isFavorite}
+            >
+            </button>
         </div>
         <div className="">
           <div className="w-[733px] h-[275px] pr-5  font-bold text-right ">

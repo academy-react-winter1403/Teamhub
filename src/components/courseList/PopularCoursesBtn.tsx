@@ -17,7 +17,7 @@ const PopularCoursesBtn = ({ setCardList }: any) => {
   }
 
   return (
-    <div className="dropdown w-[25%]">
+    <div className="dropdown w-50 lg:block md:hidden sm:hidden">
       <div tabIndex={0} role="button" className="btn w-full h-12 bg-white rounded-xl shadow-sm text-base text-gray-600">محبوب ترین ها 
         <span className="w-5 h-full bg-[url(/arrow-down.svg)] bg-no-repeat bg-center"></span>
       </div>

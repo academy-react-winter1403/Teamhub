@@ -17,13 +17,11 @@ interface Comment {
   likeCount:number
   insertDate: string
   author: string
-  // ... other properties
 }
 
 function Comment() {
     const [cmnt, setcmnt] = useState<Comment[]>([])
     const [newComment, setnewComment] = useState('')
-    // const [title, setTitle] = useState('')
     const { id } = useParams();
 
   const getComment= async(courseId: string) => {
@@ -87,7 +85,7 @@ function Comment() {
 
   return (
     <>
-      <div className="flex  w-full gap-3 mr-[-11px] justify-center items-center mb-5">
+      <div className="flex w-full gap-3 mr-[-11px] justify-center items-center mb-5">
         <input
           className="textarea w-full text-sm font-normal text-[rgba(69,90,100,1)] rounded-2xl focus:outline-none focus:border-none shadow focus:shadow-inner  max-h-40 min-h-11"
           placeholder="نظر خودتو بنویس..."
@@ -99,7 +97,7 @@ function Comment() {
           ارسال
         </button>
       </div>
-      <div className=" max-h-100 shadow-inner overflow-auto p-2 rounded-2xl">
+      <div className=" max-h-140 shadow-inner overflow-auto p-2 rounded-2xl">
         {cmnt.map((item, index)=>(
           <div className="w-full mr-[-11px] mb-5 border-b-1 border-gray-100" key={index}>
             <div className="flex justify-between items-center">

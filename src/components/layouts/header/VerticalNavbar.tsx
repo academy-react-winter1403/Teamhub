@@ -1,14 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { HeaderMockData } from "../../../core/constants/mock/HeaderMockData";
-
 interface MenuItem {
   title: string;
   path: string;
 }
 
-const NavBar = () => {
+const VerticalNavbar = () => {
   return (
-    <div className="top-menu flex gap-12 text-sm ">
+    <div className="top-menu flex flex-col justify-right text-sm ">
       {HeaderMockData.map((item: MenuItem, index: number) => (
         <NavLink to={item.path} key={index} 
           className={({isActive})=> isActive 
@@ -19,7 +18,8 @@ const NavBar = () => {
           {item.title}
         </NavLink>
       ))}
-    </div>
-  );
-};
-export { NavBar };
+    </div>  
+  )
+}
+
+export default VerticalNavbar

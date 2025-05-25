@@ -31,40 +31,55 @@ const BlogSorting = ({setCardList}: any) => {
     }
   };
   return (
-    <div className="w-[50%] flex justify-around items-center bg-white rounded-2xl drop-shadow-sm tabs tabs-boxed">
-        <input
-          type="radio"
-          name="my_tabs_1"
-          className="tab rounded-xl hover:bg-blue-400 hover:text-white  checked:bg-blue-400 checked:text-white "
-          aria-label="همه"
-          checked={activeTab === "all"}
-          onChange={()=> handleTabClick("all")}
-        />
-        <input
-          type="radio"
-          name="my_tabs_1"
-          className="tab rounded-xl hover:bg-blue-400 hover:text-white  checked:bg-blue-400 checked:text-white "
-          aria-label="محبوب‌ترین‌ها"
-          checked={activeTab === "popular"}
-          onChange={() => handleTabClick("popular")}
-        />
-        <input
-          type="radio"
-          name="my_tabs_1"
-          className="tab rounded-xl hover:bg-blue-400 hover:text-white  checked:bg-blue-400 checked:text-white "
-          aria-label="پربازدیدترین‌ها"
-          checked={activeTab === "mostViewed"}
-          onChange={() => handleTabClick("mostViewed")}
-        />
-        <input
-          type="radio"
-          name="my_tabs_1"
-          className="tab rounded-xl hover:bg-blue-400 hover:text-white  checked:bg-blue-400 checked:text-white "
-          aria-label="جدیدترین‌ها"
-          checked={activeTab === "latest"}
-          onChange={() => handleTabClick("latest")}
-        />
+    <>
+      <div className="w-[50%]  mx-auto hidden lg:flex flex-nowrap justify-around items-center bg-white rounded-2xl drop-shadow-sm tabs tabs-boxed">
+          <input
+            type="radio"
+            name="my_tabs_1"
+            className="tab rounded-xl hover:bg-blue-400 hover:text-white  checked:bg-blue-400 checked:text-white "
+            aria-label="همه"
+            checked={activeTab === "all"}
+            onChange={()=> handleTabClick("all")}
+          />
+          <input
+            type="radio"
+            name="my_tabs_1"
+            className="tab rounded-xl hover:bg-blue-400 hover:text-white  checked:bg-blue-400 checked:text-white "
+            aria-label="محبوب‌ترین‌ها"
+            checked={activeTab === "popular"}
+            onChange={() => handleTabClick("popular")}
+          />
+          <input
+            type="radio"
+            name="my_tabs_1"
+            className="tab rounded-xl hover:bg-blue-400 hover:text-white  checked:bg-blue-400 checked:text-white "
+            aria-label="پربازدیدترین‌ها"
+            checked={activeTab === "mostViewed"}
+            onChange={() => handleTabClick("mostViewed")}
+          />
+          <input
+            type="radio"
+            name="my_tabs_1"
+            className="tab rounded-xl hover:bg-blue-400 hover:text-white  checked:bg-blue-400 checked:text-white "
+            aria-label="جدیدترین‌ها"
+            checked={activeTab === "latest"}
+            onChange={() => handleTabClick("latest")}
+          />
       </div>
+
+      <div className="block lg:hidden lg:w-[35%] mx-auto">
+        <select
+          className="w-full rounded-xl p-3 text-md bg-white drop-shadow-sm"
+          value={activeTab}
+          onChange={(e) => handleTabClick(e.target.value)}
+        >
+          <option value="all">همه</option>
+          <option value="popular ">محبوب‌ترین‌ها</option>
+          <option value="mostViewed">پربازدیدترین‌ها</option>
+          <option value="latest">جدیدترین‌ها</option>
+        </select>
+      </div>
+    </>
   )
 }
 

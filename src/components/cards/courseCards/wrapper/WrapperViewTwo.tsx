@@ -1,8 +1,7 @@
-import { CourseState } from "../../../../core/constants/Types"
+// import { CourseState } from "../../../../core/constants/Types"
 import { CardViewTwo } from "../CardViewTwo"
 
-
-const WrapperViewTwo = ({cardList}: {cardList: CourseState[]}) => {
+const WrapperViewTwo = ({cardList}: {cardList: any[]}) => {
   return (
     <div>
       {cardList.map((item, index) => 
@@ -15,8 +14,6 @@ const WrapperViewTwo = ({cardList}: {cardList: CourseState[]}) => {
         tumbImageAddress={item.tumbImageAddress}
         />
       )}
-
-
     </div>
   )
 }

@@ -4,11 +4,10 @@ import CourseInfos from "../components/courseDetails/ui/CourseInfos";
 import CourseTabs from "../components/courseDetails/ui/CourseTabs";
 import {useCourseDetails} from "../components/courseDetails/func/CourseData";
 import courseImage from "../assets/images/CourseImg.svg"
-// // import { CourseDetailsType } from "../core/services/types/CourseDetails";
 
 const CourseDetails = () => {
 
-  const {details, loading, error, teacher} = useCourseDetails()
+  const {details, loading, error, teacher, isFavorite, onFavorite} = useCourseDetails()
   if (loading) return <div>در حال بارگذاری...</div>;
   if (error) return <div>{error}</div>;
 
@@ -23,8 +22,16 @@ const CourseDetails = () => {
             <img className="w-full h-full rounded-4xl object-cover"  
              src={details?.imageAddress ? details?.imageAddress : courseImage}  
              alt="" />
-            <button className="likes btn h-10 p-5 items-center bg-[url(/cardIcons/likes.svg)] bg-no-repeat bg-[50%] bg-[size:25px] bg-pink-100 border-0 rounded-2xl absolute top-5 right-5">
-              {/* <span className="border-1 w-full text-left text-xl text-red-600">5</span> */}
+            <button 
+              onClick={onFavorite} 
+              className={
+                isFavorite
+                ?"favorite btn h-10 p-5 items-center bg-[url(./assets/images/heartIcon.svg)] bg-no-repeat bg-[50%] bg-[size:25px] bg-pink-100 border-0 rounded-2xl absolute top-5 right-5"
+                :"favorite btn h-10 p-5 items-center bg-[url(/cardIcons/likes.svg)] bg-no-repeat bg-[50%] bg-[size:25px] bg-pink-100 border-0 rounded-2xl absolute top-5 right-5"
+              }
+              disabled= {isFavorite}
+            >
+              {/* <span className="w-full text-right text-xl text-red-600">5</span> */}
             </button>
             <span className="absolute bottom-5 left-10 w-30 h-12 rounded-4xl bg-[url(/cardIcons/clock.svg)] bg-no-repeat bg-[85%] bg-[size:25px] bg-[rgba(255,255,255,0.66)] text-left pl-5 leading-12">{"۵ ساعت"}</span>
             <span className="absolute bottom-5 left-45 w-30 h-12 rounded-4xl bg-[url(/cardIcons/note-2.svg)] bg-no-repeat bg-[85%] bg-[size:25px] bg-[rgba(255,255,255,0.66)] text-left pl-5 leading-12">{"۱۲ درس"}</span>
@@ -80,12 +87,11 @@ const CourseDetails = () => {
         </div>
       </div>
       {/* dynamic */}
-      <div className="w-10/12 h-auto">
+      <div className="w-10/12 mb-20">
         <CourseTabs 
         describe={details?.describe}
         />
       </div>
-
       <TopCourse />
     </div>
   );

@@ -2,22 +2,38 @@
   import likeIcon from "./../../assets/images/like.svg";
   import http from "../../core/services/interceptor"
   import { useParams } from "react-router-dom";
-  import { useState } from "react";
+  import { useEffect, useState } from "react";
 
 
   function Rating({currentLikeCount, currentDissLikeCount, currentUserLike, currentUserDissLike,
      currentUserSetRate, currentUserRateNumber}: any) {
     const [isLike, setIsLike] = useState<boolean>(false)
+    const [isDisLike, setIsDisLike] = useState<boolean>(false)
     const [ratingValue, setRatingValue] = useState<number>(0)
     const [hasRated, setHasRated] = useState<boolean>(currentUserSetRate)
     const {id} = useParams()
 
     const onLike = async() => {
-      await http.post(`/Course/AddCourseLike?CourseId=${id}`,{isLike})
+      await http.post(`/News/NewsLike/${id}`)
+      setIsLike(true)
     }
-      const onDisLike = async() => {
-      await http.post(`/Course/AddCourseDissLike?CourseId=${id}`,{isLike})
+    useEffect(() => {
+      if(currentUserLike !== undefined){
+        setIsLike(currentUserLike)
+        // console.log(isLike)
+      }
+    }, [currentUserLike])
+    
+    const onDisLike = async() => {
+      await http.post(`/News/NewsDissLike/${id}`)
+      setIsDisLike(true)
     }
+    useEffect(() => {
+      if(currentUserDissLike !== undefined){
+        setIsDisLike(currentUserDissLike)
+        // console.log(currentUserDissLike)
+      }
+    }, [currentUserDissLike])
 
     const onRating = async (value: number) => {
       try {
@@ -45,6 +61,12 @@
           alert("قبلا ارسال کرده اید!!");
         }
     };
+    useEffect(() => {
+      if(currentUserSetRate !== undefined){
+        setHasRated(currentUserSetRate)
+      }
+    }, [currentUserSetRate])
+    
 
     return (
       <>
@@ -67,7 +89,7 @@
             <span className="text-base font-medium">امتیاز {currentUserRateNumber} نفر</span>
             <button
               onClick={submitRating}
-              disabled={currentUserSetRate}
+              disabled={hasRated}
               className="btn rounded-full text-xs font-bold text-white h-[38px] bg-[rgba(33,150,243,1)]">
               ثبت دیدگاه
             </button>
@@ -80,25 +102,21 @@
 
             <div className="w-[182px] h-[42px] flex gap-4">
               <button 
-                onClick={() => {
-                  setIsLike(true); // کاربر لایک کرده است
-                  onLike();
-                }} 
-                className={(currentUserLike==="1")? "btn w-[83px] h-[42px] rounded-3xl bg-blue-500 flex justify-center items-center gap-2 text-white" :
+                onClick={onLike} 
+                className={(currentUserLike==="1")|| (isLike===true)? "btn w-[83px] h-[42px] rounded-3xl bg-blue-500 flex justify-center items-center gap-2 text-white" :
                   "btn w-[83px] h-[42px] rounded-3xl bg-[rgba(236,239,241,1)] flex justify-center items-center gap-2"
                 }
+                // disabled={(isLike===true)}
               >
                 {" "}
-                <img src={likeIcon} alt="not found" /> {currentLikeCount}
+                <img src={likeIcon} alt="not found" />{currentLikeCount}
               </button>
-              <button 
-                onClick={() => {
-                  setIsLike(true); // کاربر لایک کرده است
-                  onDisLike();
-                }} 
-                className={currentUserDissLike==="1"? "btn w-[83px] h-[42px] rounded-3xl bg-blue-500 flex justify-center items-center gap-2 text-white" :
+              <button
+                onClick={onDisLike} 
+                className={(currentUserDissLike==="1")|| (isDisLike===true)? "btn w-[83px] h-[42px] rounded-3xl bg-blue-500 flex justify-center items-center gap-2 text-white" :
                   "btn w-[83px] h-[42px] rounded-3xl bg-[rgba(236,239,241,1)] flex justify-center items-center gap-2"
                 }
+                // disabled={(isDisLike===true)}
                 >
                 {" "}
                 <img src={dislikeIcon} alt="not found" /> {currentDissLikeCount}
